@@ -33,3 +33,4 @@ ai_model/models/*
 # OS
 Thumbs.db
 .DS_Store
+mobile_app/android/build/
