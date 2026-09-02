@@ -14,6 +14,7 @@ ai_model/.venv/
 ai_model/venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 
 # Dataset / Model files
 dataset/*
@@ -33,3 +34,4 @@ ai_model/models/*
 # OS
 Thumbs.db
 .DS_Store
+mobile_app/android/build/
