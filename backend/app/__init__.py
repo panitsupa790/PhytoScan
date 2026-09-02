@@ -1,0 +1,1 @@
+"""PhytoScan backend application."""
