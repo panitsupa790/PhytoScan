@@ -1,10 +1,10 @@
-import 'dart:io'; 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:mobile_app/screens/analyzing_screen.dart';
+import 'package:mobile_app/screens/login_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-//เรียกใช้งานปลั๊กอินที่เพิ่งลงไป
-import 'package:image_picker/image_picker.dart'; 
-import 'login_screen.dart';
-import 'analyzing_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,41 +14,88 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // 🚀 2. ตัวแปรสำหรับเก็บไฟล์รูปภาพจริงสูงสุด 3 รูป
-  final List<XFile> _selectedImages = [];
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final ImagePicker _picker = ImagePicker();
+  final List<XFile> _selectedImages = [];
 
   Future<void> _logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('isLoggedIn');
-    if (mounted) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
-        (route) => false,
-      );
+
+    if (!mounted) return;
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      (route) => false,
+    );
+  }
+
+  Future<void> _pickImage(ImageSource source) async {
+    if (_selectedImages.length >= 3) {
+      _showSnackBar('คุณสามารถอัปโหลดรูปภาพได้สูงสุด 3 ภาพเท่านั้น');
+      return;
+    }
+
+    try {
+      final image = await _picker.pickImage(source: source, imageQuality: 80);
+      if (image == null) return;
+
+      setState(() => _selectedImages.add(image));
+    } catch (error) {
+      debugPrint('Error picking image: $error');
+      _showSnackBar('ไม่สามารถเลือกรูปภาพได้ กรุณาลองอีกครั้ง');
     }
   }
 
+  void _removeImage(int index) {
+    setState(() => _selectedImages.removeAt(index));
+  }
+
+  Future<void> _analyzeSelectedImages() async {
+    if (_selectedImages.isEmpty) {
+      _showSnackBar('กรุณาเลือกภาพอย่างน้อย 1 ภาพ');
+      return;
+    }
+
+    final images = List<XFile>.of(_selectedImages);
+    setState(_selectedImages.clear);
+
+    await Navigator.push<void>(
+      context,
+      MaterialPageRoute(builder: (context) => AnalyzingScreen(images: images)),
+    );
+  }
+
   void _showLogoutDialog() {
-    showDialog(
+    showDialog<void>(
       context: context,
-      builder: (BuildContext context) {
+      builder: (context) {
         return AlertDialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          title: const Text('ออกจากระบบ', style: TextStyle(fontWeight: FontWeight.bold)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: const Text(
+            'ออกจากระบบ',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           content: const Text('คุณต้องการออกจากระบบใช่หรือไม่?'),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('ยกเลิก', style: TextStyle(color: Colors.grey)),
+              child: const Text('ยกเลิก'),
             ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
                 _logout();
               },
-              child: const Text('ยืนยัน', style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
+              child: const Text(
+                'ยืนยัน',
+                style: TextStyle(
+                  color: Colors.redAccent,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         );
@@ -56,257 +103,309 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // 3. ฟังก์ชันสำหรับเปิดกล้อง หรือ แกลเลอรี
-  Future<void> _pickImage(ImageSource source) async {
-    if (_selectedImages.length >= 3) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('คุณสามารถอัปโหลดรูปภาพได้สูงสุด 3 ภาพเท่านั้น')),
-      );
-      return;
-    }
-
-    try {
-      final XFile? image = await _picker.pickImage(
-        source: source,
-        imageQuality: 80, 
-      );
-
-      if (image != null) {
-        setState(() {
-          _selectedImages.add(image); 
-        });
-
-        // 🆕 วางโค้ดเปิดหน้าจอ AnalyzingScreen ตรงนี้เลยครับ!
-        if (mounted) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => AnalyzingScreen(
-                imageFile: File(image.path), // ส่งไฟล์รูปภาพล่าสุดที่เลือกไปแสดงผล
-                onCancel: () {
-                  // เมื่อกดปุ่มกากบาท (X) สีชมพู จะทำลายหน้านี้ ย้อนกลับหน้าหลัก 
-                  Navigator.of(context).pop(); 
-                  // และทำการเคลียร์รูปภาพออกเพื่อให้ตรงตามดีไซน์
-                  setState(() {
-                    _selectedImages.remove(image);
-                  });
-                },
-              ),
-            ),
-          );
-        }
-      }
-    } catch (e) {
-      debugPrint('Error picking image: $e');
-    }
-  }
-
-  // 4. ฟังก์ชันสำหรับลบรูปภาพออก
-  void _removeImage(int index) {
-    setState(() {
-      _selectedImages.removeAt(index);
-    });
+  void _showSnackBar(String message) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(message)));
   }
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+    final theme = Theme.of(context);
 
     return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: const Color(0xFFF8FAFC),
-      endDrawer: Drawer(
-        child: Column(
-          children: [
-            UserAccountsDrawerHeader(
-              decoration: const BoxDecoration(color: Color(0xFF00BFA5)),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(Icons.person, size: 40, color: Colors.teal.shade400),
+      key: _scaffoldKey,
+      endDrawer: _buildDrawer(),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFFDFF1D8), Color(0xFFF4F8F1)],
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              _buildHeader(),
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      _buildHero(theme),
+                      const SizedBox(height: 20),
+                      _buildDiagnosisPanel(theme),
+                    ],
+                  ),
+                ),
               ),
-              accountName: const Text('ผู้ใช้งาน PhytoScan', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-              accountEmail: const Text('user@phytoscan.com'),
-            ),
-            ListTile(leading: const Icon(Icons.settings_outlined), title: const Text('ตั้งค่าระบบ'), onTap: () {}),
-            ListTile(leading: const Icon(Icons.help_outline), title: const Text('ความช่วยเหลือ'), onTap: () {}),
-            const Spacer(),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Colors.redAccent),
-              title: const Text('ออกจากระบบ', style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold)),
-              onTap: () {
-                Navigator.of(context).pop();
-                _showLogoutDialog();
-              },
-            ),
-            const SizedBox(height: 20),
-          ],
+            ],
+          ),
         ),
       ),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(6),
-              decoration: BoxDecoration(color: const Color(0xFF10B981), borderRadius: BorderRadius.circular(8)),
-              child: const Icon(Icons.eco, color: Colors.white, size: 20),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 12, 12, 8),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: const Color(0xFF3F7F2B),
+              borderRadius: BorderRadius.circular(12),
             ),
-            const SizedBox(width: 10),
-            Column(
+            child: const Icon(Icons.eco_rounded, color: Colors.white),
+          ),
+          const SizedBox(width: 12),
+          const Expanded(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('PhytoScan', style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold)),
-                Text('ระบบวินิจฉัยโรคพืชด้วย AI', style: TextStyle(color: Colors.grey.shade600, fontSize: 10)),
+                Text(
+                  'PhytoScan',
+                  style: TextStyle(
+                    color: Color(0xFF214D18),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                Text(
+                  'ระบบวินิจฉัยโรคพืชด้วย AI',
+                  style: TextStyle(color: Color(0xFF55734E), fontSize: 12),
+                ),
               ],
             ),
-          ],
-        ),
-        actions: [
+          ),
           IconButton(
-            icon: const Icon(Icons.menu, color: Colors.grey, size: 28),
-            onPressed: () => scaffoldKey.currentState?.openEndDrawer(),
+            icon: const Icon(Icons.menu_rounded, color: Color(0xFF2F6B1F)),
+            onPressed: () => _scaffoldKey.currentState?.openEndDrawer(),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            // --- Card บน ---
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 20, offset: const Offset(0, 10))],
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: const BoxDecoration(color: Color(0xFFEAF8F7), shape: BoxShape.circle),
-                    child: const Icon(Icons.eco_outlined, size: 50, color: Color(0xFF10B981)),
-                  ),
-                  const SizedBox(height: 20),
-                  const Text('Identify,\nCure,\nExplore.', textAlign: TextAlign.center, style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, height: 1.2)),
-                  const SizedBox(height: 15),
-                  Text('Upload or capture plant leaf images to start\nAI diagnosis', textAlign: TextAlign.center, style: TextStyle(color: Colors.grey.shade500, fontSize: 13)),
-                ],
+    );
+  }
+
+  Widget _buildHero(ThemeData theme) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 88,
+          height: 88,
+          decoration: BoxDecoration(
+            color: const Color(0xFFE6F4DF),
+            borderRadius: BorderRadius.circular(28),
+          ),
+          child: const Icon(
+            Icons.eco_rounded,
+            size: 44,
+            color: Color(0xFF2F6B1F),
+          ),
+        ),
+        const SizedBox(height: 24),
+        Text(
+          'วิเคราะห์โรคพืชจากภาพ',
+          style: theme.textTheme.headlineSmall?.copyWith(
+            fontWeight: FontWeight.w800,
+            color: const Color(0xFF214D18),
+          ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'ถ่ายภาพหรืออัปโหลดภาพใบพืช เพื่อให้ระบบช่วยประเมินโรคเบื้องต้นและแสดงคำแนะนำการดูแล',
+          style: theme.textTheme.bodyLarge?.copyWith(
+            height: 1.5,
+            color: const Color(0xFF55734E),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDiagnosisPanel(ThemeData theme) {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.88),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: const Color(0xFFD3E5C8)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Auto Diagnosis',
+            style: theme.textTheme.titleLarge?.copyWith(
+              color: const Color(0xFF214D18),
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'ถ่ายภาพใบพืชให้ชัด แสงเพียงพอ และมีพืชชนิดเดียวในภาพ',
+            style: TextStyle(height: 1.5, color: Color(0xFF4F6847)),
+          ),
+          if (_selectedImages.isNotEmpty) ...[
+            const SizedBox(height: 18),
+            _buildSelectedImages(),
+          ],
+          const SizedBox(height: 20),
+          FilledButton.icon(
+            onPressed: () => _pickImage(ImageSource.camera),
+            style: FilledButton.styleFrom(
+              backgroundColor: const Color(0xFF3F7F2B),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
               ),
             ),
-            const SizedBox(height: 20),
-
-            // --- Card ล่าง (Auto Diagnosis) ---
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 20, offset: const Offset(0, 10))],
+            icon: const Icon(Icons.photo_camera_outlined),
+            label: const Text(
+              'ถ่ายภาพ',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
+          ),
+          const SizedBox(height: 12),
+          OutlinedButton.icon(
+            onPressed: () => _pickImage(ImageSource.gallery),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF2F6B1F),
+              side: const BorderSide(color: Color(0xFF8DBA7A)),
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Auto Diagnosis', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Please take clear pictures of the sick part from different angles and take a picture of whole plants.',
-                    style: TextStyle(color: Colors.grey.shade600, fontSize: 13, height: 1.4),
-                  ),
-                  const SizedBox(height: 25),
+            ),
+            icon: const Icon(Icons.photo_library_outlined),
+            label: const Text(
+              'เลือกจากแกลเลอรี',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
+          ),
+          const SizedBox(height: 14),
+          Text(
+            'เพิ่มรูปภาพ (${_selectedImages.length}/3)',
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Color(0xFF6D8367), fontSize: 12),
+          ),
+          const SizedBox(height: 16),
+          FilledButton.icon(
+            onPressed: _selectedImages.isEmpty ? null : _analyzeSelectedImages,
+            style: FilledButton.styleFrom(
+              backgroundColor: const Color(0xFF214D18),
+              foregroundColor: Colors.white,
+              disabledBackgroundColor: const Color(0xFFDDE8D6),
+              disabledForegroundColor: const Color(0xFF71816B),
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
+              ),
+            ),
+            icon: const Icon(Icons.analytics_outlined),
+            label: const Text(
+              'วิเคราะห์ภาพ',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
-                  // 🚀 5. โชว์รูปภาพจริงในหน้าแอปเมื่อเลือกเข้ามาแล้ว
-                  if (_selectedImages.isNotEmpty) ...[
-                    GridView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: _selectedImages.length,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3, 
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
-                      ),
-                      itemBuilder: (context, index) {
-                        return Stack(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                image: DecorationImage(
-                                  image: FileImage(File(_selectedImages[index].path)),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              top: 2,
-                              right: 2,
-                              child: GestureDetector(
-                                onTap: () => _removeImage(index),
-                                child: Container(
-                                  padding: const EdgeInsets.all(4),
-                                  decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
-                                  child: const Icon(Icons.close, size: 14, color: Colors.white),
-                                ),
-                              ),
-                            ),
-                          ],
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 20),
-                  ],
-                  
-                  // ปุ่ม Take Photo
-                  SizedBox(
-                    width: double.infinity,
-                    height: 55,
-                    child: ElevatedButton.icon(
-                      onPressed: () => _pickImage(ImageSource.camera), // 🚀 ลิงก์เข้ากล้องจริง
-                      icon: const Icon(Icons.camera_alt_outlined, color: Colors.white),
-                      label: const Text('Take Photo'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF00BFA5),
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                        elevation: 0,
-                      ),
-                    ),
+  Widget _buildSelectedImages() {
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: _selectedImages.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+      ),
+      itemBuilder: (context, index) {
+        return Stack(
+          children: [
+            Positioned.fill(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.file(
+                  File(_selectedImages[index].path),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 4,
+              right: 4,
+              child: InkWell(
+                onTap: () => _removeImage(index),
+                borderRadius: BorderRadius.circular(999),
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: const BoxDecoration(
+                    color: Colors.black54,
+                    shape: BoxShape.circle,
                   ),
-                  const SizedBox(height: 12),
-                  
-                  // ปุ่ม Upload from Gallery
-                  SizedBox(
-                    width: double.infinity,
-                    height: 55,
-                    child: OutlinedButton.icon(
-                      onPressed: () => _pickImage(ImageSource.gallery), // 🚀 ลิงก์เข้าแกลเลอรีจริง
-                      icon: const Icon(Icons.upload_outlined, color: Colors.grey),
-                      label: const Text('Upload from Gallery', style: TextStyle(color: Colors.black87)),
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: Colors.grey.shade200),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  
-                  Center(
-                    child: Text(
-                      'Add images (${_selectedImages.length}/3)',
-                      style: const TextStyle(color: Colors.grey, fontSize: 12),
-                    ),
-                  ),
-                ],
+                  child: const Icon(Icons.close, size: 14, color: Colors.white),
+                ),
               ),
             ),
           ],
-        ),
+        );
+      },
+    );
+  }
+
+  Widget _buildDrawer() {
+    return Drawer(
+      child: Column(
+        children: [
+          UserAccountsDrawerHeader(
+            decoration: const BoxDecoration(color: Color(0xFF3F7F2B)),
+            currentAccountPicture: const CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Icon(Icons.person, size: 40, color: Color(0xFF3F7F2B)),
+            ),
+            accountName: const Text(
+              'ผู้ใช้งาน PhytoScan',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            accountEmail: const Text('user@phytoscan.com'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings_outlined),
+            title: const Text('ตั้งค่าระบบ'),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: const Icon(Icons.help_outline),
+            title: const Text('ความช่วยเหลือ'),
+            onTap: () {},
+          ),
+          const Spacer(),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.logout, color: Colors.redAccent),
+            title: const Text(
+              'ออกจากระบบ',
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              _showLogoutDialog();
+            },
+          ),
+          const SizedBox(height: 20),
+        ],
       ),
     );
   }
