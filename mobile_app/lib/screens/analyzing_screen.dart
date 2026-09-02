@@ -1,16 +1,18 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:mobile_app/screens/result_screen.dart';
+import 'package:mobile_app/services/analysis_api_service.dart';
 
 class AnalyzingScreen extends StatefulWidget {
-  final File? imageFile;
-  final VoidCallback onCancel;
+  final List<XFile> images;
+  final AnalysisService? analysisService;
 
   const AnalyzingScreen({
     super.key,
-    required this.imageFile,
-    required this.onCancel,
+    required this.images,
+    this.analysisService,
   });
 
   @override
@@ -18,18 +20,50 @@ class AnalyzingScreen extends StatefulWidget {
 }
 
 class _AnalyzingScreenState extends State<AnalyzingScreen> {
+  late final AnalysisService _analysisService;
+  bool _isLoading = true;
+  AnalysisApiException? _error;
+
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    _analysisService = widget.analysisService ?? const AnalysisApiService();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _analyze());
+  }
+
+  Future<void> _analyze() async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+
+    try {
+      final result = await _analysisService.analyze(widget.images);
       if (!mounted) return;
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => ResultScreen(imageFile: widget.imageFile),
+          builder: (context) =>
+              ResultScreen(images: widget.images, result: result),
         ),
       );
-    });
+    } on AnalysisApiException catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+        _error = error;
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+        _error = const AnalysisApiException(
+          errorCode: 'UNKNOWN_ERROR',
+          userMessage: 'เกิดข้อผิดพลาดที่ไม่คาดคิด กรุณาลองใหม่อีกครั้ง',
+        );
+      });
+    }
   }
 
   @override
@@ -73,7 +107,7 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
           children: [
             _buildImageCard(),
             const SizedBox(height: 20),
-            _buildAnalyzingCard(),
+            _isLoading ? _buildLoadingCard() : _buildErrorCard(),
           ],
         ),
       ),
@@ -89,43 +123,25 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: widget.imageFile != null
-                      ? Image.file(
-                          widget.imageFile!,
-                          height: 220,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        )
-                      : Container(
-                          height: 220,
-                          width: double.infinity,
-                          color: const Color(0xFFE5E7EB),
-                          child: const Icon(Icons.image, size: 50),
-                        ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.file(
+                File(widget.images.first.path),
+                height: 220,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  height: 220,
+                  width: double.infinity,
+                  color: const Color(0xFFE5E7EB),
+                  child: const Icon(Icons.broken_image_outlined, size: 50),
                 ),
-                Positioned(
-                  top: 12,
-                  right: 12,
-                  child: InkWell(
-                    onTap: widget.onCancel,
-                    borderRadius: BorderRadius.circular(999),
-                    child: const CircleAvatar(
-                      radius: 16,
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.close, size: 18, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-            const SizedBox(height: 14),
-            const Text(
-              'อัปโหลดรูปภาพสำเร็จ',
-              style: TextStyle(color: Color(0xFF6B7280), fontSize: 13),
+            const SizedBox(height: 12),
+            Text(
+              'กำลังวิเคราะห์ ${widget.images.length} ภาพ',
+              style: const TextStyle(color: Color(0xFF55734E)),
             ),
           ],
         ),
@@ -133,52 +149,81 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
     );
   }
 
-  Widget _buildAnalyzingCard() {
+  Widget _buildLoadingCard() {
     return Card(
       elevation: 1,
       color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(18),
-              decoration: const BoxDecoration(
-                color: Color(0xFFE6F4DF),
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.eco_outlined,
-                size: 36,
-                color: Color(0xFF3F7F2B),
-              ),
-            ),
+            const CircularProgressIndicator(color: Color(0xFF3F7F2B)),
             const SizedBox(height: 20),
             const Text(
-              'กำลังวิเคราะห์ด้วย AI...',
+              'กำลังวิเคราะห์ภาพ',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF214D18),
               ),
             ),
-            const SizedBox(height: 4),
+            const SizedBox(height: 8),
             const Text(
-              'กรุณารอสักครู่',
-              style: TextStyle(fontSize: 13, color: Color(0xFF6B7280)),
-            ),
-            const SizedBox(height: 24),
-            const LinearProgressIndicator(
-              minHeight: 8,
-              color: Color(0xFF3F7F2B),
-              backgroundColor: Color(0xFFDDE8D6),
-            ),
-            const SizedBox(height: 24),
-            const Text(
-              'ระบบกำลังตรวจสอบลักษณะใบและประเมินโรคเบื้องต้น',
+              'กำลังส่งภาพและรอผลจากเซิร์ฟเวอร์',
               textAlign: TextAlign.center,
               style: TextStyle(color: Color(0xFF55734E), height: 1.5),
+            ),
+            const SizedBox(height: 20),
+            TextButton.icon(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.arrow_back),
+              label: const Text('กลับไปเลือกภาพใหม่'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildErrorCard() {
+    return Card(
+      elevation: 1,
+      color: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            const Icon(Icons.error_outline, color: Color(0xFFB42318), size: 48),
+            const SizedBox(height: 16),
+            const Text(
+              'วิเคราะห์ภาพไม่สำเร็จ',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF214D18),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _error?.userMessage ?? 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง',
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Color(0xFF55734E), height: 1.5),
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton.icon(
+                onPressed: _analyze,
+                icon: const Icon(Icons.refresh),
+                label: const Text('ลองวิเคราะห์อีกครั้ง'),
+              ),
+            ),
+            TextButton.icon(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.arrow_back),
+              label: const Text('กลับไปเลือกภาพใหม่'),
             ),
           ],
         ),

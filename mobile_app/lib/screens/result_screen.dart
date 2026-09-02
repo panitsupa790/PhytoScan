@@ -1,20 +1,24 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:mobile_app/models/analysis_result.dart';
 
 class ResultScreen extends StatefulWidget {
-  final File? imageFile;
+  final List<XFile> images;
+  final AnalysisResult result;
 
-  const ResultScreen({super.key, required this.imageFile});
+  const ResultScreen({super.key, required this.images, required this.result});
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
 }
 
 class _ResultScreenState extends State<ResultScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   String _selectedTab = 'ผลวิเคราะห์';
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  AnalysisResult get result => widget.result;
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +59,7 @@ class _ResultScreenState extends State<ResultScreen> {
         ),
         actions: [
           IconButton(
+            tooltip: 'เปิดเมนู',
             icon: const Icon(Icons.menu, color: Color(0xFF2F6B1F)),
             onPressed: () => _scaffoldKey.currentState?.openDrawer(),
           ),
@@ -120,18 +125,39 @@ class _ResultScreenState extends State<ResultScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (widget.imageFile != null) ...[
+            if (widget.images.isNotEmpty) ...[
               ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.file(
-                  widget.imageFile!,
+                  File(widget.images.first.path),
                   height: 180,
                   width: double.infinity,
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => Container(
+                    height: 180,
+                    color: const Color(0xFFE5E7EB),
+                    child: const Center(
+                      child: Icon(Icons.broken_image_outlined, size: 42),
+                    ),
+                  ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 12),
+              Text(
+                'วิเคราะห์จาก ${result.imageCount} ภาพ',
+                style: const TextStyle(color: Color(0xFF55734E), fontSize: 12),
+              ),
+              const SizedBox(height: 12),
             ],
+            Text(
+              '${result.plant.nameTh} (${result.plant.nameEn})',
+              style: const TextStyle(
+                color: Color(0xFF55734E),
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Container(
@@ -147,10 +173,10 @@ class _ResultScreenState extends State<ResultScreen> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    'โรคใบจุด (Leaf Spot)',
-                    style: TextStyle(
+                    '${result.disease.nameTh} (${result.disease.nameEn})',
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF214D18),
@@ -164,11 +190,11 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 44, top: 4),
+            Padding(
+              padding: const EdgeInsets.only(left: 44, top: 4),
               child: Text(
-                'ความมั่นใจในการวิเคราะห์: 84%',
-                style: TextStyle(
+                'ความมั่นใจในการวิเคราะห์: ${_percentage(result.disease.confidence)}',
+                style: const TextStyle(
                   color: Color(0xFF3F7F2B),
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
@@ -183,7 +209,6 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Widget _buildTabs() {
     const tabs = ['ผลวิเคราะห์', 'อาการ', 'การดูแล', 'การป้องกัน'];
-
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: tabs.map(_buildTabButton).toList()),
@@ -210,41 +235,21 @@ class _ResultScreenState extends State<ResultScreen> {
   }
 
   Widget _buildSelectedTabContent() {
-    switch (_selectedTab) {
-      case 'อาการ':
-        return _buildListSection(
-          title: 'อาการของโรค',
-          items: const [
-            'ใบมีจุดสีน้ำตาลหรือสีดำที่มีขอบชัดเจน',
-            'จุดอาจมีวงแหวนหลายวงรอบ ๆ',
-            'ใบเหลืองรอบบริเวณที่เป็นโรค',
-            'ใบแห้งหรือร่วงก่อนกำหนด',
-            'จุดเล็กอาจรวมตัวกันเป็นแผลใหญ่',
-          ],
-        );
-      case 'การดูแล':
-        return _buildListSection(
-          title: 'คำแนะนำการดูแล',
-          items: const [
-            'ตัดใบที่เป็นโรคออกเพื่อลดการแพร่กระจาย',
-            'หลีกเลี่ยงการรดน้ำโดนใบโดยตรง',
-            'เพิ่มการระบายอากาศบริเวณต้นพืช',
-            'แยกต้นที่มีอาการรุนแรงออกจากต้นอื่น',
-          ],
-        );
-      case 'การป้องกัน':
-        return _buildListSection(
-          title: 'แนวทางป้องกัน',
-          items: const [
-            'ใช้ดินและกระถางที่ระบายน้ำได้ดี',
-            'เว้นระยะปลูกให้เหมาะสม',
-            'ตรวจใบพืชเป็นประจำ โดยเฉพาะช่วงอากาศชื้น',
-            'ทำความสะอาดอุปกรณ์ตัดแต่งกิ่งก่อนใช้งาน',
-          ],
-        );
-      default:
-        return _buildResultsLayout();
-    }
+    return switch (_selectedTab) {
+      'อาการ' => _buildListSection(
+        title: 'อาการของโรค',
+        items: result.symptoms,
+      ),
+      'การดูแล' => _buildListSection(
+        title: 'คำแนะนำการดูแล',
+        items: result.care,
+      ),
+      'การป้องกัน' => _buildListSection(
+        title: 'แนวทางป้องกัน',
+        items: result.prevention,
+      ),
+      _ => _buildResultsLayout(),
+    };
   }
 
   Widget _buildResultsLayout() {
@@ -265,33 +270,15 @@ class _ResultScreenState extends State<ResultScreen> {
             ),
           ],
         ),
-        const SizedBox(height: 16),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'ระดับความมั่นใจ',
-              style: TextStyle(fontSize: 12, color: Color(0xFF6B7280)),
-            ),
-            Text(
-              '84%',
-              style: TextStyle(
-                fontSize: 12,
-                color: Color(0xFF3F7F2B),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+        const SizedBox(height: 18),
+        _buildConfidenceRow(
+          label: 'ความมั่นใจชนิดพืช',
+          confidence: result.plant.confidence,
         ),
-        const SizedBox(height: 8),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: const LinearProgressIndicator(
-            value: 0.84,
-            minHeight: 8,
-            backgroundColor: Color(0xFFDDE8D6),
-            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF3F7F2B)),
-          ),
+        const SizedBox(height: 18),
+        _buildConfidenceRow(
+          label: 'ความมั่นใจโรค',
+          confidence: result.disease.confidence,
         ),
         const SizedBox(height: 24),
         const Text(
@@ -303,9 +290,50 @@ class _ResultScreenState extends State<ResultScreen> {
           ),
         ),
         const SizedBox(height: 8),
-        const Text(
-          'พบลักษณะคล้ายโรคใบจุด ซึ่งทำให้เกิดจุดสีน้ำตาลหรือสีดำบนใบพืช หากปล่อยไว้อาจทำให้ใบเหลือง แห้ง และร่วงได้',
-          style: TextStyle(fontSize: 13, color: Color(0xFF4F6847), height: 1.5),
+        Text(
+          'ระบบตรวจพบ ${result.disease.nameTh} ใน ${result.plant.nameTh}',
+          style: const TextStyle(
+            fontSize: 13,
+            color: Color(0xFF4F6847),
+            height: 1.5,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildConfidenceRow({
+    required String label,
+    required double confidence,
+  }) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              label,
+              style: const TextStyle(fontSize: 12, color: Color(0xFF6B7280)),
+            ),
+            Text(
+              _percentage(confidence),
+              style: const TextStyle(
+                fontSize: 12,
+                color: Color(0xFF3F7F2B),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: LinearProgressIndicator(
+            value: confidence,
+            minHeight: 8,
+            backgroundColor: const Color(0xFFDDE8D6),
+            valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF3F7F2B)),
+          ),
         ),
       ],
     );
@@ -333,8 +361,14 @@ class _ResultScreenState extends State<ResultScreen> {
           ],
         ),
         const SizedBox(height: 16),
-        for (final (index, item) in items.indexed)
-          _buildListItem('${index + 1}', item),
+        if (items.isEmpty)
+          const Text(
+            'ยังไม่มีข้อมูลจากระบบวิเคราะห์',
+            style: TextStyle(color: Color(0xFF6B7280)),
+          )
+        else
+          for (final (index, item) in items.indexed)
+            _buildListItem('${index + 1}', item),
       ],
     );
   }
@@ -411,7 +445,6 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Widget _buildTabButton(String tabName) {
     final isSelected = _selectedTab == tabName;
-
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: ChoiceChip(
@@ -487,4 +520,6 @@ class _ResultScreenState extends State<ResultScreen> {
       ),
     );
   }
+
+  String _percentage(double confidence) => '${(confidence * 100).round()}%';
 }

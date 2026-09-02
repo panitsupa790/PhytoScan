@@ -41,22 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
       if (image == null) return;
 
       setState(() => _selectedImages.add(image));
-
-      if (!mounted) return;
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => AnalyzingScreen(
-            imageFile: File(image.path),
-            onCancel: () {
-              Navigator.of(context).pop();
-              if (mounted) {
-                setState(() => _selectedImages.remove(image));
-              }
-            },
-          ),
-        ),
-      );
     } catch (error) {
       debugPrint('Error picking image: $error');
       _showSnackBar('ไม่สามารถเลือกรูปภาพได้ กรุณาลองอีกครั้ง');
@@ -65,6 +49,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _removeImage(int index) {
     setState(() => _selectedImages.removeAt(index));
+  }
+
+  Future<void> _analyzeSelectedImages() async {
+    if (_selectedImages.isEmpty) {
+      _showSnackBar('กรุณาเลือกภาพอย่างน้อย 1 ภาพ');
+      return;
+    }
+
+    final images = List<XFile>.of(_selectedImages);
+    setState(_selectedImages.clear);
+
+    await Navigator.push<void>(
+      context,
+      MaterialPageRoute(builder: (context) => AnalyzingScreen(images: images)),
+    );
   }
 
   void _showLogoutDialog() {
@@ -294,6 +293,25 @@ class _HomeScreenState extends State<HomeScreen> {
             'เพิ่มรูปภาพ (${_selectedImages.length}/3)',
             textAlign: TextAlign.center,
             style: const TextStyle(color: Color(0xFF6D8367), fontSize: 12),
+          ),
+          const SizedBox(height: 16),
+          FilledButton.icon(
+            onPressed: _selectedImages.isEmpty ? null : _analyzeSelectedImages,
+            style: FilledButton.styleFrom(
+              backgroundColor: const Color(0xFF214D18),
+              foregroundColor: Colors.white,
+              disabledBackgroundColor: const Color(0xFFDDE8D6),
+              disabledForegroundColor: const Color(0xFF71816B),
+              padding: const EdgeInsets.symmetric(vertical: 18),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
+              ),
+            ),
+            icon: const Icon(Icons.analytics_outlined),
+            label: const Text(
+              'วิเคราะห์ภาพ',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
           ),
         ],
       ),
