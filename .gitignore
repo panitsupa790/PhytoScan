@@ -70,3 +70,6 @@ ai_model/models/*
 !ai_model/models/eggplant/
 !ai_model/models/eggplant/v1/
 !ai_model/models/eggplant/v1/*.json
+
+# Trained model weights are local build artifacts
+*.keras
