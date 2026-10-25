@@ -1,0 +1,9 @@
+{
+  "method": "path, size, and modified-time metadata comparison; test image bytes were not opened",
+  "unchanged": {
+    "dataset/raw": true,
+    "dataset/cleaned": true,
+    "dataset/split": true
+  },
+  "pass": true
+}

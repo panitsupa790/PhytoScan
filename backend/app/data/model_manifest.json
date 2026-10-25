@@ -1,0 +1,38 @@
+{
+  "models": {
+    "rose": {
+      "plant_code": "rose",
+      "model_version": "rose-v1",
+      "model_path": "models/rose-v1.keras",
+      "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3],
+      "class_order": [
+        "Rose_Yellow_Mosaic_Virus",
+        "Rose_Rust",
+        "Rose_Powdery_Mildew",
+        "Rose_Mosaic_Virus",
+        "Rose_Insect_Damage",
+        "Rose_Healthy",
+        "Rose_Downy_Mildew",
+        "Rose_Black_Spot"
+      ],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "e284c7c693f612a31d3620526d59eff680d026d78dffebef67e22f18a2488c04"
+    },
+    "sunflower": {
+      "plant_code": "sunflower",
+      "model_version": "sunflower-v1",
+      "model_path": "models/sunflower-v1.keras",
+      "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3],
+      "class_order": [
+        "downy_mildew",
+        "gray_mold",
+        "healthy",
+        "leaf_scars"
+      ],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "a6e2174ab5c4b480f9c15f425222ad52768167075e2d6637d6693c08cb023fc3"
+    }
+  }
+}

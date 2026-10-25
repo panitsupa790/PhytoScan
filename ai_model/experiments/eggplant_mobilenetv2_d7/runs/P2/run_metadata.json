@@ -1,0 +1,28 @@
+{
+  "augmentation_enabled": false,
+  "backbone_frozen": true,
+  "class_balancing_enabled": false,
+  "completed_at_utc": "2026-09-13T21:14:26.233144+00:00",
+  "keras_version": "3.15.1",
+  "model_normalization": "tensorflow.keras.applications.mobilenet_v2.preprocess_input",
+  "parameter_counts": {
+    "non_trainable": 2257984,
+    "total": 2261827,
+    "trainable": 3843
+  },
+  "physical_devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "preprocessing_config_sha256": "50bbab37e075afe86c9d99b498cd59ceec07ea09f6c2be62709b5692613bda81",
+  "python_version": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "scikit_learn_version": "1.7.2",
+  "seed": 42,
+  "smoke_test": false,
+  "tensorflow_version": "2.21.0",
+  "test_image_bytes_accessed": 0,
+  "train_samples": 2425,
+  "training_config_sha256": "139d74a077f9a054717bcf80d2e18ac41564cf6a35e1af451953319b63be9c9e",
+  "validation_samples": 324,
+  "variant": "P2"
+}

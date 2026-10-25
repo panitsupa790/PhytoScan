@@ -1,0 +1,61 @@
+source_split,class,filename,variant,config_version,seed,purpose
+train,healthy,Healthy Leaf Image 1299.jpg,P0,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1299.jpg,P1,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1299.jpg,P2,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1299.jpg,P3,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1063.jpg,P0,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1063.jpg,P1,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1063.jpg,P2,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 1063.jpg,P3,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 405.jpg,P0,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 405.jpg,P1,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 405.jpg,P2,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 405.jpg,P3,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 335.jpg,P0,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 335.jpg,P1,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 335.jpg,P2,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 335.jpg,P3,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 284.jpg,P0,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 284.jpg,P1,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 284.jpg,P2,1.0,42,preview_sanity_check_only
+train,healthy,Healthy Leaf Image 284.jpg,P3,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 188.jpg,P0,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 188.jpg,P1,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 188.jpg,P2,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 188.jpg,P3,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 169.jpg,P0,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 169.jpg,P1,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 169.jpg,P2,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 169.jpg,P3,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 592.jpg,P0,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 592.jpg,P1,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 592.jpg,P2,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 592.jpg,P3,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 487.jpg,P0,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 487.jpg,P1,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 487.jpg,P2,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 487.jpg,P3,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 156.jpg,P0,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 156.jpg,P1,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 156.jpg,P2,1.0,42,preview_sanity_check_only
+train,leaf_spot,Leaf Spot Disease Image 156.jpg,P3,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 522.jpg,P0,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 522.jpg,P1,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 522.jpg,P2,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 522.jpg,P3,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 302.jpg,P0,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 302.jpg,P1,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 302.jpg,P2,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 302.jpg,P3,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1030.jpg,P0,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1030.jpg,P1,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1030.jpg,P2,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1030.jpg,P3,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1028.jpg,P0,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1028.jpg,P1,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1028.jpg,P2,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1028.jpg,P3,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1109.jpg,P0,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1109.jpg,P1,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1109.jpg,P2,1.0,42,preview_sanity_check_only
+train,mosaic_virus,Mosaic Virus Disease Image 1109.jpg,P3,1.0,42,preview_sanity_check_only

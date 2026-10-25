@@ -1,24 +1,176 @@
 {
   "eggplant": {
+    "healthy": {
+      "plant_code": "eggplant",
+      "plant_name_th": "มะเขือยาว",
+      "plant_name_en": "Eggplant",
+      "disease_code": "healthy",
+      "disease_name_th": "ใบสุขภาพดี",
+      "disease_name_en": "Healthy Leaf",
+      "symptoms": [
+        "ภาพใบมีลักษณะสอดคล้องกับคลาส healthy ตามชุดข้อมูลที่ใช้ฝึกโมเดล",
+        "ไม่พบลักษณะเด่นของคลาส leaf_spot หรือ mosaic_virus ในผลจำแนกนี้"
+      ],
+      "care": [
+        "ดูแลน้ำ ธาตุอาหาร และแสงให้เหมาะสมกับระยะการเจริญเติบโต",
+        "ติดตามความเปลี่ยนแปลงของใบอย่างสม่ำเสมอ"
+      ],
+      "prevention": [
+        "รักษาความสะอาดของแปลงและอุปกรณ์",
+        "หลีกเลี่ยงสภาพแวดล้อมที่ชื้นสะสมเป็นเวลานาน"
+      ]
+    },
     "leaf_spot": {
       "plant_code": "eggplant",
       "plant_name_th": "มะเขือยาว",
       "plant_name_en": "Eggplant",
       "disease_code": "leaf_spot",
-      "disease_name_th": "โรคใบจุด",
+      "disease_name_th": "ลักษณะโรคใบจุด",
       "disease_name_en": "Leaf Spot",
       "symptoms": [
         "พบจุดสีน้ำตาลหรือดำบนใบ และอาจมีขอบสีเหลือง",
         "ใบที่มีอาการรุนแรงอาจแห้งและร่วงก่อนเวลา"
       ],
       "care": [
-        "ตัดใบที่มีอาการรุนแรงออกและนำไปกำจัดนอกแปลง",
+        "แยกหรือตัดใบที่มีอาการรุนแรงและนำไปกำจัดอย่างเหมาะสม",
         "หลีกเลี่ยงการรดน้ำให้เปียกใบและเพิ่มการถ่ายเทอากาศ"
       ],
       "prevention": [
         "เว้นระยะปลูกให้เหมาะสมเพื่อลดความชื้นสะสม",
         "ทำความสะอาดอุปกรณ์และกำจัดเศษพืชหลังเก็บเกี่ยว"
       ]
+    },
+    "mosaic_virus": {
+      "plant_code": "eggplant",
+      "plant_name_th": "มะเขือยาว",
+      "plant_name_en": "Eggplant",
+      "disease_code": "mosaic_virus",
+      "disease_name_th": "ลักษณะใบด่างคล้ายโมเสก",
+      "disease_name_en": "Mosaic-like Leaf Symptoms",
+      "symptoms": [
+        "ภาพมีลักษณะสีใบเขียวสลับอ่อนหรือด่างคล้ายโมเสก สอดคล้องกับคลาส mosaic_virus ในชุดข้อมูล",
+        "ผลนี้เป็นการจำแนกจากภาพ ไม่ใช่การยืนยันเชื้อไวรัสทางห้องปฏิบัติการ"
+      ],
+      "care": [
+        "แยกต้นที่สงสัยออกจากต้นอื่นระหว่างรอคำแนะนำจากผู้เชี่ยวชาญ",
+        "หลีกเลี่ยงการใช้เครื่องมือร่วมกันโดยไม่ทำความสะอาด"
+      ],
+      "prevention": [
+        "ควบคุมแมลงพาหะตามคำแนะนำทางการเกษตรที่เหมาะสม",
+        "เลือกวัสดุปลูกที่มีแหล่งที่มาเชื่อถือได้และรักษาความสะอาดของอุปกรณ์"
+      ]
+    }
+  },
+  "rose": {
+    "Rose_Yellow_Mosaic_Virus": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Yellow_Mosaic_Virus",
+      "name_th": "",
+      "name_en": "Rose Yellow Mosaic Virus",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Rust": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Rust",
+      "name_th": "",
+      "name_en": "Rose Rust",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Powdery_Mildew": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Powdery_Mildew",
+      "name_th": "",
+      "name_en": "Rose Powdery Mildew",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Mosaic_Virus": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Mosaic_Virus",
+      "name_th": "",
+      "name_en": "Rose Mosaic Virus",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Insect_Damage": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Insect_Damage",
+      "name_th": "",
+      "name_en": "Rose Insect Damage",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Healthy": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Healthy",
+      "name_th": "",
+      "name_en": "Healthy Rose",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Downy_Mildew": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Downy_Mildew",
+      "name_th": "",
+      "name_en": "Rose Downy Mildew",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "Rose_Black_Spot": {
+      "plant_code": "rose",
+      "disease_code": "Rose_Black_Spot",
+      "name_th": "",
+      "name_en": "Rose Black Spot",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    }
+  },
+  "sunflower": {
+    "downy_mildew": {
+      "plant_code": "sunflower",
+      "disease_code": "downy_mildew",
+      "name_th": "",
+      "name_en": "Downy Mildew",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "gray_mold": {
+      "plant_code": "sunflower",
+      "disease_code": "gray_mold",
+      "name_th": "",
+      "name_en": "Gray Mold",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "healthy": {
+      "plant_code": "sunflower",
+      "disease_code": "healthy",
+      "name_th": "",
+      "name_en": "Healthy Sunflower",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
+    },
+    "leaf_scars": {
+      "plant_code": "sunflower",
+      "disease_code": "leaf_scars",
+      "name_th": "",
+      "name_en": "Leaf Scars",
+      "symptoms": [],
+      "care": [],
+      "prevention": []
     }
   }
 }

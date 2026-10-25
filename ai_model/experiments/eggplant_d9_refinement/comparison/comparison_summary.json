@@ -1,0 +1,17 @@
+{
+  "primary_metric": "validation_macro_f1",
+  "close_tolerance": 0.005,
+  "best_validation_candidate": "R2",
+  "best_macro_f1": 0.715550852733115,
+  "close_to_best": [
+    "R2"
+  ],
+  "ranking": [
+    "R2",
+    "R1",
+    "R0",
+    "R3"
+  ],
+  "selection_note": "R2 has the highest Macro F1 and improves leaf_spot recall/F1 without augmentation.",
+  "test_metrics_used": false
+}

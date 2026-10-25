@@ -1,0 +1,58 @@
+{
+  "class_counts": {
+    "healthy": 5,
+    "leaf_spot": 5,
+    "mosaic_virus": 5
+  },
+  "classification_performance_claim": false,
+  "config_version": "1.0",
+  "generated_at_utc": "2026-09-09T10:22:24.271259+00:00",
+  "images_per_class": 5,
+  "purpose": "preview_sanity_check_only",
+  "seed": 42,
+  "source_image_count": 15,
+  "source_split": "train",
+  "statistics_by_variant": {
+    "P0": {
+      "maximum_pixel": 255,
+      "mean_laplacian_variance": 306.75654526666665,
+      "mean_luminance": 222.61252133333335,
+      "mean_std_luminance": 57.083805266666666,
+      "minimum_pixel": 0,
+      "samples": 15
+    },
+    "P1": {
+      "maximum_pixel": 255,
+      "mean_laplacian_variance": 168.68202780000001,
+      "mean_luminance": 222.63868913333332,
+      "mean_std_luminance": 56.9310374,
+      "minimum_pixel": 2,
+      "samples": 15
+    },
+    "P2": {
+      "maximum_pixel": 255,
+      "mean_laplacian_variance": 376.58883126666666,
+      "mean_luminance": 220.87850646666666,
+      "mean_std_luminance": 60.488481,
+      "minimum_pixel": 0,
+      "samples": 15
+    },
+    "P3": {
+      "maximum_pixel": 255,
+      "mean_laplacian_variance": 629.5682548,
+      "mean_luminance": 222.5539116,
+      "mean_std_luminance": 57.496596999999994,
+      "minimum_pixel": 0,
+      "samples": 15
+    }
+  },
+  "test_images_used": 0,
+  "variant_output_count": 60,
+  "variants": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "winner_selected": false
+}

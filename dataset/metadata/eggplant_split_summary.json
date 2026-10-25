@@ -1,0 +1,56 @@
+{
+  "actual_percentages": {
+    "test": 0.14996907854050712,
+    "train": 0.7498453927025356,
+    "val": 0.10018552875695733
+  },
+  "allocation_method": "largest_remainder_per_class",
+  "assignment_sha256": "26861714087fffdffd5f098f3283bba5bebe9dbb6cc93bca30dbf4cf7d14d313",
+  "cleaned_fingerprint_before_split": {
+    "class_counts": {
+      "healthy": 1386,
+      "leaf_spot": 495,
+      "mosaic_virus": 1353
+    },
+    "dataset_sha256": "a5c9ea01d64e39143b476f697e42dbab47c083856e254d6b0797a421091ebc9b",
+    "total_bytes": 2172133285,
+    "total_files": 3234
+  },
+  "counts_per_class": {
+    "healthy": {
+      "test": 208,
+      "train": 1039,
+      "val": 139
+    },
+    "leaf_spot": {
+      "test": 74,
+      "train": 371,
+      "val": 50
+    },
+    "mosaic_virus": {
+      "test": 203,
+      "train": 1015,
+      "val": 135
+    }
+  },
+  "counts_per_split": {
+    "test": 485,
+    "train": 2425,
+    "val": 324
+  },
+  "generated_at_utc": "2026-09-09T09:57:50.100125+00:00",
+  "policies": {
+    "augmentation": "Apply only after splitting and only to train; never augment val or test",
+    "class_imbalance": "Preserved in D5; no under-sampling over-sampling class weighting or augmentation applied",
+    "near_duplicate_limitation": "Exact duplicate leakage is prevented; near-duplicate or same-leaf sequence leakage was not deeply assessed because no reliable grouping metadata is available",
+    "test_set": "FROZEN after D5; use only for final evaluation and never for tuning or selection",
+    "validation_set": "Use for model selection hyperparameter tuning preprocessing comparison and early stopping"
+  },
+  "ratios": {
+    "test": 0.15,
+    "train": 0.75,
+    "val": 0.1
+  },
+  "seed": 42,
+  "total": 3234
+}

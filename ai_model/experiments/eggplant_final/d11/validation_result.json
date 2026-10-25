@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "passed": 25,
+  "failed": 0,
+  "checks": {
+    "required_artifacts": true,
+    "config_hash": true,
+    "checkpoint_hash": true,
+    "checkpoint_is_d9_r2": true,
+    "prediction_count": true,
+    "unique_prediction_paths": true,
+    "test_class_counts": true,
+    "probability_shape": true,
+    "probabilities_finite": true,
+    "probabilities_sum_to_one": true,
+    "argmax_mapping": true,
+    "class_name_mapping": true,
+    "correct_flags": true,
+    "metrics_recomputed": true,
+    "classification_support": true,
+    "confusion_total": true,
+    "confusion_rows": true,
+    "confusion_recomputed": true,
+    "normalized_confusion": true,
+    "no_training": true,
+    "no_augmentation": true,
+    "no_threshold_adjustment": true,
+    "no_checkpoint_selection": true,
+    "test_open_recorded": true,
+    "source_data_unchanged": true
+  }
+}

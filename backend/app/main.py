@@ -1,3 +1,5 @@
+# ./backend/app/main.py
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -9,8 +11,8 @@ from app.schemas.analyze import HealthResponse
 
 app = FastAPI(
     title=settings.app_name,
-    description="Backend MVP for plant image analysis.",
-    version="0.1.0",
+    description="PhytoScan Multi-Plant Disease Classification API.",
+    version="1.0.0",
 )
 
 app.add_exception_handler(APIError, api_error_handler)

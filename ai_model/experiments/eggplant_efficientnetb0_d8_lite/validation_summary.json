@@ -1,0 +1,26 @@
+{
+  "errors": [],
+  "parameter_counts": {
+    "non_trainable": 4049571,
+    "total": 4053414,
+    "trainable": 3843
+  },
+  "result": "PASS",
+  "test_image_bytes_accessed": 0,
+  "variants_checked": {
+    "P0": {
+      "best_epoch": 15,
+      "leaf_spot_recall": 0.42,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.6748096317164789
+    },
+    "P3": {
+      "best_epoch": 15,
+      "leaf_spot_recall": 0.46,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.7039624333115575
+    }
+  }
+}

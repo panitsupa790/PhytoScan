@@ -1,0 +1,9 @@
+{
+  "policy": "Only train and val image bytes are loadable; test is rejected before I/O",
+  "test_image_bytes_accessed": 0,
+  "unique_paths_accessed": {
+    "test": 0,
+    "train": 2425,
+    "val": 324
+  }
+}

@@ -1,0 +1,151 @@
+class,filename,review_status,reviewer,notes
+healthy,Healthy Leaf Image 101.jpg,INCORRECT,Codex visual adjudication,visible mottling conflicts with a clean healthy example
+healthy,Healthy Leaf Image 1044.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1047.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1053.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1057.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1078.jpg,CORRECT,Codex visual adjudication,dark tone appears exposure related without distinct lesions
+healthy,Healthy Leaf Image 1159.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1169.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1170.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1177.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1187.jpg,INCORRECT,Codex visual adjudication,visible mottling conflicts with a clean healthy example
+healthy,Healthy Leaf Image 1203.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1228.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1255.jpg,INCORRECT,Codex visual adjudication,uneven color and browning conflict with healthy label
+healthy,Healthy Leaf Image 1285.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1292.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1365.jpg,INCORRECT,Codex visual adjudication,strong mottling conflicts with healthy label
+healthy,Healthy Leaf Image 1395.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1400.jpg,INCORRECT,Codex visual adjudication,visible mottling conflicts with healthy label
+healthy,Healthy Leaf Image 1404.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 141.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 1427.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 145.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 18.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 2.jpg,INCORRECT,Codex visual adjudication,visible mottling conflicts with healthy label
+healthy,Healthy Leaf Image 204.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 312.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 319.jpg,INCORRECT,Codex visual adjudication,prominent chlorosis conflicts with healthy label
+healthy,Healthy Leaf Image 326.jpg,INCORRECT,Codex visual adjudication,prominent surface damage is unsuitable as a healthy example
+healthy,Healthy Leaf Image 354.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 390.jpg,CORRECT,Codex visual adjudication,uneven tone appears lighting related without distinct lesions
+healthy,Healthy Leaf Image 393.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 466.jpg,INCORRECT,Codex visual triage,prominent yellow mottling conflicts with healthy label
+healthy,Healthy Leaf Image 470.jpg,INCORRECT,Codex visual triage,prominent yellow mottling conflicts with healthy label
+healthy,Healthy Leaf Image 471.jpg,INCORRECT,Codex visual triage,prominent yellow mottling conflicts with healthy label
+healthy,Healthy Leaf Image 52.jpg,INCORRECT,Codex visual adjudication,dark marks conflict with a clean healthy example
+healthy,Healthy Leaf Image 539.jpg,INCORRECT,Codex visual adjudication,chlorosis and tissue damage conflict with healthy label
+healthy,Healthy Leaf Image 623.jpg,INCORRECT,Codex visual adjudication,uneven chlorotic coloration conflicts with healthy label
+healthy,Healthy Leaf Image 681.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 698.jpg,INCORRECT,Codex visual adjudication,surface marks and uneven color conflict with healthy label
+healthy,Healthy Leaf Image 727.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 779.jpg,INCORRECT,Codex visual triage,prominent yellow mottling conflicts with healthy label
+healthy,Healthy Leaf Image 781.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 801.jpg,INCORRECT,Codex visual adjudication,prominent yellowing is unsuitable as a healthy example
+healthy,Healthy Leaf Image 805.jpg,INCORRECT,Codex visual adjudication,chlorotic coloration conflicts with healthy label
+healthy,Healthy Leaf Image 871.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 890.jpg,INCORRECT,Codex visual adjudication,visible mottling conflicts with healthy label
+healthy,Healthy Leaf Image 94.jpg,INCORRECT,Codex visual triage,visible lesions conflict with healthy label
+healthy,Healthy Leaf Image 98.jpg,CORRECT,Codex visual triage,leaf appears visually healthy
+healthy,Healthy Leaf Image 986.jpg,INCORRECT,Codex visual triage,prominent yellow mottling conflicts with healthy label
+leaf_spot,Leaf Spot Disease Image 128.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 140.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 150.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 16.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 163.jpg,INCORRECT,Codex visual adjudication,no distinct spot lesions are visible
+leaf_spot,Leaf Spot Disease Image 165.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 171.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 172.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 192.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 227.jpg,INCORRECT,Codex visual adjudication,curling and yellowing lack characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 230.jpg,INCORRECT,Codex visual adjudication,mosaic like mottling dominates without distinct spot lesions
+leaf_spot,Leaf Spot Disease Image 249.jpg,CORRECT,Codex visual triage,multiple visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 25.jpg,INCORRECT,Codex visual triage,leaf appears healthy without visible spot lesions
+leaf_spot,Leaf Spot Disease Image 257.jpg,INCORRECT,Codex visual adjudication,mosaic like mottling dominates without distinct spot lesions
+leaf_spot,Leaf Spot Disease Image 276.jpg,INCORRECT,Codex visual adjudication,deformation and dark tone lack characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 292.jpg,INCORRECT,Codex visual adjudication,mosaic like mottling dominates without distinct spot lesions
+leaf_spot,Leaf Spot Disease Image 294.jpg,CORRECT,Codex visual triage,necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 295.jpg,CORRECT,Codex visual triage,necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 300.jpg,INCORRECT,Codex visual adjudication,mottling and tissue damage lack characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 309.jpg,CORRECT,Codex visual triage,necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 31.jpg,CORRECT,Codex visual triage,small visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 313.jpg,CORRECT,Codex visual adjudication,marginal necrotic lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 324.jpg,INCORRECT,Codex visual adjudication,mottling is visible without characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 343.jpg,CORRECT,Codex visual adjudication,localized necrotic damage supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 345.jpg,INCORRECT,Codex visual triage,yellowing visible without characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 346.jpg,INCORRECT,Codex visual triage,leaf appears healthy without visible spot lesions
+leaf_spot,Leaf Spot Disease Image 348.jpg,INCORRECT,Codex visual adjudication,diffuse yellowing lacks characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 355.jpg,CORRECT,Codex visual adjudication,localized circular lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 366.jpg,INCORRECT,Codex visual adjudication,diffuse chlorosis lacks characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 37.jpg,CORRECT,Codex visual adjudication,localized necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 39.jpg,CORRECT,Codex visual triage,multiple visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 390.jpg,CORRECT,Codex visual adjudication,marginal necrotic lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 399.jpg,INCORRECT,Codex visual adjudication,no distinct spot lesions are visible at usable scale
+leaf_spot,Leaf Spot Disease Image 426.jpg,CORRECT,Codex visual triage,marginal necrotic lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 432.jpg,INCORRECT,Codex visual adjudication,mottling is visible without characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 435.jpg,INCORRECT,Codex visual adjudication,leaf lacks characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 440.jpg,CORRECT,Codex visual triage,circular lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 449.jpg,CORRECT,Codex visual triage,multiple visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 45.jpg,CORRECT,Codex visual adjudication,marginal necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 464.jpg,CORRECT,Codex visual triage,multiple visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 469.jpg,CORRECT,Codex visual adjudication,small localized lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 517.jpg,INCORRECT,Codex visual triage,leaf appears healthy without visible spot lesions
+leaf_spot,Leaf Spot Disease Image 521.jpg,CORRECT,Codex visual adjudication,marginal necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 525.jpg,INCORRECT,Codex visual adjudication,deformation and uneven color lack characteristic spot lesions
+leaf_spot,Leaf Spot Disease Image 56.jpg,CORRECT,Codex visual triage,multiple visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 591.jpg,CORRECT,Codex visual triage,necrotic lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 66.jpg,INCORRECT,Codex visual triage,leaf appears healthy without visible spot lesions
+leaf_spot,Leaf Spot Disease Image 70.jpg,CORRECT,Codex visual triage,visible lesion supports leaf spot label
+leaf_spot,Leaf Spot Disease Image 8.jpg,CORRECT,Codex visual triage,visible lesions support leaf spot label
+leaf_spot,Leaf Spot Disease Image 9.jpg,INCORRECT,Codex visual adjudication,large holes and chlorosis are more consistent with physical or feeding damage
+mosaic_virus,Mosaic Virus Disease Image 1003.jpg,INCORRECT,Codex visual adjudication,sparse marks do not form a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 1019.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1085.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1114.jpg,INCORRECT,Codex visual adjudication,dark leaf lacks a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 1165.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1193.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 12.jpg,CORRECT,Codex visual adjudication,interveinal mottling supports mosaic virus label
+mosaic_virus,Mosaic Virus Disease Image 1202.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1208.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1251.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1279.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1288.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1291.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 1325.jpg,INCORRECT,Codex visual adjudication,wrinkling is visible without a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 188.jpg,INCORRECT,Codex visual adjudication,curling is visible without a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 238.jpg,INCORRECT,Codex visual adjudication,general yellowing lacks a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 245.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 267.jpg,CORRECT,Codex visual adjudication,diffuse interveinal chlorosis supports mosaic virus label
+mosaic_virus,Mosaic Virus Disease Image 268.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 274.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 322.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 331.jpg,CORRECT,Codex visual adjudication,subtle interveinal mottling supports mosaic virus label
+mosaic_virus,Mosaic Virus Disease Image 407.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 447.jpg,CORRECT,Codex visual adjudication,interveinal chlorotic mottling supports mosaic virus label
+mosaic_virus,Mosaic Virus Disease Image 483.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 49.jpg,INCORRECT,Codex visual triage,dark leaf and sparse lesions do not show mosaic symptoms
+mosaic_virus,Mosaic Virus Disease Image 514.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 557.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 568.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 58.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 614.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 64.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 686.jpg,CORRECT,Codex visual adjudication,vein associated color contrast supports mosaic virus label
+mosaic_virus,Mosaic Virus Disease Image 7.jpg,INCORRECT,Codex visual triage,leaf appears healthy without visible mosaic symptoms
+mosaic_virus,Mosaic Virus Disease Image 711.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 715.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 750.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 765.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 769.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 796.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 809.jpg,CORRECT,Codex visual triage,chlorotic mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 850.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 852.jpg,INCORRECT,Codex visual adjudication,leaf lacks a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 872.jpg,CORRECT,Codex visual triage,strong mosaic and deformation support virus label
+mosaic_virus,Mosaic Virus Disease Image 873.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 897.jpg,CORRECT,Codex visual triage,strong chlorotic mosaic supports virus label
+mosaic_virus,Mosaic Virus Disease Image 926.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 93.jpg,INCORRECT,Codex visual adjudication,uneven tone lacks a characteristic mosaic pattern
+mosaic_virus,Mosaic Virus Disease Image 950.jpg,CORRECT,Codex visual triage,strong mosaic pattern supports virus label
+mosaic_virus,Mosaic Virus Disease Image 954.jpg,CORRECT,Codex visual triage,mosaic pattern supports virus label

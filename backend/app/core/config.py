@@ -20,6 +20,15 @@ class Settings:
         os.getenv("MAX_IMAGE_SIZE_BYTES", str(10 * 1024 * 1024))
     )
     cors_origins: tuple[str, ...] = _cors_origins_from_env()
+    model_manifest: str = os.getenv(
+        "MODEL_MANIFEST",
+        "app/data/model_manifest.json",
+    )
+    # Kept only so the previous Eggplant research tests/artifacts remain usable.
+    eggplant_model_manifest: str = os.getenv(
+        "EGGPLANT_MODEL_MANIFEST",
+        "../ai_model/models/eggplant/v1/model_manifest.json",
+    )
 
 
 settings = Settings()

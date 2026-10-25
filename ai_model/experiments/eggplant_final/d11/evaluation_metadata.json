@@ -1,0 +1,26 @@
+{
+  "augmentation_used": false,
+  "checkpoint_selection_performed": false,
+  "checkpoint_sha256": "ae0be68277300848eb4208c5184bf9c937cbe2ea9c8d5abc363eb38976135aa5",
+  "completed_at_utc": "2026-09-13T23:49:44.665467+00:00",
+  "config_sha256": "5a7663db4f8c648fe06ce4d62206f7267946d357cedc6af73a6a7c35f432899b",
+  "devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "evaluation_duration_seconds": 47.85750189999999,
+  "event": "Test set opened for final evaluation",
+  "fine_tuning_performed": false,
+  "keras_version": "3.15.1",
+  "opened_at_utc": "2026-09-13T23:48:55.101537+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "prediction_rule": "softmax_argmax",
+  "python_version": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "status": "TEST_IS_NO_LONGER_UNSEEN_FOR_THIS_MODEL_VERSION",
+  "tensorflow_version": "2.21.0",
+  "test_assignment_sha256": "26861714087fffdffd5f098f3283bba5bebe9dbb6cc93bca30dbf4cf7d14d313",
+  "test_images_accessed": 485,
+  "test_time_augmentation_used": false,
+  "threshold_adjustment_used": false,
+  "training_performed": false,
+  "unique_predictions": 485
+}

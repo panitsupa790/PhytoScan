@@ -1,0 +1,54 @@
+{
+  "config_version": "1.0",
+  "random_seed": 42,
+  "output": {
+    "target_width": 224,
+    "target_height": 224,
+    "color_mode": "RGB",
+    "dtype": "uint8",
+    "value_range": [0, 255],
+    "model_specific_normalization": false
+  },
+  "resize": {
+    "policy": "aspect_ratio_preserving_pad",
+    "interpolation": "lanczos",
+    "pad_color_rgb": [255, 255, 255]
+  },
+  "augmentation": {
+    "enabled": false
+  },
+  "class_balancing": {
+    "enabled": false
+  },
+  "variants": {
+    "P0": {
+      "name": "baseline",
+      "method": "resize_only",
+      "parameters": {}
+    },
+    "P1": {
+      "name": "noise_reduction",
+      "method": "median_filter",
+      "parameters": {
+        "size": 3
+      }
+    },
+    "P2": {
+      "name": "brightness_contrast",
+      "method": "luminance_brightness_contrast",
+      "parameters": {
+        "brightness_factor": 1.02,
+        "contrast_factor": 1.08
+      }
+    },
+    "P3": {
+      "name": "sharpening",
+      "method": "unsharp_mask",
+      "parameters": {
+        "radius": 1.0,
+        "percent": 60,
+        "threshold": 3
+      }
+    }
+  }
+}

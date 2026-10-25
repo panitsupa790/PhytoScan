@@ -1,0 +1,6 @@
+label,precision,recall,f1_score,support
+healthy,0.0,0.0,0.0,2
+leaf_spot,1.0,0.5,0.6666666666666666,2
+mosaic_virus,0.5,1.0,0.6666666666666666,2
+macro avg,0.5,0.5,0.4444444444444444,6
+weighted avg,0.5,0.5,0.4444444444444444,6

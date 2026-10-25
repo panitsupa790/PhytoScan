@@ -1,0 +1,64 @@
+{
+  "purpose": "D12 development regression; Validation images only",
+  "tensorflow_model_version": "eggplant-v1",
+  "preprocessing_variant": "P3",
+  "probability_tolerance": 1e-05,
+  "samples": [
+    {
+      "source_split": "val",
+      "true_class": "healthy",
+      "filename": "Healthy Leaf Image 1001.jpg",
+      "input_sha256": "808297e75fe112887169bdadbd3d6a4a21b3ecfff43f4ba5249a9b51ffaa56e4",
+      "preprocessing_rgb_uint8_sha256": "70423410c60fa2cf9feac3b8091f5975ce5d9648abb626bef2b95c6b7af0ce8f",
+      "predicted_class": "healthy",
+      "predicted_class_index": 0,
+      "confidence": 0.5248609781265259,
+      "probabilities": {
+        "healthy": 0.5248609781265259,
+        "leaf_spot": 0.06088155135512352,
+        "mosaic_virus": 0.4142574965953827
+      }
+    },
+    {
+      "source_split": "val",
+      "true_class": "leaf_spot",
+      "filename": "Leaf Spot Disease Image 129.jpg",
+      "input_sha256": "1b0d65c1e0f9dc2e6019f43fcdf0ca14036704daab0f34b868f21b85f19e7324",
+      "preprocessing_rgb_uint8_sha256": "2569ef9b2a402a4f6e345c3a5890bdd82396236e4e9f571be47269840217d6d0",
+      "predicted_class": "leaf_spot",
+      "predicted_class_index": 1,
+      "confidence": 0.7201937437057495,
+      "probabilities": {
+        "healthy": 0.1731179803609848,
+        "leaf_spot": 0.7201937437057495,
+        "mosaic_virus": 0.10668830573558807
+      }
+    },
+    {
+      "source_split": "val",
+      "true_class": "mosaic_virus",
+      "filename": "Mosaic Virus Disease Image 1045.jpg",
+      "input_sha256": "fb574f8a89e8412b67719b5b2e60406d401c9b82485bb435b333393bb4859aff",
+      "preprocessing_rgb_uint8_sha256": "3259a023e59a12bda30855cc2d7b54291fa7716916d275dccba42bf31e2dc325",
+      "predicted_class": "healthy",
+      "predicted_class_index": 0,
+      "confidence": 0.6635256409645081,
+      "probabilities": {
+        "healthy": 0.6635256409645081,
+        "leaf_spot": 0.09884089231491089,
+        "mosaic_virus": 0.23763340711593628
+      }
+    }
+  ],
+  "three_image_aggregate": {
+    "policy": "mean_class_probabilities",
+    "predicted_class": "healthy",
+    "confidence": 0.45383477210998535,
+    "probabilities": {
+      "healthy": 0.45383477210998535,
+      "leaf_spot": 0.2933054268360138,
+      "mosaic_virus": 0.2528597762187322
+    }
+  },
+  "test_images_used": 0
+}

@@ -1,0 +1,71 @@
+{
+  "config_version": "1.0",
+  "experiment_id": "eggplant_d9_refinement",
+  "seed": 42,
+  "classes": ["healthy", "leaf_spot", "mosaic_virus"],
+  "data": {
+    "manifest": "dataset/metadata/eggplant_split_manifest.csv",
+    "split_root": "dataset/split/eggplant",
+    "train_split": "train",
+    "validation_split": "val",
+    "expected_counts": {"train": 2425, "val": 324, "test": 0},
+    "train_class_counts": {"healthy": 1039, "leaf_spot": 371, "mosaic_virus": 1015},
+    "image_size": [224, 224],
+    "channels": 3
+  },
+  "source": {
+    "checkpoint": "ai_model/experiments/eggplant_efficientnetb0_d8_lite/runs/P3/best_model.keras",
+    "checkpoint_sha256": "c30bfc8839ba91bb4ced173375aeb2b95098e57d4eea32a326e4f23ec1bb0496",
+    "d8_metrics": "ai_model/experiments/eggplant_efficientnetb0_d8_lite/runs/P3/metrics.json",
+    "preprocessing_config": "ai_model/configs/eggplant_preprocessing.json",
+    "preprocessing_variant": "P3"
+  },
+  "model": {
+    "architecture": "EfficientNetB0",
+    "backbone_layer_name": "efficientnetb0",
+    "feature_extractor_layer_name": "frozen_efficientnetb0_features",
+    "head_layer_name": "classification_head",
+    "top_layer_window": 20,
+    "freeze_batch_normalization": true,
+    "dropout_rate": 0.2,
+    "output_classes": 3
+  },
+  "training": {
+    "batch_size": 32,
+    "max_epochs": 20,
+    "optimizer": "Adam",
+    "learning_rate": 0.00001,
+    "loss": "sparse_categorical_crossentropy",
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 5,
+    "restore_best_weights": true,
+    "shuffle_train": true
+  },
+  "class_weights": {
+    "formula": "N / (number_of_classes * count_i)"
+  },
+  "augmentation": {
+    "horizontal_flip": true,
+    "rotation_degrees": 10.0,
+    "zoom_fraction": 0.1,
+    "translation_height_fraction": 0.05,
+    "translation_width_fraction": 0.05,
+    "fill_mode": "reflect",
+    "interpolation": "bilinear"
+  },
+  "runs": {
+    "R1": {"directory": "R1_finetune", "technique": "Fine-tuning", "class_weights": false, "augmentation": false},
+    "R2": {"directory": "R2_class_weight", "technique": "Fine-tuning + class weights", "class_weights": true, "augmentation": false},
+    "R3": {"directory": "R3_augmentation", "technique": "Fine-tuning + class weights + mild train-only augmentation", "class_weights": true, "augmentation": true}
+  },
+  "selection": {
+    "primary_metric": "validation_macro_f1",
+    "close_tolerance": 0.005,
+    "require_leaf_spot_not_collapsed": true
+  },
+  "smoke_test": {
+    "train_per_class": 4,
+    "validation_per_class": 2,
+    "epochs": 1
+  }
+}

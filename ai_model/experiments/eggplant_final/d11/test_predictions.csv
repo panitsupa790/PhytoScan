@@ -1,0 +1,486 @@
+filename,source_path,true_class,true_class_index,predicted_class,predicted_class_index,prob_healthy,prob_leaf_spot,prob_mosaic_virus,correct
+Healthy Leaf Image 10.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 10.jpg,healthy,0,healthy,0,0.9298722147941589,0.03360702097415924,0.03652077540755272,True
+Healthy Leaf Image 1003.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1003.jpg,healthy,0,healthy,0,0.7675221562385559,0.09222874045372009,0.140249103307724,True
+Healthy Leaf Image 1010.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1010.jpg,healthy,0,healthy,0,0.9479743838310242,0.012839333154261112,0.039186280220746994,True
+Healthy Leaf Image 1011.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1011.jpg,healthy,0,healthy,0,0.8019075989723206,0.01324595045298338,0.18484649062156677,True
+Healthy Leaf Image 102.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 102.jpg,healthy,0,healthy,0,0.9207220077514648,0.0236437376588583,0.05563417822122574,True
+Healthy Leaf Image 1036.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1036.jpg,healthy,0,mosaic_virus,2,0.33118119835853577,0.09023450314998627,0.5785843133926392,False
+Healthy Leaf Image 1040.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1040.jpg,healthy,0,mosaic_virus,2,0.15209347009658813,0.051003579050302505,0.7969028949737549,False
+Healthy Leaf Image 1048.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1048.jpg,healthy,0,mosaic_virus,2,0.25291281938552856,0.06850718706846237,0.6785799860954285,False
+Healthy Leaf Image 1051.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1051.jpg,healthy,0,mosaic_virus,2,0.29770246148109436,0.023596569895744324,0.6787009239196777,False
+Healthy Leaf Image 1058.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1058.jpg,healthy,0,healthy,0,0.9783944487571716,0.015106355771422386,0.006499126553535461,True
+Healthy Leaf Image 1060.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1060.jpg,healthy,0,healthy,0,0.7556065320968628,0.19616205990314484,0.04823138192296028,True
+Healthy Leaf Image 1061.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1061.jpg,healthy,0,leaf_spot,1,0.09373153001070023,0.8368256688117981,0.06944280862808228,False
+Healthy Leaf Image 1084.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1084.jpg,healthy,0,healthy,0,0.8586434125900269,0.11985384672880173,0.021502727642655373,True
+Healthy Leaf Image 1089.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1089.jpg,healthy,0,healthy,0,0.5449707508087158,0.10470785200595856,0.35032135248184204,True
+Healthy Leaf Image 1092.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1092.jpg,healthy,0,mosaic_virus,2,0.27226072549819946,0.3258591890335083,0.40188005566596985,False
+Healthy Leaf Image 1109.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1109.jpg,healthy,0,healthy,0,0.9047322869300842,0.01057449821382761,0.08469325304031372,True
+Healthy Leaf Image 1112.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1112.jpg,healthy,0,healthy,0,0.7626330256462097,0.0665951520204544,0.17077180743217468,True
+Healthy Leaf Image 1115.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1115.jpg,healthy,0,healthy,0,0.6818080544471741,0.15497758984565735,0.16321426630020142,True
+Healthy Leaf Image 1124.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1124.jpg,healthy,0,healthy,0,0.6558074951171875,0.2232103943824768,0.1209821030497551,True
+Healthy Leaf Image 1125.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1125.jpg,healthy,0,healthy,0,0.9300220012664795,0.029803995043039322,0.04017401114106178,True
+Healthy Leaf Image 113.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 113.jpg,healthy,0,mosaic_virus,2,0.12036977708339691,0.23194098472595215,0.647689163684845,False
+Healthy Leaf Image 1132.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1132.jpg,healthy,0,healthy,0,0.8572250604629517,0.02670469507575035,0.11607024818658829,True
+Healthy Leaf Image 1135.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1135.jpg,healthy,0,healthy,0,0.920325756072998,0.031124528497457504,0.04854970797896385,True
+Healthy Leaf Image 1136.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1136.jpg,healthy,0,healthy,0,0.8730847835540771,0.02739606238901615,0.09951914101839066,True
+Healthy Leaf Image 1139.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1139.jpg,healthy,0,healthy,0,0.8402895331382751,0.016873160377144814,0.14283721148967743,True
+Healthy Leaf Image 114.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 114.jpg,healthy,0,healthy,0,0.7550750374794006,0.09270212799310684,0.15222279727458954,True
+Healthy Leaf Image 1154.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1154.jpg,healthy,0,healthy,0,0.7579917907714844,0.20056185126304626,0.04144635796546936,True
+Healthy Leaf Image 1156.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1156.jpg,healthy,0,healthy,0,0.5762303471565247,0.03368149697780609,0.39008814096450806,True
+Healthy Leaf Image 1167.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1167.jpg,healthy,0,healthy,0,0.8185103535652161,0.03605172038078308,0.14543789625167847,True
+Healthy Leaf Image 117.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 117.jpg,healthy,0,healthy,0,0.6471580266952515,0.02871965989470482,0.32412225008010864,True
+Healthy Leaf Image 1177.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1177.jpg,healthy,0,healthy,0,0.46800851821899414,0.3269885778427124,0.20500294864177704,True
+Healthy Leaf Image 118.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 118.jpg,healthy,0,mosaic_virus,2,0.40029314160346985,0.10582820326089859,0.4938786029815674,False
+Healthy Leaf Image 1181.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1181.jpg,healthy,0,healthy,0,0.5885648131370544,0.10294648259878159,0.30848875641822815,True
+Healthy Leaf Image 1189.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1189.jpg,healthy,0,healthy,0,0.9111352562904358,0.06963257491588593,0.019232146441936493,True
+Healthy Leaf Image 1196.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1196.jpg,healthy,0,healthy,0,0.683574914932251,0.24190515279769897,0.07451990246772766,True
+Healthy Leaf Image 1199.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1199.jpg,healthy,0,healthy,0,0.6446258425712585,0.18117421865463257,0.1741999238729477,True
+Healthy Leaf Image 1205.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1205.jpg,healthy,0,healthy,0,0.4569269120693207,0.1810682713985443,0.362004816532135,True
+Healthy Leaf Image 1211.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1211.jpg,healthy,0,healthy,0,0.947769045829773,0.018717095255851746,0.033513832837343216,True
+Healthy Leaf Image 1215.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1215.jpg,healthy,0,healthy,0,0.7644054889678955,0.1196497455239296,0.1159447580575943,True
+Healthy Leaf Image 1216.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1216.jpg,healthy,0,healthy,0,0.5823206901550293,0.2167501449584961,0.2009291648864746,True
+Healthy Leaf Image 1222.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1222.jpg,healthy,0,healthy,0,0.6946829557418823,0.17398539185523987,0.13133159279823303,True
+Healthy Leaf Image 1235.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1235.jpg,healthy,0,healthy,0,0.564172089099884,0.2064235806465149,0.22940431535243988,True
+Healthy Leaf Image 1243.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1243.jpg,healthy,0,healthy,0,0.4718933403491974,0.3320756256580353,0.19603103399276733,True
+Healthy Leaf Image 1245.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1245.jpg,healthy,0,healthy,0,0.501350462436676,0.25689709186553955,0.24175246059894562,True
+Healthy Leaf Image 125.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 125.jpg,healthy,0,healthy,0,0.5299460291862488,0.3251594007015228,0.1448945552110672,True
+Healthy Leaf Image 1272.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1272.jpg,healthy,0,healthy,0,0.5945180058479309,0.11853597313165665,0.28694605827331543,True
+Healthy Leaf Image 1275.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1275.jpg,healthy,0,healthy,0,0.6216851472854614,0.026139723137021065,0.35217514634132385,True
+Healthy Leaf Image 1282.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1282.jpg,healthy,0,healthy,0,0.7919103503227234,0.01710847020149231,0.1909812092781067,True
+Healthy Leaf Image 1300.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1300.jpg,healthy,0,leaf_spot,1,0.23447299003601074,0.7493677735328674,0.01615922525525093,False
+Healthy Leaf Image 1305.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1305.jpg,healthy,0,healthy,0,0.43637242913246155,0.41480952501296997,0.14881806075572968,True
+Healthy Leaf Image 131.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 131.jpg,healthy,0,healthy,0,0.9716507792472839,0.007129125762730837,0.021220151335000992,True
+Healthy Leaf Image 1312.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1312.jpg,healthy,0,healthy,0,0.6105048656463623,0.2016364187002182,0.1878586709499359,True
+Healthy Leaf Image 1313.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1313.jpg,healthy,0,healthy,0,0.6525623798370361,0.061526887118816376,0.2859107255935669,True
+Healthy Leaf Image 1316.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1316.jpg,healthy,0,healthy,0,0.5924402475357056,0.2577851116657257,0.14977461099624634,True
+Healthy Leaf Image 1319.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1319.jpg,healthy,0,healthy,0,0.7101926207542419,0.10095865279436111,0.18884867429733276,True
+Healthy Leaf Image 132.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 132.jpg,healthy,0,healthy,0,0.9401347637176514,0.03252106532454491,0.027344195172190666,True
+Healthy Leaf Image 1323.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1323.jpg,healthy,0,healthy,0,0.6142448782920837,0.32787078619003296,0.05788436904549599,True
+Healthy Leaf Image 1334.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1334.jpg,healthy,0,healthy,0,0.5876522064208984,0.1720329076051712,0.24031496047973633,True
+Healthy Leaf Image 1348.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1348.jpg,healthy,0,healthy,0,0.6348108053207397,0.3543905019760132,0.010798695497214794,True
+Healthy Leaf Image 1374.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1374.jpg,healthy,0,healthy,0,0.9705670475959778,0.009718860499560833,0.019714167341589928,True
+Healthy Leaf Image 1388.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1388.jpg,healthy,0,healthy,0,0.46798110008239746,0.3479659855365753,0.184052973985672,True
+Healthy Leaf Image 1391.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1391.jpg,healthy,0,mosaic_virus,2,0.4120124876499176,0.15231215953826904,0.43567538261413574,False
+Healthy Leaf Image 141.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 141.jpg,healthy,0,healthy,0,0.6371466517448425,0.22576779127120972,0.13708554208278656,True
+Healthy Leaf Image 1412.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1412.jpg,healthy,0,healthy,0,0.8762519359588623,0.07091592252254486,0.05283215641975403,True
+Healthy Leaf Image 1413.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1413.jpg,healthy,0,healthy,0,0.7519312500953674,0.17615266144275665,0.07191608101129532,True
+Healthy Leaf Image 1415.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1415.jpg,healthy,0,healthy,0,0.8066574335098267,0.12254464626312256,0.0707978680729866,True
+Healthy Leaf Image 142.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 142.jpg,healthy,0,healthy,0,0.6222496628761292,0.2511323392391205,0.12661799788475037,True
+Healthy Leaf Image 1427.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1427.jpg,healthy,0,healthy,0,0.9027212858200073,0.045411333441734314,0.05186742916703224,True
+Healthy Leaf Image 1429.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1429.jpg,healthy,0,healthy,0,0.7177282571792603,0.18446476757526398,0.09780701994895935,True
+Healthy Leaf Image 1430.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1430.jpg,healthy,0,healthy,0,0.4562439024448395,0.1061302125453949,0.4376258850097656,True
+Healthy Leaf Image 1436.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1436.jpg,healthy,0,healthy,0,0.6373873949050903,0.18257972598075867,0.180032879114151,True
+Healthy Leaf Image 1439.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1439.jpg,healthy,0,healthy,0,0.8971723318099976,0.07016430050134659,0.032663341611623764,True
+Healthy Leaf Image 1444.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1444.jpg,healthy,0,healthy,0,0.9158436059951782,0.06051475927233696,0.023641593754291534,True
+Healthy Leaf Image 1446.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1446.jpg,healthy,0,leaf_spot,1,0.030701352283358574,0.9464735388755798,0.022825129330158234,False
+Healthy Leaf Image 1447.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1447.jpg,healthy,0,healthy,0,0.8525902032852173,0.11020933091640472,0.03720040246844292,True
+Healthy Leaf Image 1449.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 1449.jpg,healthy,0,mosaic_virus,2,0.3900566101074219,0.14160168170928955,0.4683416485786438,False
+Healthy Leaf Image 147.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 147.jpg,healthy,0,mosaic_virus,2,0.39032718539237976,0.02094157785177231,0.5887312293052673,False
+Healthy Leaf Image 16.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 16.jpg,healthy,0,healthy,0,0.878737211227417,0.10051096230745316,0.02075190097093582,True
+Healthy Leaf Image 162.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 162.jpg,healthy,0,healthy,0,0.8962941765785217,0.028727762401103973,0.0749780461192131,True
+Healthy Leaf Image 17.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 17.jpg,healthy,0,leaf_spot,1,0.4178388714790344,0.4638378620147705,0.11832330375909805,False
+Healthy Leaf Image 173.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 173.jpg,healthy,0,healthy,0,0.5195343494415283,0.2311677634716034,0.24929794669151306,True
+Healthy Leaf Image 175.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 175.jpg,healthy,0,healthy,0,0.9788917303085327,0.011789994314312935,0.009318307973444462,True
+Healthy Leaf Image 181.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 181.jpg,healthy,0,healthy,0,0.9305768013000488,0.04451250657439232,0.024910779669880867,True
+Healthy Leaf Image 205.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 205.jpg,healthy,0,healthy,0,0.4865672290325165,0.4270276129245758,0.08640510588884354,True
+Healthy Leaf Image 206.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 206.jpg,healthy,0,healthy,0,0.9064706563949585,0.05047587305307388,0.043053433299064636,True
+Healthy Leaf Image 208.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 208.jpg,healthy,0,healthy,0,0.7689120769500732,0.17728184163570404,0.053806059062480927,True
+Healthy Leaf Image 209.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 209.jpg,healthy,0,mosaic_virus,2,0.4369563162326813,0.06040121987462044,0.5026424527168274,False
+Healthy Leaf Image 212.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 212.jpg,healthy,0,healthy,0,0.8796079158782959,0.01819651387631893,0.10219552367925644,True
+Healthy Leaf Image 214.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 214.jpg,healthy,0,healthy,0,0.8075733184814453,0.10132013261318207,0.09110662341117859,True
+Healthy Leaf Image 218.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 218.jpg,healthy,0,healthy,0,0.9151226282119751,0.03529084473848343,0.049586471170186996,True
+Healthy Leaf Image 228.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 228.jpg,healthy,0,healthy,0,0.850559413433075,0.09102395176887512,0.0584166944026947,True
+Healthy Leaf Image 233.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 233.jpg,healthy,0,healthy,0,0.733193576335907,0.2211756557226181,0.04563072323799133,True
+Healthy Leaf Image 254.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 254.jpg,healthy,0,healthy,0,0.7143229246139526,0.22932730615139008,0.05634978041052818,True
+Healthy Leaf Image 261.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 261.jpg,healthy,0,healthy,0,0.8211739659309387,0.06468452513217926,0.1141415685415268,True
+Healthy Leaf Image 262.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 262.jpg,healthy,0,healthy,0,0.9253873825073242,0.028128109872341156,0.046484578400850296,True
+Healthy Leaf Image 271.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 271.jpg,healthy,0,healthy,0,0.8831479549407959,0.08070028573274612,0.03615182265639305,True
+Healthy Leaf Image 288.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 288.jpg,healthy,0,leaf_spot,1,0.46824225783348083,0.5185924172401428,0.01316528394818306,False
+Healthy Leaf Image 296.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 296.jpg,healthy,0,mosaic_virus,2,0.3967905640602112,0.03820236772298813,0.5650070309638977,False
+Healthy Leaf Image 300.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 300.jpg,healthy,0,healthy,0,0.8665452003479004,0.10106667131185532,0.03238809108734131,True
+Healthy Leaf Image 302.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 302.jpg,healthy,0,healthy,0,0.7157720327377319,0.04231890290975571,0.24190908670425415,True
+Healthy Leaf Image 32.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 32.jpg,healthy,0,healthy,0,0.9785056710243225,0.015571259893476963,0.0059230513870716095,True
+Healthy Leaf Image 320.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 320.jpg,healthy,0,mosaic_virus,2,0.18155330419540405,0.11961178481578827,0.6988348960876465,False
+Healthy Leaf Image 332.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 332.jpg,healthy,0,healthy,0,0.6851264238357544,0.12844708561897278,0.18642646074295044,True
+Healthy Leaf Image 346.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 346.jpg,healthy,0,healthy,0,0.4539084732532501,0.19294586777687073,0.3531457483768463,True
+Healthy Leaf Image 349.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 349.jpg,healthy,0,mosaic_virus,2,0.13767009973526,0.18526262044906616,0.6770672798156738,False
+Healthy Leaf Image 352.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 352.jpg,healthy,0,healthy,0,0.5995326638221741,0.07823138684034348,0.3222358524799347,True
+Healthy Leaf Image 36.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 36.jpg,healthy,0,healthy,0,0.5777665972709656,0.06458240002393723,0.3576509952545166,True
+Healthy Leaf Image 380.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 380.jpg,healthy,0,mosaic_virus,2,0.22854505479335785,0.013032404705882072,0.7584225535392761,False
+Healthy Leaf Image 388.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 388.jpg,healthy,0,mosaic_virus,2,0.04515910521149635,0.024726344272494316,0.9301146268844604,False
+Healthy Leaf Image 392.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 392.jpg,healthy,0,healthy,0,0.852674126625061,0.05858490616083145,0.08874098211526871,True
+Healthy Leaf Image 393.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 393.jpg,healthy,0,leaf_spot,1,0.25209841132164,0.6402477025985718,0.10765388607978821,False
+Healthy Leaf Image 395.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 395.jpg,healthy,0,healthy,0,0.5119513273239136,0.3776229918003082,0.1104256883263588,True
+Healthy Leaf Image 399.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 399.jpg,healthy,0,healthy,0,0.9844447374343872,0.005889700725674629,0.009665567427873611,True
+Healthy Leaf Image 408.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 408.jpg,healthy,0,healthy,0,0.8721688389778137,0.04516223445534706,0.0826689600944519,True
+Healthy Leaf Image 413.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 413.jpg,healthy,0,healthy,0,0.677151083946228,0.2816903293132782,0.04115854948759079,True
+Healthy Leaf Image 414.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 414.jpg,healthy,0,leaf_spot,1,0.36203598976135254,0.4764315187931061,0.16153252124786377,False
+Healthy Leaf Image 423.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 423.jpg,healthy,0,healthy,0,0.6831664443016052,0.018558215349912643,0.29827532172203064,True
+Healthy Leaf Image 425.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 425.jpg,healthy,0,healthy,0,0.605248212814331,0.22096629440784454,0.17378558218479156,True
+Healthy Leaf Image 426.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 426.jpg,healthy,0,healthy,0,0.7959898710250854,0.18122509121894836,0.022784985601902008,True
+Healthy Leaf Image 429.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 429.jpg,healthy,0,healthy,0,0.4888429045677185,0.11876971274614334,0.39238736033439636,True
+Healthy Leaf Image 435.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 435.jpg,healthy,0,mosaic_virus,2,0.47499144077301025,0.023876884952187538,0.5011315941810608,False
+Healthy Leaf Image 456.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 456.jpg,healthy,0,healthy,0,0.6526451706886292,0.08085200190544128,0.2665027379989624,True
+Healthy Leaf Image 462.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 462.jpg,healthy,0,healthy,0,0.6845435500144958,0.1660091131925583,0.14944730699062347,True
+Healthy Leaf Image 467.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 467.jpg,healthy,0,healthy,0,0.5660294890403748,0.15885406732559204,0.2751164734363556,True
+Healthy Leaf Image 504.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 504.jpg,healthy,0,healthy,0,0.8891193270683289,0.05660928785800934,0.0542713962495327,True
+Healthy Leaf Image 509.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 509.jpg,healthy,0,healthy,0,0.7190041542053223,0.06538525968790054,0.2156105786561966,True
+Healthy Leaf Image 51.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 51.jpg,healthy,0,healthy,0,0.9628792405128479,0.028265204280614853,0.008855492807924747,True
+Healthy Leaf Image 510.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 510.jpg,healthy,0,leaf_spot,1,0.21811048686504364,0.4375750720500946,0.34431445598602295,False
+Healthy Leaf Image 521.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 521.jpg,healthy,0,healthy,0,0.8995247483253479,0.045283325016498566,0.055191975086927414,True
+Healthy Leaf Image 533.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 533.jpg,healthy,0,healthy,0,0.8293339014053345,0.014824316836893559,0.15584173798561096,True
+Healthy Leaf Image 540.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 540.jpg,healthy,0,healthy,0,0.522657036781311,0.35884520411491394,0.11849776655435562,True
+Healthy Leaf Image 560.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 560.jpg,healthy,0,mosaic_virus,2,0.4063277244567871,0.10350298881530762,0.4901692867279053,False
+Healthy Leaf Image 566.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 566.jpg,healthy,0,healthy,0,0.8110003471374512,0.04331430420279503,0.1456853747367859,True
+Healthy Leaf Image 57.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 57.jpg,healthy,0,healthy,0,0.9060359597206116,0.04260990768671036,0.05135418847203255,True
+Healthy Leaf Image 570.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 570.jpg,healthy,0,healthy,0,0.9626373052597046,0.01513256411999464,0.022230127826333046,True
+Healthy Leaf Image 58.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 58.jpg,healthy,0,healthy,0,0.9467466473579407,0.010237143374979496,0.0430162250995636,True
+Healthy Leaf Image 580.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 580.jpg,healthy,0,healthy,0,0.8598870038986206,0.031091248616576195,0.10902173072099686,True
+Healthy Leaf Image 586.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 586.jpg,healthy,0,healthy,0,0.9562625885009766,0.012049767188727856,0.03168763592839241,True
+Healthy Leaf Image 598.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 598.jpg,healthy,0,healthy,0,0.7774245738983154,0.07708612829446793,0.14548924565315247,True
+Healthy Leaf Image 610.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 610.jpg,healthy,0,leaf_spot,1,0.31131890416145325,0.6249287128448486,0.0637524425983429,False
+Healthy Leaf Image 631.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 631.jpg,healthy,0,mosaic_virus,2,0.1509460061788559,0.2702857553958893,0.578768253326416,False
+Healthy Leaf Image 637.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 637.jpg,healthy,0,healthy,0,0.454956591129303,0.37035831809043884,0.17468507587909698,True
+Healthy Leaf Image 647.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 647.jpg,healthy,0,healthy,0,0.8055648803710938,0.14386597275733948,0.05056919902563095,True
+Healthy Leaf Image 658.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 658.jpg,healthy,0,healthy,0,0.666109025478363,0.192091166973114,0.14179979264736176,True
+Healthy Leaf Image 660.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 660.jpg,healthy,0,healthy,0,0.6529393792152405,0.2871212959289551,0.059939391911029816,True
+Healthy Leaf Image 669.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 669.jpg,healthy,0,healthy,0,0.6578747034072876,0.05776328966021538,0.2843620479106903,True
+Healthy Leaf Image 673.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 673.jpg,healthy,0,healthy,0,0.5245762467384338,0.3716486692428589,0.10377506911754608,True
+Healthy Leaf Image 677.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 677.jpg,healthy,0,healthy,0,0.5934187769889832,0.29465821385383606,0.11192309856414795,True
+Healthy Leaf Image 691.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 691.jpg,healthy,0,healthy,0,0.5857755541801453,0.21294522285461426,0.20127922296524048,True
+Healthy Leaf Image 710.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 710.jpg,healthy,0,healthy,0,0.8005812764167786,0.06929533928632736,0.13012339174747467,True
+Healthy Leaf Image 713.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 713.jpg,healthy,0,leaf_spot,1,0.12125120311975479,0.8643054366111755,0.014443316496908665,False
+Healthy Leaf Image 716.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 716.jpg,healthy,0,mosaic_virus,2,0.1843620389699936,0.02751876600086689,0.7881192564964294,False
+Healthy Leaf Image 72.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 72.jpg,healthy,0,healthy,0,0.7450369596481323,0.20685593783855438,0.048107076436281204,True
+Healthy Leaf Image 722.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 722.jpg,healthy,0,healthy,0,0.8072469830513,0.04236309975385666,0.15038996934890747,True
+Healthy Leaf Image 727.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 727.jpg,healthy,0,healthy,0,0.7617158889770508,0.182292178273201,0.05599195137619972,True
+Healthy Leaf Image 728.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 728.jpg,healthy,0,healthy,0,0.6643460392951965,0.124143086373806,0.21151086688041687,True
+Healthy Leaf Image 731.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 731.jpg,healthy,0,healthy,0,0.5380681753158569,0.2826159596443176,0.17931582033634186,True
+Healthy Leaf Image 732.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 732.jpg,healthy,0,leaf_spot,1,0.4289949834346771,0.4444747269153595,0.12653028964996338,False
+Healthy Leaf Image 744.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 744.jpg,healthy,0,healthy,0,0.8881591558456421,0.03681730851531029,0.0750235840678215,True
+Healthy Leaf Image 752.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 752.jpg,healthy,0,healthy,0,0.6172037720680237,0.09541960060596466,0.28737661242485046,True
+Healthy Leaf Image 757.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 757.jpg,healthy,0,leaf_spot,1,0.38266751170158386,0.5608801245689392,0.0564524382352829,False
+Healthy Leaf Image 76.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 76.jpg,healthy,0,healthy,0,0.9608407020568848,0.026246817782521248,0.012912407517433167,True
+Healthy Leaf Image 760.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 760.jpg,healthy,0,healthy,0,0.7073367238044739,0.19343209266662598,0.09923122078180313,True
+Healthy Leaf Image 766.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 766.jpg,healthy,0,healthy,0,0.8873560428619385,0.01518929097801447,0.09745466709136963,True
+Healthy Leaf Image 774.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 774.jpg,healthy,0,leaf_spot,1,0.31464844942092896,0.6230190992355347,0.062332455068826675,False
+Healthy Leaf Image 786.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 786.jpg,healthy,0,healthy,0,0.7515367865562439,0.02972567081451416,0.21873749792575836,True
+Healthy Leaf Image 806.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 806.jpg,healthy,0,healthy,0,0.461234986782074,0.3493547737598419,0.1894102394580841,True
+Healthy Leaf Image 808.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 808.jpg,healthy,0,healthy,0,0.6731137633323669,0.30669069290161133,0.02019554004073143,True
+Healthy Leaf Image 818.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 818.jpg,healthy,0,healthy,0,0.8291226029396057,0.1583736091852188,0.012503871694207191,True
+Healthy Leaf Image 82.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 82.jpg,healthy,0,mosaic_virus,2,0.3051242232322693,0.24869541823863983,0.4461803436279297,False
+Healthy Leaf Image 828.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 828.jpg,healthy,0,leaf_spot,1,0.23824617266654968,0.7086775302886963,0.05307628959417343,False
+Healthy Leaf Image 830.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 830.jpg,healthy,0,healthy,0,0.8873497843742371,0.09118104726076126,0.021469155326485634,True
+Healthy Leaf Image 840.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 840.jpg,healthy,0,healthy,0,0.5587228536605835,0.28199470043182373,0.15928249061107635,True
+Healthy Leaf Image 841.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 841.jpg,healthy,0,healthy,0,0.9193419218063354,0.03630014881491661,0.04435787722468376,True
+Healthy Leaf Image 846.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 846.jpg,healthy,0,mosaic_virus,2,0.15467973053455353,0.019100436940789223,0.8262197971343994,False
+Healthy Leaf Image 85.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 85.jpg,healthy,0,leaf_spot,1,0.16692829132080078,0.6066845059394836,0.22638718783855438,False
+Healthy Leaf Image 851.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 851.jpg,healthy,0,mosaic_virus,2,0.24958927929401398,0.007354131434112787,0.74305659532547,False
+Healthy Leaf Image 855.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 855.jpg,healthy,0,healthy,0,0.9221787452697754,0.0641770139336586,0.013644256629049778,True
+Healthy Leaf Image 857.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 857.jpg,healthy,0,healthy,0,0.9352229833602905,0.03828805312514305,0.02648894302546978,True
+Healthy Leaf Image 865.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 865.jpg,healthy,0,leaf_spot,1,0.42018231749534607,0.5611258149147034,0.01869179867208004,False
+Healthy Leaf Image 881.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 881.jpg,healthy,0,leaf_spot,1,0.2064155489206314,0.7558041214942932,0.037780310958623886,False
+Healthy Leaf Image 883.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 883.jpg,healthy,0,leaf_spot,1,0.44416671991348267,0.45065614581108093,0.1051771491765976,False
+Healthy Leaf Image 891.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 891.jpg,healthy,0,healthy,0,0.9027060270309448,0.041248638182878494,0.05604533478617668,True
+Healthy Leaf Image 9.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 9.jpg,healthy,0,healthy,0,0.5279521942138672,0.3509332835674286,0.12111455947160721,True
+Healthy Leaf Image 903.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 903.jpg,healthy,0,healthy,0,0.774259626865387,0.16427366435527802,0.0614667572081089,True
+Healthy Leaf Image 905.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 905.jpg,healthy,0,healthy,0,0.9558544158935547,0.013934788294136524,0.030210841447114944,True
+Healthy Leaf Image 914.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 914.jpg,healthy,0,mosaic_virus,2,0.07847800105810165,0.10518430918455124,0.8163377046585083,False
+Healthy Leaf Image 915.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 915.jpg,healthy,0,healthy,0,0.8861225247383118,0.08004806935787201,0.03382938727736473,True
+Healthy Leaf Image 916.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 916.jpg,healthy,0,leaf_spot,1,0.2592587172985077,0.6621087789535522,0.07863245904445648,False
+Healthy Leaf Image 924.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 924.jpg,healthy,0,mosaic_virus,2,0.09617002308368683,0.0077089169062674046,0.8961210250854492,False
+Healthy Leaf Image 926.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 926.jpg,healthy,0,mosaic_virus,2,0.03661230206489563,0.28798913955688477,0.675398588180542,False
+Healthy Leaf Image 945.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 945.jpg,healthy,0,mosaic_virus,2,0.18237094581127167,0.19476275146007538,0.6228662133216858,False
+Healthy Leaf Image 950.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 950.jpg,healthy,0,healthy,0,0.9858178496360779,0.006788643077015877,0.007393418345600367,True
+Healthy Leaf Image 960.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 960.jpg,healthy,0,mosaic_virus,2,0.44234853982925415,0.09480700641870499,0.46284446120262146,False
+Healthy Leaf Image 966.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 966.jpg,healthy,0,healthy,0,0.9349378943443298,0.042389772832393646,0.022672314196825027,True
+Healthy Leaf Image 967.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 967.jpg,healthy,0,mosaic_virus,2,0.06278154253959656,0.3192689120769501,0.6179495453834534,False
+Healthy Leaf Image 971.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 971.jpg,healthy,0,mosaic_virus,2,0.06326010823249817,0.17202332615852356,0.7647165656089783,False
+Healthy Leaf Image 974.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 974.jpg,healthy,0,mosaic_virus,2,0.1944611370563507,0.09350291639566422,0.7120358943939209,False
+Healthy Leaf Image 979.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 979.jpg,healthy,0,mosaic_virus,2,0.405582070350647,0.10389009118080139,0.49052777886390686,False
+Healthy Leaf Image 98.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 98.jpg,healthy,0,healthy,0,0.7276623845100403,0.04997815936803818,0.22235944867134094,True
+Healthy Leaf Image 983.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 983.jpg,healthy,0,healthy,0,0.8136463761329651,0.10109717398881912,0.08525648713111877,True
+Healthy Leaf Image 988.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 988.jpg,healthy,0,mosaic_virus,2,0.13060325384140015,0.04970259964466095,0.8196941614151001,False
+Healthy Leaf Image 989.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 989.jpg,healthy,0,mosaic_virus,2,0.05847601965069771,0.04352296143770218,0.8980010747909546,False
+Healthy Leaf Image 991.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 991.jpg,healthy,0,healthy,0,0.4807940423488617,0.2871493697166443,0.2320566475391388,True
+Healthy Leaf Image 992.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 992.jpg,healthy,0,mosaic_virus,2,0.19307133555412292,0.052584193646907806,0.7543445229530334,False
+Healthy Leaf Image 993.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 993.jpg,healthy,0,healthy,0,0.5787307024002075,0.20040956139564514,0.22085972130298615,True
+Healthy Leaf Image 995.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 995.jpg,healthy,0,mosaic_virus,2,0.44136109948158264,0.04356522113084793,0.5150737762451172,False
+Healthy Leaf Image 998.jpg,dataset/split/eggplant/test/healthy/Healthy Leaf Image 998.jpg,healthy,0,healthy,0,0.7368283867835999,0.011810865253210068,0.2513607144355774,True
+Leaf Spot Disease Image 10.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 10.jpg,leaf_spot,1,leaf_spot,1,0.38307881355285645,0.42033377289772034,0.1965874433517456,True
+Leaf Spot Disease Image 105.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 105.jpg,leaf_spot,1,leaf_spot,1,0.03083609975874424,0.8441138863563538,0.12504997849464417,True
+Leaf Spot Disease Image 106.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 106.jpg,leaf_spot,1,healthy,0,0.5810848474502563,0.2347760647535324,0.18413911759853363,False
+Leaf Spot Disease Image 110.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 110.jpg,leaf_spot,1,leaf_spot,1,0.09210383147001266,0.6551203727722168,0.25277578830718994,True
+Leaf Spot Disease Image 112.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 112.jpg,leaf_spot,1,healthy,0,0.39681217074394226,0.31358665227890015,0.28960120677948,False
+Leaf Spot Disease Image 119.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 119.jpg,leaf_spot,1,mosaic_virus,2,0.056189775466918945,0.08348888158798218,0.8603213429450989,False
+Leaf Spot Disease Image 122.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 122.jpg,leaf_spot,1,leaf_spot,1,0.08880558609962463,0.8595982789993286,0.05159613862633705,True
+Leaf Spot Disease Image 127.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 127.jpg,leaf_spot,1,mosaic_virus,2,0.15658444166183472,0.03334364295005798,0.8100720047950745,False
+Leaf Spot Disease Image 128.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 128.jpg,leaf_spot,1,leaf_spot,1,0.012017828412353992,0.8586241602897644,0.1293579488992691,True
+Leaf Spot Disease Image 132.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 132.jpg,leaf_spot,1,mosaic_virus,2,0.09371273219585419,0.16118758916854858,0.745099663734436,False
+Leaf Spot Disease Image 136.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 136.jpg,leaf_spot,1,leaf_spot,1,0.4511782228946686,0.5234065055847168,0.025415319949388504,True
+Leaf Spot Disease Image 149.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 149.jpg,leaf_spot,1,healthy,0,0.5938355326652527,0.3436414897441864,0.06252297013998032,False
+Leaf Spot Disease Image 15.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 15.jpg,leaf_spot,1,healthy,0,0.7318029403686523,0.24074901640415192,0.027448076754808426,False
+Leaf Spot Disease Image 151.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 151.jpg,leaf_spot,1,leaf_spot,1,0.20132918655872345,0.7702136039733887,0.028457220643758774,True
+Leaf Spot Disease Image 157.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 157.jpg,leaf_spot,1,healthy,0,0.7979782819747925,0.1865197867155075,0.015501908957958221,False
+Leaf Spot Disease Image 159.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 159.jpg,leaf_spot,1,leaf_spot,1,0.025718877092003822,0.767333447933197,0.2069476991891861,True
+Leaf Spot Disease Image 16.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 16.jpg,leaf_spot,1,leaf_spot,1,0.36923110485076904,0.3992099463939667,0.23155894875526428,True
+Leaf Spot Disease Image 167.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 167.jpg,leaf_spot,1,leaf_spot,1,0.03277861699461937,0.635929524898529,0.3312918543815613,True
+Leaf Spot Disease Image 168.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 168.jpg,leaf_spot,1,mosaic_virus,2,0.21311978995800018,0.3663395643234253,0.42054063081741333,False
+Leaf Spot Disease Image 180.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 180.jpg,leaf_spot,1,leaf_spot,1,0.006292502395808697,0.948173999786377,0.045533549040555954,True
+Leaf Spot Disease Image 20.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 20.jpg,leaf_spot,1,mosaic_virus,2,0.028274331241846085,0.43771371245384216,0.5340119004249573,False
+Leaf Spot Disease Image 202.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 202.jpg,leaf_spot,1,leaf_spot,1,0.013647264800965786,0.8474576473236084,0.13889506459236145,True
+Leaf Spot Disease Image 209.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 209.jpg,leaf_spot,1,leaf_spot,1,0.09628859162330627,0.5464915633201599,0.3572198748588562,True
+Leaf Spot Disease Image 211.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 211.jpg,leaf_spot,1,leaf_spot,1,0.0903208926320076,0.7521282434463501,0.15755091607570648,True
+Leaf Spot Disease Image 220.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 220.jpg,leaf_spot,1,leaf_spot,1,0.12991273403167725,0.8473023176193237,0.022784927859902382,True
+Leaf Spot Disease Image 23.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 23.jpg,leaf_spot,1,leaf_spot,1,0.011267089284956455,0.5872024297714233,0.4015304446220398,True
+Leaf Spot Disease Image 24.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 24.jpg,leaf_spot,1,leaf_spot,1,0.017318133264780045,0.5436105132102966,0.4390713572502136,True
+Leaf Spot Disease Image 253.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 253.jpg,leaf_spot,1,healthy,0,0.4428498446941376,0.3102514147758484,0.24689871072769165,False
+Leaf Spot Disease Image 266.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 266.jpg,leaf_spot,1,leaf_spot,1,0.03157587721943855,0.9552161693572998,0.013207941316068172,True
+Leaf Spot Disease Image 269.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 269.jpg,leaf_spot,1,leaf_spot,1,0.1277122050523758,0.8247233629226685,0.04756437614560127,True
+Leaf Spot Disease Image 284.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 284.jpg,leaf_spot,1,leaf_spot,1,0.05845829099416733,0.7796673774719238,0.16187429428100586,True
+Leaf Spot Disease Image 286.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 286.jpg,leaf_spot,1,leaf_spot,1,0.40870803594589233,0.5036178827285767,0.0876740962266922,True
+Leaf Spot Disease Image 308.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 308.jpg,leaf_spot,1,leaf_spot,1,0.2011229395866394,0.7260580658912659,0.07281899452209473,True
+Leaf Spot Disease Image 319.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 319.jpg,leaf_spot,1,leaf_spot,1,0.08235358446836472,0.6446512937545776,0.27299514412879944,True
+Leaf Spot Disease Image 321.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 321.jpg,leaf_spot,1,healthy,0,0.6546343564987183,0.2203063815832138,0.12505929172039032,False
+Leaf Spot Disease Image 332.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 332.jpg,leaf_spot,1,mosaic_virus,2,0.05976312980055809,0.33476459980010986,0.6054723262786865,False
+Leaf Spot Disease Image 334.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 334.jpg,leaf_spot,1,healthy,0,0.4229554831981659,0.37897101044654846,0.19807355105876923,False
+Leaf Spot Disease Image 337.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 337.jpg,leaf_spot,1,mosaic_virus,2,0.32717880606651306,0.1314602643251419,0.5413608551025391,False
+Leaf Spot Disease Image 34.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 34.jpg,leaf_spot,1,mosaic_virus,2,0.03789377585053444,0.46224814653396606,0.4998581111431122,False
+Leaf Spot Disease Image 352.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 352.jpg,leaf_spot,1,leaf_spot,1,0.37538260221481323,0.4715218245983124,0.1530955731868744,True
+Leaf Spot Disease Image 355.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 355.jpg,leaf_spot,1,healthy,0,0.8589168787002563,0.1196029931306839,0.021480150520801544,False
+Leaf Spot Disease Image 367.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 367.jpg,leaf_spot,1,mosaic_virus,2,0.14407001435756683,0.17319825291633606,0.6827317476272583,False
+Leaf Spot Disease Image 373.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 373.jpg,leaf_spot,1,leaf_spot,1,0.05992838367819786,0.5358558297157288,0.4042157232761383,True
+Leaf Spot Disease Image 378.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 378.jpg,leaf_spot,1,mosaic_virus,2,0.06273747235536575,0.03460129722952843,0.902661144733429,False
+Leaf Spot Disease Image 382.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 382.jpg,leaf_spot,1,mosaic_virus,2,0.18789196014404297,0.07896886020898819,0.7331392168998718,False
+Leaf Spot Disease Image 385.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 385.jpg,leaf_spot,1,mosaic_virus,2,0.2231060117483139,0.28503572940826416,0.4918583035469055,False
+Leaf Spot Disease Image 391.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 391.jpg,leaf_spot,1,leaf_spot,1,0.07647914439439774,0.8330056071281433,0.09051520377397537,True
+Leaf Spot Disease Image 413.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 413.jpg,leaf_spot,1,leaf_spot,1,0.22017760574817657,0.3957383334636688,0.3840841054916382,True
+Leaf Spot Disease Image 414.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 414.jpg,leaf_spot,1,mosaic_virus,2,0.23837488889694214,0.3662017285823822,0.39542338252067566,False
+Leaf Spot Disease Image 416.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 416.jpg,leaf_spot,1,healthy,0,0.6837556958198547,0.21117229759693146,0.10507207363843918,False
+Leaf Spot Disease Image 418.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 418.jpg,leaf_spot,1,leaf_spot,1,0.12526939809322357,0.849780797958374,0.024949828162789345,True
+Leaf Spot Disease Image 427.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 427.jpg,leaf_spot,1,healthy,0,0.399039626121521,0.37170976400375366,0.22925058007240295,False
+Leaf Spot Disease Image 444.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 444.jpg,leaf_spot,1,leaf_spot,1,0.019920913502573967,0.7123375535011292,0.26774150133132935,True
+Leaf Spot Disease Image 451.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 451.jpg,leaf_spot,1,mosaic_virus,2,0.24318161606788635,0.12950684130191803,0.6273115277290344,False
+Leaf Spot Disease Image 452.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 452.jpg,leaf_spot,1,leaf_spot,1,0.290067195892334,0.49718695878982544,0.2127457708120346,True
+Leaf Spot Disease Image 465.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 465.jpg,leaf_spot,1,mosaic_virus,2,0.1517804116010666,0.12960731983184814,0.7186122536659241,False
+Leaf Spot Disease Image 478.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 478.jpg,leaf_spot,1,healthy,0,0.5466454029083252,0.3350659906864166,0.11828860640525818,False
+Leaf Spot Disease Image 485.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 485.jpg,leaf_spot,1,mosaic_virus,2,0.13496658205986023,0.028150588274002075,0.8368828296661377,False
+Leaf Spot Disease Image 492.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 492.jpg,leaf_spot,1,healthy,0,0.4378323554992676,0.34027597308158875,0.22189168632030487,False
+Leaf Spot Disease Image 494.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 494.jpg,leaf_spot,1,leaf_spot,1,0.06806591153144836,0.709672749042511,0.22226135432720184,True
+Leaf Spot Disease Image 508.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 508.jpg,leaf_spot,1,healthy,0,0.4622780680656433,0.21316079795360565,0.32456111907958984,False
+Leaf Spot Disease Image 51.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 51.jpg,leaf_spot,1,leaf_spot,1,0.029429743066430092,0.9302476048469543,0.040322624146938324,True
+Leaf Spot Disease Image 513.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 513.jpg,leaf_spot,1,mosaic_virus,2,0.15946951508522034,0.29321327805519104,0.5473172664642334,False
+Leaf Spot Disease Image 515.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 515.jpg,leaf_spot,1,leaf_spot,1,0.08628156036138535,0.8603986501693726,0.0533197857439518,True
+Leaf Spot Disease Image 516.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 516.jpg,leaf_spot,1,leaf_spot,1,0.15052703022956848,0.5095505714416504,0.33992239832878113,True
+Leaf Spot Disease Image 520.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 520.jpg,leaf_spot,1,leaf_spot,1,0.11836037784814835,0.8414331674575806,0.04020649567246437,True
+Leaf Spot Disease Image 529.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 529.jpg,leaf_spot,1,healthy,0,0.8754480481147766,0.057690124958753586,0.0668618455529213,False
+Leaf Spot Disease Image 551.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 551.jpg,leaf_spot,1,leaf_spot,1,0.22376461327075958,0.6733877062797546,0.10284768044948578,True
+Leaf Spot Disease Image 555.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 555.jpg,leaf_spot,1,leaf_spot,1,0.08527300506830215,0.8472057580947876,0.06752115488052368,True
+Leaf Spot Disease Image 56.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 56.jpg,leaf_spot,1,leaf_spot,1,0.1800566464662552,0.6400681138038635,0.1798752099275589,True
+Leaf Spot Disease Image 59.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 59.jpg,leaf_spot,1,leaf_spot,1,0.19978280365467072,0.5860968828201294,0.21412032842636108,True
+Leaf Spot Disease Image 7.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 7.jpg,leaf_spot,1,healthy,0,0.4007897973060608,0.2642989754676819,0.3349112272262573,False
+Leaf Spot Disease Image 84.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 84.jpg,leaf_spot,1,healthy,0,0.7452484369277954,0.2344207465648651,0.020330779254436493,False
+Leaf Spot Disease Image 92.jpg,dataset/split/eggplant/test/leaf_spot/Leaf Spot Disease Image 92.jpg,leaf_spot,1,leaf_spot,1,0.05753426253795624,0.532174289226532,0.410291463136673,True
+Mosaic Virus Disease Image 1000.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1000.jpg,mosaic_virus,2,mosaic_virus,2,0.3008917272090912,0.14707566797733307,0.5520327091217041,True
+Mosaic Virus Disease Image 1008.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1008.jpg,mosaic_virus,2,healthy,0,0.42828503251075745,0.31678301095962524,0.2549320161342621,False
+Mosaic Virus Disease Image 1029.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1029.jpg,mosaic_virus,2,mosaic_virus,2,0.18267934024333954,0.20433415472507477,0.6129864454269409,True
+Mosaic Virus Disease Image 1033.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1033.jpg,mosaic_virus,2,healthy,0,0.6212648749351501,0.043571919202804565,0.33516326546669006,False
+Mosaic Virus Disease Image 1036.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1036.jpg,mosaic_virus,2,mosaic_virus,2,0.03394051641225815,0.02572665922343731,0.9403327703475952,True
+Mosaic Virus Disease Image 1047.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1047.jpg,mosaic_virus,2,leaf_spot,1,0.31521034240722656,0.3648219406604767,0.31996771693229675,False
+Mosaic Virus Disease Image 1048.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1048.jpg,mosaic_virus,2,mosaic_virus,2,0.1826455444097519,0.1352689117193222,0.6820855140686035,True
+Mosaic Virus Disease Image 1050.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1050.jpg,mosaic_virus,2,mosaic_virus,2,0.24589021503925323,0.20120884478092194,0.5529009699821472,True
+Mosaic Virus Disease Image 1056.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1056.jpg,mosaic_virus,2,healthy,0,0.36067578196525574,0.27867236733436584,0.36065182089805603,False
+Mosaic Virus Disease Image 1059.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1059.jpg,mosaic_virus,2,healthy,0,0.5189929604530334,0.048473209142684937,0.43253380060195923,False
+Mosaic Virus Disease Image 1063.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1063.jpg,mosaic_virus,2,leaf_spot,1,0.1417444497346878,0.5549951195716858,0.3032604455947876,False
+Mosaic Virus Disease Image 1066.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1066.jpg,mosaic_virus,2,mosaic_virus,2,0.02458818629384041,0.009452111087739468,0.9659597277641296,True
+Mosaic Virus Disease Image 1067.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1067.jpg,mosaic_virus,2,mosaic_virus,2,0.15838047862052917,0.18279492855072021,0.658824622631073,True
+Mosaic Virus Disease Image 107.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 107.jpg,mosaic_virus,2,mosaic_virus,2,0.14846324920654297,0.0763147622346878,0.7752220034599304,True
+Mosaic Virus Disease Image 1076.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1076.jpg,mosaic_virus,2,leaf_spot,1,0.21353363990783691,0.5204876661300659,0.2659786641597748,False
+Mosaic Virus Disease Image 1077.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1077.jpg,mosaic_virus,2,mosaic_virus,2,0.015089424327015877,0.44038495421409607,0.5445256233215332,True
+Mosaic Virus Disease Image 108.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 108.jpg,mosaic_virus,2,mosaic_virus,2,0.281107097864151,0.05756817385554314,0.6613247394561768,True
+Mosaic Virus Disease Image 1080.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1080.jpg,mosaic_virus,2,mosaic_virus,2,0.21451713144779205,0.04366573691368103,0.7418171763420105,True
+Mosaic Virus Disease Image 1087.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1087.jpg,mosaic_virus,2,mosaic_virus,2,0.3908632695674896,0.1456950455904007,0.46344175934791565,True
+Mosaic Virus Disease Image 1098.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1098.jpg,mosaic_virus,2,mosaic_virus,2,0.3267524242401123,0.30052387714385986,0.37272369861602783,True
+Mosaic Virus Disease Image 1103.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1103.jpg,mosaic_virus,2,mosaic_virus,2,0.23115628957748413,0.054932743310928345,0.7139109373092651,True
+Mosaic Virus Disease Image 1113.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1113.jpg,mosaic_virus,2,healthy,0,0.733501672744751,0.13198737800121307,0.1345110386610031,False
+Mosaic Virus Disease Image 1115.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1115.jpg,mosaic_virus,2,mosaic_virus,2,0.06528057157993317,0.1256360411643982,0.8090834021568298,True
+Mosaic Virus Disease Image 1122.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1122.jpg,mosaic_virus,2,mosaic_virus,2,0.19570723176002502,0.11379622668027878,0.6904965043067932,True
+Mosaic Virus Disease Image 1123.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1123.jpg,mosaic_virus,2,healthy,0,0.4212801158428192,0.35798659920692444,0.22073332965373993,False
+Mosaic Virus Disease Image 1137.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1137.jpg,mosaic_virus,2,mosaic_virus,2,0.04596005380153656,0.05665386840701103,0.8973861932754517,True
+Mosaic Virus Disease Image 1140.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1140.jpg,mosaic_virus,2,mosaic_virus,2,0.060550201684236526,0.06224497780203819,0.8772048354148865,True
+Mosaic Virus Disease Image 1144.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1144.jpg,mosaic_virus,2,mosaic_virus,2,0.017990119755268097,0.007107321172952652,0.9749026298522949,True
+Mosaic Virus Disease Image 1145.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1145.jpg,mosaic_virus,2,mosaic_virus,2,0.1083919107913971,0.10808481276035309,0.7835233807563782,True
+Mosaic Virus Disease Image 1146.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1146.jpg,mosaic_virus,2,mosaic_virus,2,0.0827178880572319,0.018183335661888123,0.8990986943244934,True
+Mosaic Virus Disease Image 115.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 115.jpg,mosaic_virus,2,healthy,0,0.3562673032283783,0.2901427149772644,0.3535899817943573,False
+Mosaic Virus Disease Image 1151.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1151.jpg,mosaic_virus,2,healthy,0,0.7761096954345703,0.15814287960529327,0.06574739515781403,False
+Mosaic Virus Disease Image 1153.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1153.jpg,mosaic_virus,2,mosaic_virus,2,0.16788098216056824,0.14284272491931915,0.6892762780189514,True
+Mosaic Virus Disease Image 1157.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1157.jpg,mosaic_virus,2,mosaic_virus,2,0.2142915427684784,0.027625594288110733,0.7580829858779907,True
+Mosaic Virus Disease Image 1168.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1168.jpg,mosaic_virus,2,mosaic_virus,2,0.2646699845790863,0.06613235920667648,0.6691976189613342,True
+Mosaic Virus Disease Image 1181.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1181.jpg,mosaic_virus,2,mosaic_virus,2,0.05412494018673897,0.2771786153316498,0.6686964631080627,True
+Mosaic Virus Disease Image 1189.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1189.jpg,mosaic_virus,2,mosaic_virus,2,0.06393007934093475,0.008724752813577652,0.9273450970649719,True
+Mosaic Virus Disease Image 1190.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1190.jpg,mosaic_virus,2,mosaic_virus,2,0.13016600906848907,0.11902885138988495,0.7508050799369812,True
+Mosaic Virus Disease Image 1203.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1203.jpg,mosaic_virus,2,mosaic_virus,2,0.1336146593093872,0.11509109288454056,0.7512943148612976,True
+Mosaic Virus Disease Image 1208.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1208.jpg,mosaic_virus,2,mosaic_virus,2,0.2044442892074585,0.19452978670597076,0.6010259389877319,True
+Mosaic Virus Disease Image 1222.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1222.jpg,mosaic_virus,2,mosaic_virus,2,0.017035415396094322,0.008454857394099236,0.9745097160339355,True
+Mosaic Virus Disease Image 1227.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1227.jpg,mosaic_virus,2,mosaic_virus,2,0.4546927809715271,0.01567334309220314,0.5296338796615601,True
+Mosaic Virus Disease Image 1228.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1228.jpg,mosaic_virus,2,mosaic_virus,2,0.3165438771247864,0.1376841962337494,0.5457718968391418,True
+Mosaic Virus Disease Image 1230.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1230.jpg,mosaic_virus,2,mosaic_virus,2,0.22571007907390594,0.17600765824317932,0.5982822775840759,True
+Mosaic Virus Disease Image 1244.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1244.jpg,mosaic_virus,2,mosaic_virus,2,0.22091560065746307,0.052295394241809845,0.7267890572547913,True
+Mosaic Virus Disease Image 1247.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1247.jpg,mosaic_virus,2,mosaic_virus,2,0.12660382688045502,0.05980297923088074,0.8135932087898254,True
+Mosaic Virus Disease Image 1251.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1251.jpg,mosaic_virus,2,mosaic_virus,2,0.04533568024635315,0.020412079989910126,0.9342522621154785,True
+Mosaic Virus Disease Image 1254.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1254.jpg,mosaic_virus,2,mosaic_virus,2,0.02995816245675087,0.017036976292729378,0.9530048370361328,True
+Mosaic Virus Disease Image 1261.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1261.jpg,mosaic_virus,2,leaf_spot,1,0.1285070925951004,0.7785043120384216,0.09298866242170334,False
+Mosaic Virus Disease Image 1263.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1263.jpg,mosaic_virus,2,mosaic_virus,2,0.02586383931338787,0.005843925755470991,0.968292236328125,True
+Mosaic Virus Disease Image 1268.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1268.jpg,mosaic_virus,2,mosaic_virus,2,0.3527863025665283,0.08168691396713257,0.5655267834663391,True
+Mosaic Virus Disease Image 127.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 127.jpg,mosaic_virus,2,healthy,0,0.45857205986976624,0.156890869140625,0.38453713059425354,False
+Mosaic Virus Disease Image 1274.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1274.jpg,mosaic_virus,2,mosaic_virus,2,0.18680977821350098,0.08263184130191803,0.7305583953857422,True
+Mosaic Virus Disease Image 1281.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1281.jpg,mosaic_virus,2,mosaic_virus,2,0.14607863128185272,0.17472872138023376,0.6791926622390747,True
+Mosaic Virus Disease Image 1293.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1293.jpg,mosaic_virus,2,mosaic_virus,2,0.09323222935199738,0.019060848280787468,0.8877069354057312,True
+Mosaic Virus Disease Image 1294.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1294.jpg,mosaic_virus,2,mosaic_virus,2,0.010601929388940334,0.00335104251280427,0.9860470294952393,True
+Mosaic Virus Disease Image 1305.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1305.jpg,mosaic_virus,2,leaf_spot,1,0.1351175159215927,0.5710500478744507,0.293832391500473,False
+Mosaic Virus Disease Image 1320.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1320.jpg,mosaic_virus,2,leaf_spot,1,0.16914482414722443,0.736828088760376,0.09402711689472198,False
+Mosaic Virus Disease Image 1331.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1331.jpg,mosaic_virus,2,healthy,0,0.8409554362297058,0.0129109350964427,0.14613360166549683,False
+Mosaic Virus Disease Image 1335.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1335.jpg,mosaic_virus,2,healthy,0,0.49420830607414246,0.26855260133743286,0.2372390329837799,False
+Mosaic Virus Disease Image 1341.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1341.jpg,mosaic_virus,2,mosaic_virus,2,0.030790608376264572,0.0175786055624485,0.9516307711601257,True
+Mosaic Virus Disease Image 1342.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 1342.jpg,mosaic_virus,2,healthy,0,0.8921036124229431,0.006426938343793154,0.10146939754486084,False
+Mosaic Virus Disease Image 135.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 135.jpg,mosaic_virus,2,mosaic_virus,2,0.1743665635585785,0.14718246459960938,0.6784510016441345,True
+Mosaic Virus Disease Image 142.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 142.jpg,mosaic_virus,2,leaf_spot,1,0.1172737404704094,0.6127783060073853,0.26994797587394714,False
+Mosaic Virus Disease Image 156.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 156.jpg,mosaic_virus,2,leaf_spot,1,0.007297717500478029,0.6742006540298462,0.31850162148475647,False
+Mosaic Virus Disease Image 16.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 16.jpg,mosaic_virus,2,mosaic_virus,2,0.08639982342720032,0.06057785451412201,0.8530222773551941,True
+Mosaic Virus Disease Image 183.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 183.jpg,mosaic_virus,2,mosaic_virus,2,0.02989782951772213,0.036942146718502045,0.9331600666046143,True
+Mosaic Virus Disease Image 196.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 196.jpg,mosaic_virus,2,mosaic_virus,2,0.13902714848518372,0.3454847037792206,0.5154880881309509,True
+Mosaic Virus Disease Image 20.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 20.jpg,mosaic_virus,2,mosaic_virus,2,0.23225121200084686,0.010292801074683666,0.7574559450149536,True
+Mosaic Virus Disease Image 220.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 220.jpg,mosaic_virus,2,mosaic_virus,2,0.18607857823371887,0.2574918270111084,0.5564295053482056,True
+Mosaic Virus Disease Image 221.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 221.jpg,mosaic_virus,2,mosaic_virus,2,0.10481452196836472,0.21999230980873108,0.675193190574646,True
+Mosaic Virus Disease Image 224.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 224.jpg,mosaic_virus,2,mosaic_virus,2,0.12554743885993958,0.074055016040802,0.8003976345062256,True
+Mosaic Virus Disease Image 226.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 226.jpg,mosaic_virus,2,leaf_spot,1,0.2145981788635254,0.6448533535003662,0.1405484825372696,False
+Mosaic Virus Disease Image 23.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 23.jpg,mosaic_virus,2,healthy,0,0.5577331781387329,0.15184682607650757,0.2904200255870819,False
+Mosaic Virus Disease Image 230.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 230.jpg,mosaic_virus,2,leaf_spot,1,0.38949641585350037,0.49158725142478943,0.11891628056764603,False
+Mosaic Virus Disease Image 232.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 232.jpg,mosaic_virus,2,mosaic_virus,2,0.033259373158216476,0.22462713718414307,0.742113471031189,True
+Mosaic Virus Disease Image 247.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 247.jpg,mosaic_virus,2,mosaic_virus,2,0.2478771060705185,0.06610599160194397,0.6860169172286987,True
+Mosaic Virus Disease Image 253.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 253.jpg,mosaic_virus,2,mosaic_virus,2,0.11790142208337784,0.04218241199851036,0.8399161696434021,True
+Mosaic Virus Disease Image 254.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 254.jpg,mosaic_virus,2,healthy,0,0.5961355566978455,0.047272372990846634,0.356592059135437,False
+Mosaic Virus Disease Image 259.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 259.jpg,mosaic_virus,2,mosaic_virus,2,0.14569178223609924,0.004188615828752518,0.8501197099685669,True
+Mosaic Virus Disease Image 279.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 279.jpg,mosaic_virus,2,mosaic_virus,2,0.19102095067501068,0.016710976138710976,0.7922681570053101,True
+Mosaic Virus Disease Image 28_0_7383.jpeg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 28_0_7383.jpeg,mosaic_virus,2,mosaic_virus,2,0.013500903733074665,0.0013980393996462226,0.985101044178009,True
+Mosaic Virus Disease Image 29.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 29.jpg,mosaic_virus,2,mosaic_virus,2,0.34006619453430176,0.14242172241210938,0.5175120830535889,True
+Mosaic Virus Disease Image 292.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 292.jpg,mosaic_virus,2,mosaic_virus,2,0.12474119663238525,0.03317873924970627,0.8420800566673279,True
+Mosaic Virus Disease Image 3.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 3.jpg,mosaic_virus,2,mosaic_virus,2,0.07524196803569794,0.07117900252342224,0.8535789847373962,True
+Mosaic Virus Disease Image 310.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 310.jpg,mosaic_virus,2,mosaic_virus,2,0.043854840099811554,0.1649700254201889,0.7911750674247742,True
+Mosaic Virus Disease Image 312.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 312.jpg,mosaic_virus,2,mosaic_virus,2,0.3431624174118042,0.045151807367801666,0.6116857528686523,True
+Mosaic Virus Disease Image 314.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 314.jpg,mosaic_virus,2,mosaic_virus,2,0.4112195670604706,0.03566504269838333,0.5531154274940491,True
+Mosaic Virus Disease Image 317.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 317.jpg,mosaic_virus,2,mosaic_virus,2,0.20751668512821198,0.13832980394363403,0.6541534662246704,True
+Mosaic Virus Disease Image 322.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 322.jpg,mosaic_virus,2,mosaic_virus,2,0.3277319669723511,0.030561259016394615,0.6417067646980286,True
+Mosaic Virus Disease Image 326.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 326.jpg,mosaic_virus,2,mosaic_virus,2,0.04186434671282768,0.02600160613656044,0.9321340322494507,True
+Mosaic Virus Disease Image 327.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 327.jpg,mosaic_virus,2,healthy,0,0.6424729228019714,0.05116778239607811,0.30635929107666016,False
+Mosaic Virus Disease Image 330.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 330.jpg,mosaic_virus,2,mosaic_virus,2,0.2837153375148773,0.051350295543670654,0.6649344563484192,True
+Mosaic Virus Disease Image 340.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 340.jpg,mosaic_virus,2,mosaic_virus,2,0.13624319434165955,0.09435075521469116,0.7694059610366821,True
+Mosaic Virus Disease Image 350.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 350.jpg,mosaic_virus,2,mosaic_virus,2,0.005753729492425919,0.05062349885702133,0.9436228275299072,True
+Mosaic Virus Disease Image 358.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 358.jpg,mosaic_virus,2,mosaic_virus,2,0.22815927863121033,0.0421459935605526,0.7296947836875916,True
+Mosaic Virus Disease Image 364.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 364.jpg,mosaic_virus,2,mosaic_virus,2,0.07103142142295837,0.1807257980108261,0.7482427358627319,True
+Mosaic Virus Disease Image 367.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 367.jpg,mosaic_virus,2,mosaic_virus,2,0.1595134288072586,0.008070728741586208,0.8324158787727356,True
+Mosaic Virus Disease Image 372.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 372.jpg,mosaic_virus,2,mosaic_virus,2,0.3665589988231659,0.03873254731297493,0.5947084426879883,True
+Mosaic Virus Disease Image 377.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 377.jpg,mosaic_virus,2,mosaic_virus,2,0.12419038265943527,0.050871994346380234,0.824937641620636,True
+Mosaic Virus Disease Image 39.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 39.jpg,mosaic_virus,2,healthy,0,0.4290379285812378,0.3834766745567322,0.18748533725738525,False
+Mosaic Virus Disease Image 397.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 397.jpg,mosaic_virus,2,healthy,0,0.918886125087738,0.024968795478343964,0.056145086884498596,False
+Mosaic Virus Disease Image 398.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 398.jpg,mosaic_virus,2,healthy,0,0.4187294542789459,0.34620118141174316,0.2350693792104721,False
+Mosaic Virus Disease Image 402.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 402.jpg,mosaic_virus,2,leaf_spot,1,0.22772401571273804,0.4615984261035919,0.31067758798599243,False
+Mosaic Virus Disease Image 409.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 409.jpg,mosaic_virus,2,mosaic_virus,2,0.2076687216758728,0.04232040420174599,0.7500108480453491,True
+Mosaic Virus Disease Image 41.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 41.jpg,mosaic_virus,2,leaf_spot,1,0.1312241554260254,0.5298429131507874,0.33893293142318726,False
+Mosaic Virus Disease Image 420.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 420.jpg,mosaic_virus,2,mosaic_virus,2,0.08697257190942764,0.010458073578774929,0.9025693535804749,True
+Mosaic Virus Disease Image 429.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 429.jpg,mosaic_virus,2,mosaic_virus,2,0.23280034959316254,0.04758615791797638,0.7196134328842163,True
+Mosaic Virus Disease Image 432.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 432.jpg,mosaic_virus,2,mosaic_virus,2,0.25252607464790344,0.07788311690092087,0.6695907711982727,True
+Mosaic Virus Disease Image 434.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 434.jpg,mosaic_virus,2,mosaic_virus,2,0.20064817368984222,0.12588292360305786,0.6734688878059387,True
+Mosaic Virus Disease Image 435.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 435.jpg,mosaic_virus,2,mosaic_virus,2,0.28022515773773193,0.14183743298053741,0.5779373645782471,True
+Mosaic Virus Disease Image 442.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 442.jpg,mosaic_virus,2,mosaic_virus,2,0.020960496738553047,0.18801550567150116,0.7910239696502686,True
+Mosaic Virus Disease Image 449.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 449.jpg,mosaic_virus,2,mosaic_virus,2,0.2090032994747162,0.05380358174443245,0.7371931672096252,True
+Mosaic Virus Disease Image 451.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 451.jpg,mosaic_virus,2,healthy,0,0.5821428298950195,0.2117561250925064,0.20610104501247406,False
+Mosaic Virus Disease Image 454.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 454.jpg,mosaic_virus,2,mosaic_virus,2,0.007485478185117245,0.013506234623491764,0.9790082573890686,True
+Mosaic Virus Disease Image 46.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 46.jpg,mosaic_virus,2,leaf_spot,1,0.32802075147628784,0.40944406390190125,0.2625352442264557,False
+Mosaic Virus Disease Image 460.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 460.jpg,mosaic_virus,2,mosaic_virus,2,0.033861398696899414,0.39670512080192566,0.5694334506988525,True
+Mosaic Virus Disease Image 461.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 461.jpg,mosaic_virus,2,mosaic_virus,2,0.19591322541236877,0.0976669043302536,0.7064198851585388,True
+Mosaic Virus Disease Image 462.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 462.jpg,mosaic_virus,2,mosaic_virus,2,0.006253607105463743,0.002642820356413722,0.9911035299301147,True
+Mosaic Virus Disease Image 468.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 468.jpg,mosaic_virus,2,mosaic_virus,2,0.14001260697841644,0.029894739389419556,0.8300926685333252,True
+Mosaic Virus Disease Image 47.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 47.jpg,mosaic_virus,2,leaf_spot,1,0.043661050498485565,0.7536406517028809,0.20269832015037537,False
+Mosaic Virus Disease Image 472.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 472.jpg,mosaic_virus,2,healthy,0,0.5958700776100159,0.05853893235325813,0.3455910384654999,False
+Mosaic Virus Disease Image 473.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 473.jpg,mosaic_virus,2,mosaic_virus,2,0.026791203767061234,0.18283289670944214,0.7903758883476257,True
+Mosaic Virus Disease Image 475.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 475.jpg,mosaic_virus,2,mosaic_virus,2,0.019814854487776756,0.03577692434191704,0.9444082379341125,True
+Mosaic Virus Disease Image 491.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 491.jpg,mosaic_virus,2,mosaic_virus,2,0.14876678586006165,0.06363512575626373,0.7875980734825134,True
+Mosaic Virus Disease Image 497.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 497.jpg,mosaic_virus,2,mosaic_virus,2,0.09840739518404007,0.13786707818508148,0.7637255787849426,True
+Mosaic Virus Disease Image 498.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 498.jpg,mosaic_virus,2,healthy,0,0.3649314343929291,0.2740039825439453,0.3610646426677704,False
+Mosaic Virus Disease Image 499.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 499.jpg,mosaic_virus,2,healthy,0,0.4823249876499176,0.26897159218788147,0.24870342016220093,False
+Mosaic Virus Disease Image 503.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 503.jpg,mosaic_virus,2,healthy,0,0.8180172443389893,0.02217148058116436,0.159811332821846,False
+Mosaic Virus Disease Image 514.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 514.jpg,mosaic_virus,2,mosaic_virus,2,0.2713926434516907,0.0834033414721489,0.6452040076255798,True
+Mosaic Virus Disease Image 518.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 518.jpg,mosaic_virus,2,mosaic_virus,2,0.11712892353534698,0.0773656815290451,0.8055054545402527,True
+Mosaic Virus Disease Image 521.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 521.jpg,mosaic_virus,2,mosaic_virus,2,0.22412721812725067,0.10111437737941742,0.6747583746910095,True
+Mosaic Virus Disease Image 532.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 532.jpg,mosaic_virus,2,mosaic_virus,2,0.19113950431346893,0.034485675394535065,0.7743748426437378,True
+Mosaic Virus Disease Image 549.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 549.jpg,mosaic_virus,2,mosaic_virus,2,0.21951231360435486,0.02720344439148903,0.7532841563224792,True
+Mosaic Virus Disease Image 552.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 552.jpg,mosaic_virus,2,mosaic_virus,2,0.014381949789822102,0.044276993721723557,0.9413411021232605,True
+Mosaic Virus Disease Image 558.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 558.jpg,mosaic_virus,2,mosaic_virus,2,0.008783991448581219,0.013601909391582012,0.9776140451431274,True
+Mosaic Virus Disease Image 563.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 563.jpg,mosaic_virus,2,mosaic_virus,2,0.010688192211091518,0.023765558376908302,0.9655462503433228,True
+Mosaic Virus Disease Image 566.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 566.jpg,mosaic_virus,2,mosaic_virus,2,0.0588785819709301,0.380723774433136,0.5603976249694824,True
+Mosaic Virus Disease Image 569.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 569.jpg,mosaic_virus,2,mosaic_virus,2,0.006710158661007881,0.05887719243764877,0.9344125986099243,True
+Mosaic Virus Disease Image 575.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 575.jpg,mosaic_virus,2,mosaic_virus,2,0.12056674808263779,0.02181968092918396,0.8576135635375977,True
+Mosaic Virus Disease Image 577.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 577.jpg,mosaic_virus,2,leaf_spot,1,0.014121712185442448,0.9187526106834412,0.06712565571069717,False
+Mosaic Virus Disease Image 585.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 585.jpg,mosaic_virus,2,mosaic_virus,2,0.044587284326553345,0.0655503123998642,0.8898623585700989,True
+Mosaic Virus Disease Image 589.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 589.jpg,mosaic_virus,2,mosaic_virus,2,0.3143436014652252,0.043023135513067245,0.6426332592964172,True
+Mosaic Virus Disease Image 59.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 59.jpg,mosaic_virus,2,mosaic_virus,2,0.25384876132011414,0.04896632581949234,0.6971848607063293,True
+Mosaic Virus Disease Image 591.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 591.jpg,mosaic_virus,2,mosaic_virus,2,0.019673725590109825,0.11910994350910187,0.8612163662910461,True
+Mosaic Virus Disease Image 594.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 594.jpg,mosaic_virus,2,mosaic_virus,2,0.07537761330604553,0.014955883845686913,0.9096664190292358,True
+Mosaic Virus Disease Image 601.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 601.jpg,mosaic_virus,2,mosaic_virus,2,0.23889771103858948,0.024888399988412857,0.7362138628959656,True
+Mosaic Virus Disease Image 605.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 605.jpg,mosaic_virus,2,mosaic_virus,2,0.012066924944519997,0.17639224231243134,0.8115408420562744,True
+Mosaic Virus Disease Image 607.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 607.jpg,mosaic_virus,2,mosaic_virus,2,0.3716579079627991,0.13999716937541962,0.4883449673652649,True
+Mosaic Virus Disease Image 61.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 61.jpg,mosaic_virus,2,leaf_spot,1,0.16320426762104034,0.5335255265235901,0.3032701909542084,False
+Mosaic Virus Disease Image 611.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 611.jpg,mosaic_virus,2,mosaic_virus,2,0.038180168718099594,0.02030886523425579,0.9415110349655151,True
+Mosaic Virus Disease Image 612.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 612.jpg,mosaic_virus,2,mosaic_virus,2,0.055958300828933716,0.06904903054237366,0.8749926686286926,True
+Mosaic Virus Disease Image 614.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 614.jpg,mosaic_virus,2,mosaic_virus,2,0.3310903012752533,0.26524338126182556,0.40366625785827637,True
+Mosaic Virus Disease Image 626.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 626.jpg,mosaic_virus,2,mosaic_virus,2,0.014310529455542564,0.013580313883721828,0.9721091389656067,True
+Mosaic Virus Disease Image 627.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 627.jpg,mosaic_virus,2,mosaic_virus,2,0.05282939225435257,0.03313915804028511,0.9140313863754272,True
+Mosaic Virus Disease Image 639.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 639.jpg,mosaic_virus,2,mosaic_virus,2,0.043537698686122894,0.006597259547561407,0.9498650431632996,True
+Mosaic Virus Disease Image 647.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 647.jpg,mosaic_virus,2,healthy,0,0.7712418437004089,0.09153248369693756,0.1372256875038147,False
+Mosaic Virus Disease Image 649.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 649.jpg,mosaic_virus,2,healthy,0,0.4756459593772888,0.07081573456525803,0.45353829860687256,False
+Mosaic Virus Disease Image 653.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 653.jpg,mosaic_virus,2,mosaic_virus,2,0.04873856157064438,0.06925953179597855,0.8820018768310547,True
+Mosaic Virus Disease Image 655.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 655.jpg,mosaic_virus,2,mosaic_virus,2,0.386445552110672,0.11237873136997223,0.5011756420135498,True
+Mosaic Virus Disease Image 665.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 665.jpg,mosaic_virus,2,mosaic_virus,2,0.05890964716672897,0.030663805082440376,0.9104266166687012,True
+Mosaic Virus Disease Image 697.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 697.jpg,mosaic_virus,2,mosaic_virus,2,0.03507614508271217,0.04082445800304413,0.9240994453430176,True
+Mosaic Virus Disease Image 699.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 699.jpg,mosaic_virus,2,mosaic_virus,2,0.020327668637037277,0.009929189458489418,0.9697431325912476,True
+Mosaic Virus Disease Image 703.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 703.jpg,mosaic_virus,2,mosaic_virus,2,0.027714354917407036,0.09917015582323074,0.8731155395507812,True
+Mosaic Virus Disease Image 708.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 708.jpg,mosaic_virus,2,healthy,0,0.4556235373020172,0.08881286531686783,0.4555635452270508,False
+Mosaic Virus Disease Image 718.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 718.jpg,mosaic_virus,2,mosaic_virus,2,0.20494993031024933,0.06749933212995529,0.727550745010376,True
+Mosaic Virus Disease Image 728.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 728.jpg,mosaic_virus,2,mosaic_virus,2,0.09773872047662735,0.197450652718544,0.704810619354248,True
+Mosaic Virus Disease Image 729.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 729.jpg,mosaic_virus,2,mosaic_virus,2,0.04876674711704254,0.03058248944580555,0.9206506609916687,True
+Mosaic Virus Disease Image 732.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 732.jpg,mosaic_virus,2,leaf_spot,1,0.1307152956724167,0.4705432951450348,0.39874139428138733,False
+Mosaic Virus Disease Image 733.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 733.jpg,mosaic_virus,2,healthy,0,0.481759250164032,0.06475534290075302,0.4534853994846344,False
+Mosaic Virus Disease Image 74.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 74.jpg,mosaic_virus,2,leaf_spot,1,0.32650449872016907,0.45170196890830994,0.221793532371521,False
+Mosaic Virus Disease Image 748.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 748.jpg,mosaic_virus,2,mosaic_virus,2,0.11053919792175293,0.04599563032388687,0.8434650897979736,True
+Mosaic Virus Disease Image 751.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 751.jpg,mosaic_virus,2,mosaic_virus,2,0.055003758519887924,0.059146568179130554,0.88584965467453,True
+Mosaic Virus Disease Image 754.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 754.jpg,mosaic_virus,2,mosaic_virus,2,0.2776637077331543,0.12117397785186768,0.601162314414978,True
+Mosaic Virus Disease Image 758.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 758.jpg,mosaic_virus,2,mosaic_virus,2,0.030478954315185547,0.010280481539666653,0.9592406153678894,True
+Mosaic Virus Disease Image 77.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 77.jpg,mosaic_virus,2,mosaic_virus,2,0.07643909752368927,0.20575425028800964,0.7178066372871399,True
+Mosaic Virus Disease Image 783.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 783.jpg,mosaic_virus,2,mosaic_virus,2,0.07490719854831696,0.01042091567069292,0.9146718978881836,True
+Mosaic Virus Disease Image 785.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 785.jpg,mosaic_virus,2,mosaic_virus,2,0.08044058829545975,0.06335750222206116,0.8562018871307373,True
+Mosaic Virus Disease Image 788.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 788.jpg,mosaic_virus,2,healthy,0,0.5873379111289978,0.3127904534339905,0.09987161308526993,False
+Mosaic Virus Disease Image 789.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 789.jpg,mosaic_virus,2,mosaic_virus,2,0.08215697109699249,0.07813695073127747,0.8397060632705688,True
+Mosaic Virus Disease Image 793.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 793.jpg,mosaic_virus,2,mosaic_virus,2,0.08753342926502228,0.07520323246717453,0.8372634053230286,True
+Mosaic Virus Disease Image 801.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 801.jpg,mosaic_virus,2,mosaic_virus,2,0.16508403420448303,0.1959192305803299,0.6389967799186707,True
+Mosaic Virus Disease Image 826.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 826.jpg,mosaic_virus,2,mosaic_virus,2,0.006396709010004997,0.047865673899650574,0.9457376599311829,True
+Mosaic Virus Disease Image 832.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 832.jpg,mosaic_virus,2,mosaic_virus,2,0.05383780226111412,0.0353887602686882,0.9107734560966492,True
+Mosaic Virus Disease Image 840.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 840.jpg,mosaic_virus,2,mosaic_virus,2,0.08751901984214783,0.2827281355857849,0.6297528743743896,True
+Mosaic Virus Disease Image 853.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 853.jpg,mosaic_virus,2,mosaic_virus,2,0.025101950392127037,0.013138145208358765,0.9617598652839661,True
+Mosaic Virus Disease Image 854.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 854.jpg,mosaic_virus,2,mosaic_virus,2,0.03252685070037842,0.07245989888906479,0.8950133323669434,True
+Mosaic Virus Disease Image 881.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 881.jpg,mosaic_virus,2,mosaic_virus,2,0.10143757611513138,0.08581645041704178,0.812745988368988,True
+Mosaic Virus Disease Image 889.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 889.jpg,mosaic_virus,2,leaf_spot,1,0.35498756170272827,0.39927616715431213,0.2457362711429596,False
+Mosaic Virus Disease Image 902.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 902.jpg,mosaic_virus,2,mosaic_virus,2,0.009400269016623497,0.18537767231464386,0.8052220344543457,True
+Mosaic Virus Disease Image 913.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 913.jpg,mosaic_virus,2,mosaic_virus,2,0.02534431219100952,0.021762756630778313,0.9528928995132446,True
+Mosaic Virus Disease Image 914.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 914.jpg,mosaic_virus,2,mosaic_virus,2,0.019648676738142967,0.00557246059179306,0.9747787714004517,True
+Mosaic Virus Disease Image 915.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 915.jpg,mosaic_virus,2,mosaic_virus,2,0.19828960299491882,0.027074553072452545,0.7746357917785645,True
+Mosaic Virus Disease Image 918.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 918.jpg,mosaic_virus,2,mosaic_virus,2,0.016555320471525192,0.17291240394115448,0.8105323910713196,True
+Mosaic Virus Disease Image 923.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 923.jpg,mosaic_virus,2,mosaic_virus,2,0.04108143970370293,0.016896618530154228,0.942021906375885,True
+Mosaic Virus Disease Image 926.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 926.jpg,mosaic_virus,2,mosaic_virus,2,0.047852080315351486,0.284288227558136,0.667859673500061,True
+Mosaic Virus Disease Image 929.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 929.jpg,mosaic_virus,2,mosaic_virus,2,0.03575645759701729,0.0071302722208201885,0.9571133255958557,True
+Mosaic Virus Disease Image 933.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 933.jpg,mosaic_virus,2,mosaic_virus,2,0.22545607388019562,0.09468783438205719,0.6798561215400696,True
+Mosaic Virus Disease Image 940.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 940.jpg,mosaic_virus,2,mosaic_virus,2,0.074707992374897,0.0660487562417984,0.8592432737350464,True
+Mosaic Virus Disease Image 941.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 941.jpg,mosaic_virus,2,mosaic_virus,2,0.010833049193024635,0.01195051334798336,0.9772164821624756,True
+Mosaic Virus Disease Image 950.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 950.jpg,mosaic_virus,2,mosaic_virus,2,0.0075864591635763645,0.010391452349722385,0.9820220470428467,True
+Mosaic Virus Disease Image 955.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 955.jpg,mosaic_virus,2,mosaic_virus,2,0.1212950050830841,0.08472107350826263,0.7939839363098145,True
+Mosaic Virus Disease Image 971.jpg,dataset/split/eggplant/test/mosaic_virus/Mosaic Virus Disease Image 971.jpg,mosaic_virus,2,healthy,0,0.5578672289848328,0.31355294585227966,0.12857984006404877,False

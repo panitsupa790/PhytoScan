@@ -1,0 +1,86 @@
+{
+  "classes": [
+    "healthy",
+    "leaf_spot",
+    "mosaic_virus"
+  ],
+  "config_version": "1.0",
+  "d7_reference": {
+    "P0": {
+      "best_epoch": 11,
+      "leaf_spot_recall": 0.36,
+      "validation_accuracy": 0.7006172839506173,
+      "validation_macro_f1": 0.6395911705895311
+    },
+    "P3": {
+      "best_epoch": 13,
+      "leaf_spot_recall": 0.44,
+      "validation_accuracy": 0.7098765432098766,
+      "validation_macro_f1": 0.6627456506915528
+    },
+    "comparison_csv": "ai_model/experiments/eggplant_mobilenetv2_d7/comparison/preprocessing_comparison.csv"
+  },
+  "data": {
+    "channels": 3,
+    "expected_counts": {
+      "test": 0,
+      "train": 2425,
+      "val": 324
+    },
+    "image_size": [
+      224,
+      224
+    ],
+    "manifest": "dataset/metadata/eggplant_split_manifest.csv",
+    "split_root": "dataset/split/eggplant",
+    "train_split": "train",
+    "validation_split": "val"
+  },
+  "experiment_id": "eggplant_efficientnetb0_d8_lite",
+  "model": {
+    "architecture": "EfficientNetB0",
+    "backbone_trainable": false,
+    "dropout_rate": 0.2,
+    "include_top": false,
+    "output_activation": "softmax",
+    "pooling": "global_average",
+    "weights": "imagenet"
+  },
+  "preprocessing": {
+    "augmentation_enabled": false,
+    "class_balancing_enabled": false,
+    "config": "ai_model/configs/eggplant_preprocessing.json",
+    "input_dtype": "float32",
+    "input_value_range": [
+      0,
+      255
+    ],
+    "model_normalization": "keras_efficientnet_internal_rescaling",
+    "variants": [
+      "P0",
+      "P3"
+    ]
+  },
+  "seed": 42,
+  "selection": {
+    "p2_trigger_if_p3_leaf_spot_recall_below_p0": true,
+    "primary_metric": "validation_macro_f1",
+    "tie_breaker_threshold": 0.005
+  },
+  "smoke_test": {
+    "epochs": 1,
+    "train_per_class": 4,
+    "validation_per_class": 2
+  },
+  "training": {
+    "batch_size": 32,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 5,
+    "learning_rate": 0.001,
+    "loss": "sparse_categorical_crossentropy",
+    "max_epochs": 30,
+    "optimizer": "Adam",
+    "restore_best_weights": true,
+    "shuffle_train": true
+  }
+}

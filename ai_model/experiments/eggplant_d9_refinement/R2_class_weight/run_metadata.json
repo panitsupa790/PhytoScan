@@ -1,0 +1,30 @@
+{
+  "augmentation_enabled": false,
+  "batch_normalization_trainable": 0,
+  "class_weights_enabled": true,
+  "completed_at_utc": "2026-09-13T22:26:20.588799+00:00",
+  "keras_version": "3.15.1",
+  "parameter_counts": {
+    "non_trainable": 2706803,
+    "total": 4053414,
+    "trainable": 1346611
+  },
+  "physical_devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "preprocessing_config_sha256": "50bbab37e075afe86c9d99b498cd59ceec07ea09f6c2be62709b5692613bda81",
+  "python_version": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "run": "R2",
+  "scikit_learn_version": "1.7.2",
+  "seed": 42,
+  "smoke_test": false,
+  "source_checkpoint_sha256": "c30bfc8839ba91bb4ced173375aeb2b95098e57d4eea32a326e4f23ec1bb0496",
+  "technique": "Fine-tuning + class weights",
+  "tensorflow_version": "2.21.0",
+  "test_image_bytes_accessed": 0,
+  "train_samples": 2425,
+  "training_config_sha256": "e753587c8d4713fee909062e3d7b68dbb98bd82f04585ace842754f386aec92d",
+  "validation_augmentation_enabled": false,
+  "validation_samples": 324
+}

@@ -19,6 +19,15 @@ class DiseasePrediction(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
 
 
+class ImageAnalyzeResult(BaseModel):
+    index: int = Field(ge=0, le=2)
+    filename: str
+    disease: DiseasePrediction
+    symptoms: list[str]
+    care: list[str]
+    prevention: list[str]
+
+
 class AnalyzeResponse(BaseModel):
     success: Literal[True] = True
     image_count: int = Field(ge=1, le=3)
@@ -27,6 +36,7 @@ class AnalyzeResponse(BaseModel):
     symptoms: list[str]
     care: list[str]
     prevention: list[str]
+    image_results: list[ImageAnalyzeResult] = Field(default_factory=list)
 
 
 class ErrorResponse(BaseModel):
@@ -38,3 +48,14 @@ class ErrorResponse(BaseModel):
 class HealthResponse(BaseModel):
     status: Literal["ok"] = "ok"
     service: str
+
+
+class PlantSummary(BaseModel):
+    code: str
+    name_th: str
+    name_en: str
+    disease_count: int = Field(ge=1)
+
+
+class PlantsResponse(BaseModel):
+    plants: list[PlantSummary]

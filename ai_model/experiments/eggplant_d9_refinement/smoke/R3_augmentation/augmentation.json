@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "parameters": {
+    "fill_mode": "reflect",
+    "horizontal_flip": true,
+    "interpolation": "bilinear",
+    "rotation_degrees": 10.0,
+    "translation_height_fraction": 0.05,
+    "translation_width_fraction": 0.05,
+    "zoom_fraction": 0.1
+  },
+  "scope": "train_only"
+}

@@ -1,0 +1,27 @@
+{
+  "checkpoint_sha256": "ae0be68277300848eb4208c5184bf9c937cbe2ea9c8d5abc363eb38976135aa5",
+  "checks": {
+    "assignment_hash": true,
+    "checkpoint_hash_matches_expected": true,
+    "class_mapping": true,
+    "config_hash_matches_expected": true,
+    "lock_status": true,
+    "no_sha_overlap_across_splits": true,
+    "source_run": true,
+    "split_counts": true,
+    "test_class_counts": true,
+    "test_evaluation_not_previously_recorded": true,
+    "test_files_match_manifest": true,
+    "unique_assignments": true
+  },
+  "config_sha256": "5a7663db4f8c648fe06ce4d62206f7267946d357cedc6af73a6a7c35f432899b",
+  "pass": true,
+  "test_assignment_sha256": "26861714087fffdffd5f098f3283bba5bebe9dbb6cc93bca30dbf4cf7d14d313",
+  "test_counts": {
+    "healthy": 208,
+    "leaf_spot": 74,
+    "mosaic_virus": 203
+  },
+  "test_image_bytes_accessed": 0,
+  "test_total": 485
+}

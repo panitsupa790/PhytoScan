@@ -1,0 +1,9 @@
+{
+  "method": "path, size, and modified-time metadata after the one-time Test evaluation",
+  "pass": true,
+  "unchanged": {
+    "dataset/cleaned": true,
+    "dataset/raw": true,
+    "dataset/split": true
+  }
+}

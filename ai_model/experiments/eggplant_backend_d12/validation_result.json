@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "passed": 24,
+  "failed": 0,
+  "checks": {
+    "manifest_version": true,
+    "eggplant_only": true,
+    "class_mapping": true,
+    "locked_config_hash": true,
+    "locked_checkpoint_hash": true,
+    "locked_paths_exist": true,
+    "model_shape": true,
+    "model_loaded_once": true,
+    "p3_reused": true,
+    "mean_probability_aggregation": true,
+    "golden_validation_only": true,
+    "golden_probabilities": true,
+    "disease_metadata_complete": true,
+    "mosaic_language": true,
+    "normal_route_real": true,
+    "http_health_docs": true,
+    "http_one_two_three": true,
+    "http_no_mock_values": true,
+    "performance_stable": true,
+    "no_duplicate_model_binary": true,
+    "immutable_inputs": true,
+    "no_training_code": true,
+    "report_exists": true,
+    "backend_scope_documented": true
+  }
+}

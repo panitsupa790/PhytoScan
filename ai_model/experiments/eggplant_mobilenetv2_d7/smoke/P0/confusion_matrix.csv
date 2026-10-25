@@ -1,0 +1,4 @@
+actual,healthy,leaf_spot,mosaic_virus
+healthy,1,1,0
+leaf_spot,1,1,0
+mosaic_virus,0,2,0

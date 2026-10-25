@@ -1,0 +1,33 @@
+{
+  "best_epoch": 1,
+  "epochs_ran": 6,
+  "per_class": {
+    "healthy": {
+      "f1": 0.7769784172661871,
+      "precision": 0.7769784172661871,
+      "recall": 0.7769784172661871,
+      "support": 139
+    },
+    "leaf_spot": {
+      "f1": 0.616822429906542,
+      "precision": 0.5789473684210527,
+      "recall": 0.66,
+      "support": 50
+    },
+    "mosaic_virus": {
+      "f1": 0.752851711026616,
+      "precision": 0.7734375,
+      "recall": 0.7333333333333333,
+      "support": 135
+    }
+  },
+  "run": "R2",
+  "smoke_test": false,
+  "technique": "Fine-tuning + class weights",
+  "training_time_seconds": 415.6155403999992,
+  "validation_accuracy": 0.7407407407407407,
+  "validation_macro_f1": 0.715550852733115,
+  "validation_macro_precision": 0.7097877618957465,
+  "validation_macro_recall": 0.7234372501998402,
+  "validation_weighted_f1": 0.7422101928516058
+}

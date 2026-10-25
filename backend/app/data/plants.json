@@ -1,0 +1,14 @@
+{
+  "plants": [
+    {
+      "code": "rose",
+      "name_th": "กุหลาบ",
+      "name_en": "Rose"
+    },
+    {
+      "code": "sunflower",
+      "name_th": "ทานตะวัน",
+      "name_en": "Sunflower"
+    }
+  ]
+}

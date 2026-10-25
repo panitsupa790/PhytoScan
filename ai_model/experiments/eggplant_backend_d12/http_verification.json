@@ -1,0 +1,47 @@
+{
+  "server": {
+    "command": "python -m uvicorn app.main:app --host 127.0.0.1 --port 8000",
+    "device": "Windows native TensorFlow CPU",
+    "working_set_mb_after_requests": 658.6,
+    "private_memory_mb_after_requests": 1420.3,
+    "process_stable": true,
+    "stopped_after_verification": true
+  },
+  "endpoints": {
+    "health": {
+      "status": 200,
+      "seconds": 0.002095
+    },
+    "docs": {
+      "status": 200,
+      "seconds": 0.002830
+    },
+    "openapi": {
+      "status": 200,
+      "seconds": 0.009879
+    },
+    "analyze_one_image": {
+      "status": 200,
+      "seconds": 1.853824,
+      "source_split": "val",
+      "prediction": "healthy",
+      "confidence": 0.5248609781265259
+    },
+    "analyze_two_images": {
+      "status": 200,
+      "seconds": 0.554312,
+      "source_split": "val",
+      "prediction": "leaf_spot",
+      "confidence": 0.39053771272301674
+    },
+    "analyze_three_images": {
+      "status": 200,
+      "seconds": 0.672126,
+      "source_split": "val",
+      "prediction": "healthy",
+      "confidence": 0.45383477210998535
+    }
+  },
+  "mock_values_observed": false,
+  "test_images_used": 0
+}

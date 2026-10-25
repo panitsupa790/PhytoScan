@@ -1,0 +1,24 @@
+{
+  "architecture": "EfficientNetB0",
+  "backbone": "efficientnetb0",
+  "backbone_layer_count": 238,
+  "batch_normalization_total": 49,
+  "batch_normalization_trainable": 0,
+  "checkpoint_sha256": "ae0be68277300848eb4208c5184bf9c937cbe2ea9c8d5abc363eb38976135aa5",
+  "dense_activation": "softmax",
+  "dense_units": 3,
+  "dropout_rate": 0.2,
+  "feature_extractor": "frozen_efficientnetb0_features",
+  "global_average_pooling_present": true,
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "internal_normalization_layer": "normalization",
+  "internal_rescaling_offset": 0.0,
+  "internal_rescaling_scale": 0.00392156862745098,
+  "load_successful": true,
+  "model_name": "eggplant_efficientnetb0_d8_lite",
+  "output_classes": 3
+}

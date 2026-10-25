@@ -1,0 +1,33 @@
+{
+  "best_epoch": 15,
+  "duration_seconds": 194.3035074999998,
+  "epochs_ran": 20,
+  "feature_extraction_seconds": 190.22740339999928,
+  "per_class": {
+    "healthy": {
+      "f1": 0.7515923566878981,
+      "precision": 0.6742857142857143,
+      "recall": 0.8489208633093526,
+      "support": 139
+    },
+    "leaf_spot": {
+      "f1": 0.5384615384615384,
+      "precision": 0.75,
+      "recall": 0.42,
+      "support": 50
+    },
+    "mosaic_virus": {
+      "f1": 0.734375,
+      "precision": 0.7768595041322314,
+      "recall": 0.6962962962962963,
+      "support": 135
+    }
+  },
+  "smoke_test": false,
+  "validation_accuracy": 0.7191358024691358,
+  "validation_macro_f1": 0.6748096317164789,
+  "validation_macro_precision": 0.7337150728059819,
+  "validation_macro_recall": 0.6550723865352163,
+  "validation_weighted_f1": 0.7115278996996752,
+  "variant": "P0"
+}

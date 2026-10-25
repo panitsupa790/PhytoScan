@@ -1,0 +1,22 @@
+{
+  "final_test": {
+    "accuracy": 0.7175257731958763,
+    "leaf_spot_f1": 0.5263157894736842,
+    "leaf_spot_recall": 0.5405405405405406,
+    "macro_f1": 0.6774721496196717
+  },
+  "test_minus_validation_gap": {
+    "accuracy": -0.023214967544864407,
+    "leaf_spot_f1": -0.09050664043285783,
+    "leaf_spot_recall": -0.11945945945945946,
+    "macro_f1": -0.0380787031134433
+  },
+  "used_for_tuning": false,
+  "validation": {
+    "accuracy": 0.7407407407407407,
+    "best_epoch": 1,
+    "leaf_spot_f1": 0.616822429906542,
+    "leaf_spot_recall": 0.66,
+    "macro_f1": 0.715550852733115
+  }
+}

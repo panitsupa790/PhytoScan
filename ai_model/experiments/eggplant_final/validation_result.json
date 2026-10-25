@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "passed": 17,
+  "failed": 0,
+  "checks": {
+    "r2_selected": true,
+    "checkpoint_loads": true,
+    "model_architecture": true,
+    "final_config_exists": true,
+    "config_hash": true,
+    "checkpoint_hash": true,
+    "p3_locked": true,
+    "class_mapping": true,
+    "fine_tuning_locked": true,
+    "batch_norm_frozen": true,
+    "class_weights_locked": true,
+    "augmentation_off": true,
+    "test_frozen": true,
+    "counts_locked": true,
+    "selection_rationale": true,
+    "d11_protocol": true,
+    "source_data_unchanged": true
+  }
+}

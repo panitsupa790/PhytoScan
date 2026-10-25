@@ -35,3 +35,38 @@ ai_model/models/*
 Thumbs.db
 .DS_Store
 mobile_app/android/build/
+
+# Dataset
+dataset/raw/**
+dataset/cleaned/**
+dataset/split/**
+
+# Keep dataset structure
+!dataset/raw/
+!dataset/raw/**/
+!dataset/raw/**/.gitkeep
+
+!dataset/cleaned/
+!dataset/cleaned/**/
+!dataset/cleaned/**/.gitkeep
+
+!dataset/split/
+!dataset/split/**/
+!dataset/split/**/.gitkeep
+
+# Track dataset metadata and scripts
+!dataset/metadata/
+!dataset/metadata/**
+!dataset/scripts/
+!dataset/scripts/**
+
+# Ignore generated Python cache re-included by the dataset scripts whitelist
+dataset/scripts/**/__pycache__/
+dataset/scripts/**/*.py[cod]
+
+# AI model files
+ai_model/models/*
+!ai_model/models/.gitkeep
+!ai_model/models/eggplant/
+!ai_model/models/eggplant/v1/
+!ai_model/models/eggplant/v1/*.json

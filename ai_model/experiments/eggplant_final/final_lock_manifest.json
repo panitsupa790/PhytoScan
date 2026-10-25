@@ -1,0 +1,12 @@
+{
+  "checkpoint_path": "ai_model/experiments/eggplant_d9_refinement/R2_class_weight/best_model.keras",
+  "checkpoint_sha256": "ae0be68277300848eb4208c5184bf9c937cbe2ea9c8d5abc363eb38976135aa5",
+  "final_config_path": "ai_model/configs/eggplant_final_locked.json",
+  "final_config_sha256": "5a7663db4f8c648fe06ce4d62206f7267946d357cedc6af73a6a7c35f432899b",
+  "final_test_evaluation_performed": false,
+  "hash_scope": "exact file bytes",
+  "lock_status": "LOCKED_FOR_D11_FINAL_TEST",
+  "locked_at_utc": "2026-09-13T23:23:28.972361+00:00",
+  "source_run": "D9_R2",
+  "test_image_bytes_accessed_during_d10": 0
+}

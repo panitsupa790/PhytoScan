@@ -1,0 +1,6 @@
+{
+  "metadata_only_test_counts_read": true,
+  "test_image_bytes_accessed": 0,
+  "test_images_decoded": 0,
+  "test_inference_performed": false
+}

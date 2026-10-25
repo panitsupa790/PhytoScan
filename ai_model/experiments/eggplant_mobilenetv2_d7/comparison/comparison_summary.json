@@ -1,0 +1,73 @@
+{
+  "close_candidate_tolerance": 0.005,
+  "close_candidates": [
+    "P3"
+  ],
+  "primary_metric": "validation_macro_f1",
+  "rows": [
+    {
+      "best_epoch": 13,
+      "epochs_ran": 18,
+      "leaf_spot_f1": 0.5116279069767442,
+      "leaf_spot_precision": 0.6111111111111112,
+      "leaf_spot_recall": 0.44,
+      "rank": 1,
+      "validation_accuracy": 0.7098765432098766,
+      "validation_macro_f1": 0.6627456506915528,
+      "validation_macro_precision": 0.6880015508299134,
+      "validation_macro_recall": 0.6520046185274003,
+      "validation_weighted_f1": 0.7035995042835657,
+      "variant": "P3",
+      "within_close_candidate_tolerance": true
+    },
+    {
+      "best_epoch": 13,
+      "epochs_ran": 18,
+      "leaf_spot_f1": 0.4819277108433735,
+      "leaf_spot_precision": 0.6060606060606061,
+      "leaf_spot_recall": 0.4,
+      "rank": 2,
+      "validation_accuracy": 0.7067901234567902,
+      "validation_macro_f1": 0.6523145078733656,
+      "validation_macro_precision": 0.6848174729753677,
+      "validation_macro_recall": 0.6409983124611421,
+      "validation_weighted_f1": 0.6983601282634226,
+      "variant": "P2",
+      "within_close_candidate_tolerance": false
+    },
+    {
+      "best_epoch": 11,
+      "epochs_ran": 16,
+      "leaf_spot_f1": 0.45569620253164556,
+      "leaf_spot_precision": 0.6206896551724138,
+      "leaf_spot_recall": 0.36,
+      "rank": 3,
+      "validation_accuracy": 0.7006172839506173,
+      "validation_macro_f1": 0.6395911705895311,
+      "validation_macro_precision": 0.6870425890088784,
+      "validation_macro_recall": 0.627451816324718,
+      "validation_weighted_f1": 0.6892754533134884,
+      "variant": "P0",
+      "within_close_candidate_tolerance": false
+    },
+    {
+      "best_epoch": 5,
+      "epochs_ran": 10,
+      "leaf_spot_f1": 0.4594594594594595,
+      "leaf_spot_precision": 0.7083333333333334,
+      "leaf_spot_recall": 0.34,
+      "rank": 4,
+      "validation_accuracy": 0.6944444444444444,
+      "validation_macro_f1": 0.635642472923513,
+      "validation_macro_precision": 0.7024493705528189,
+      "validation_macro_recall": 0.6187423394617639,
+      "validation_weighted_f1": 0.6830877919894115,
+      "variant": "P1",
+      "within_close_candidate_tolerance": false
+    }
+  ],
+  "selection_scope": "Validation only; test image bytes accessed = 0",
+  "top_candidate": "P3",
+  "top_validation_macro_f1": 0.6627456506915528,
+  "winner_declared": true
+}

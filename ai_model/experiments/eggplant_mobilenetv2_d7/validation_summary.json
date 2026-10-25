@@ -1,0 +1,40 @@
+{
+  "errors": [],
+  "parameter_counts": {
+    "non_trainable": 2257984,
+    "total": 2261827,
+    "trainable": 3843
+  },
+  "result": "PASS",
+  "test_image_bytes_accessed": 0,
+  "variants_checked": {
+    "P0": {
+      "best_epoch": 11,
+      "epochs_ran": 16,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.6395911705895311
+    },
+    "P1": {
+      "best_epoch": 5,
+      "epochs_ran": 10,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.635642472923513
+    },
+    "P2": {
+      "best_epoch": 13,
+      "epochs_ran": 18,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.6523145078733656
+    },
+    "P3": {
+      "best_epoch": 13,
+      "epochs_ran": 18,
+      "saved_model_loadable": true,
+      "test_image_bytes_accessed": 0,
+      "validation_macro_f1": 0.6627456506915528
+    }
+  }
+}

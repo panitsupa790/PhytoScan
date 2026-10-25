@@ -13,6 +13,8 @@ class ErrorCode(str, Enum):
     low_confidence = "LOW_CONFIDENCE"
     unsupported_plant = "UNSUPPORTED_PLANT"
     multiple_plant_types = "MULTIPLE_PLANT_TYPES"
+    model_unavailable = "MODEL_UNAVAILABLE"
+    inference_failed = "INFERENCE_FAILED"
 
 
 class APIError(Exception):

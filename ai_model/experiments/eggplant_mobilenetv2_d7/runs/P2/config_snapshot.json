@@ -1,0 +1,67 @@
+{
+  "classes": [
+    "healthy",
+    "leaf_spot",
+    "mosaic_virus"
+  ],
+  "config_version": "1.0",
+  "data": {
+    "channels": 3,
+    "expected_counts": {
+      "test": 0,
+      "train": 2425,
+      "val": 324
+    },
+    "image_size": [
+      224,
+      224
+    ],
+    "manifest": "dataset/metadata/eggplant_split_manifest.csv",
+    "split_root": "dataset/split/eggplant",
+    "train_split": "train",
+    "validation_split": "val"
+  },
+  "experiment_id": "eggplant_mobilenetv2_d7",
+  "model": {
+    "architecture": "MobileNetV2",
+    "backbone_trainable": false,
+    "dropout_rate": 0.2,
+    "include_top": false,
+    "output_activation": "softmax",
+    "pooling": "global_average",
+    "weights": "imagenet"
+  },
+  "preprocessing": {
+    "augmentation_enabled": false,
+    "class_balancing_enabled": false,
+    "config": "ai_model/configs/eggplant_preprocessing.json",
+    "model_normalization": "tensorflow.keras.applications.mobilenet_v2.preprocess_input",
+    "variants": [
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ]
+  },
+  "seed": 42,
+  "selection": {
+    "close_candidate_tolerance": 0.005,
+    "primary_metric": "validation_macro_f1"
+  },
+  "smoke_test": {
+    "epochs": 1,
+    "train_per_class": 4,
+    "validation_per_class": 2
+  },
+  "training": {
+    "batch_size": 32,
+    "early_stopping_monitor": "val_loss",
+    "early_stopping_patience": 5,
+    "learning_rate": 0.001,
+    "loss": "sparse_categorical_crossentropy",
+    "max_epochs": 30,
+    "optimizer": "Adam",
+    "restore_best_weights": true,
+    "shuffle_train": true
+  }
+}

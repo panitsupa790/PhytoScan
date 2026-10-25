@@ -1,0 +1,69 @@
+{
+  "action_counts": {
+    "DEDUPLICATED": 131,
+    "KEEP": 3234,
+    "REJECT": 50
+  },
+  "cleaned_counts": {
+    "healthy": 1386,
+    "leaf_spot": 495,
+    "mosaic_virus": 1353
+  },
+  "cleaned_total": 3234,
+  "generated_at_utc": "2026-09-09T09:36:43.195482+00:00",
+  "manifest_rows": 3415,
+  "raw_counts": {
+    "healthy": 1451,
+    "leaf_spot": 602,
+    "mosaic_virus": 1362
+  },
+  "raw_fingerprint_before_build": {
+    "class_counts": {
+      "healthy": 1451,
+      "leaf_spot": 602,
+      "mosaic_virus": 1362
+    },
+    "dataset_sha256": "cf3ab4fb9ca46bed36e923a87081476b4578826503ca1dc84e21a32cfe70053d",
+    "extension_counts": {
+      ".jpeg": 20,
+      ".jpg": 3395
+    },
+    "total_bytes": 2273189031,
+    "total_files": 3415
+  },
+  "raw_total": 3415,
+  "reason_counts": {
+    "CROSS_CLASS_KEEP_HEALTHY": 8,
+    "CROSS_CLASS_KEEP_LEAF_SPOT": 83,
+    "CROSS_CLASS_KEEP_MOSAIC_VIRUS": 2,
+    "NORMAL_VALID_IMAGE": 3188,
+    "RANDOM_AUDIT_INCORRECT": 50,
+    "SAME_CLASS_EXACT_DUPLICATE": 84
+  },
+  "removed_by_category": {
+    "cross_class": 47,
+    "cross_class_reject_both": 0,
+    "invalid": 0,
+    "random_audit": 50,
+    "resolution": 0,
+    "same_class_duplicates": 84
+  },
+  "resolved_conflicts": [
+    {
+      "cross_decision": "KEEP_LEAF_SPOT",
+      "group_id": "group_003",
+      "higher_priority_reason": "RANDOM_AUDIT_INCORRECT",
+      "resolution": "selected file excluded; non-selected duplicates remain excluded",
+      "selected_file": "leaf_spot/Leaf Spot Disease Image 163.jpg"
+    },
+    {
+      "cross_decision": "KEEP_LEAF_SPOT",
+      "group_id": "group_017",
+      "higher_priority_reason": "RANDOM_AUDIT_INCORRECT",
+      "resolution": "selected file excluded; non-selected duplicates remain excluded",
+      "selected_file": "leaf_spot/Leaf Spot Disease Image 66.jpg"
+    }
+  ],
+  "retention_rate": 0.9469985358711567,
+  "unresolved_reviews": 0
+}

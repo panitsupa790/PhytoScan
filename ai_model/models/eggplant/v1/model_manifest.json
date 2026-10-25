@@ -1,0 +1,31 @@
+{
+  "architecture": "EfficientNetB0",
+  "automatic_plant_classification": false,
+  "checkpoint_path": "ai_model/experiments/eggplant_d9_refinement/R2_class_weight/best_model.keras",
+  "checkpoint_sha256": "ae0be68277300848eb4208c5184bf9c937cbe2ea9c8d5abc363eb38976135aa5",
+  "class_mapping": {
+    "0": "healthy",
+    "1": "leaf_spot",
+    "2": "mosaic_virus"
+  },
+  "classes": [
+    "healthy",
+    "leaf_spot",
+    "mosaic_virus"
+  ],
+  "final_test_accuracy": 0.7175257731958763,
+  "final_test_macro_f1": 0.6774721496196717,
+  "input_size": [
+    224,
+    224,
+    3
+  ],
+  "d10_lock_manifest_path": "ai_model/experiments/eggplant_final/final_lock_manifest.json",
+  "locked_config_path": "ai_model/configs/eggplant_final_locked.json",
+  "locked_config_sha256": "5a7663db4f8c648fe06ce4d62206f7267946d357cedc6af73a6a7c35f432899b",
+  "model_name": "PhytoScan Eggplant Disease Classifier",
+  "model_version": "eggplant-v1",
+  "multi_image_aggregation": "mean_class_probabilities",
+  "plant": "eggplant",
+  "preprocessing_variant": "P3"
+}

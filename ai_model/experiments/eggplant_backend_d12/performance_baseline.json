@@ -1,0 +1,12 @@
+{
+  "device": "Windows native TensorFlow CPU",
+  "model_load_seconds": 1.235953100000188,
+  "first_single_image_inference_seconds": 0.4481448000005912,
+  "subsequent_single_image_inference_seconds": [
+    0.33380269999906886,
+    0.3404857000023185
+  ],
+  "three_image_inference_seconds": 0.7376738999992085,
+  "model_load_count": 1,
+  "process_stable": true
+}

@@ -1,114 +1,89 @@
-# PhytoScan Backend MVP
+# PhytoScan Backend
 
-FastAPI backend สำหรับรับภาพพืช 1-3 ภาพ ตรวจสอบไฟล์ และส่งผลวิเคราะห์จำลองกลับในรูปแบบ JSON โครงสร้างแยก API, image validation และ AI service เพื่อเปลี่ยนไปใช้โมเดลจริงภายหลังโดยไม่เปลี่ยน API contract ฝั่ง Flutter
+FastAPI service for multi-plant disease classification. The production API
+currently supports Rose and Sunflower. The user selects the plant; the service
+does not attempt automatic plant classification.
 
-## Requirements
+## Architecture
 
-- Python 3.12
-- Windows PowerShell
+- `app/data/plants.json` contains supported plant display metadata.
+- `app/data/model_manifest.json` maps plant codes to model files, class order,
+  input shape, preprocessing contract, and SHA-256.
+- `app/data/diseases.json` contains disease display metadata separately from
+  inference code.
+- `app/services/model_registry.py` is the central plant/model registry.
+- `app/services/plant_model_service.py` handles preprocessing, lazy model
+  loading, model caching, validation, inference, and multi-image aggregation.
 
-## Setup
+Adding a plant should require a model binary, one manifest entry, one plant
+entry, and disease metadata; the route and inference implementation remain
+unchanged.
 
-เปิด PowerShell ที่ `C:\phytoscan\backend` แล้วรัน:
+## Models
+
+Place the unchanged model binaries here:
+
+```text
+backend/app/models/rose-v1.keras
+backend/app/models/sunflower-v1.keras
+```
+
+Both models expect RGB input resized directly to `224x224`, as `float32` values
+in the `0..255` range. EfficientNet normalization is already inside each model,
+so the backend does not divide inputs by 255. Class order is defined only in
+`app/data/model_manifest.json` and must not be reordered.
+
+## Setup and run
+
+Requirements: Python 3.12 and PowerShell.
 
 ```powershell
+cd C:\phytoscan\backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-```
-
-`.env.example` แสดง configuration ที่รองรับ ได้แก่ `CORS_ORIGINS`, `MAX_IMAGES` และ `MAX_IMAGE_SIZE_BYTES` สำหรับ PowerShell ให้กำหนดค่าที่ต้องการก่อนเปิด server เช่น:
-
-```powershell
-$env:CORS_ORIGINS="http://localhost:8080"
-$env:MAX_IMAGE_SIZE_BYTES="10485760"
-```
-
-## Run
-
-```powershell
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-- Health: `http://127.0.0.1:8000/health`
-- Swagger UI: `http://127.0.0.1:8000/docs`
-- OpenAPI: `http://127.0.0.1:8000/openapi.json`
+Configuration is documented in `.env.example`. The default model manifest is
+`app/data/model_manifest.json`.
 
 ## API
 
-### `GET /health`
+- `GET /health`
+- `GET /api/v1/plants`
+- `POST /api/v1/analyze`
+- Swagger UI: `http://127.0.0.1:8000/docs`
 
-```json
-{
-  "status": "ok",
-  "service": "PhytoScan API"
-}
-```
-
-### `POST /api/v1/analyze`
-
-ส่ง `multipart/form-data` โดยใช้ field ชื่อ `images` ซ้ำกัน 1-3 ครั้ง รองรับ JPG, JPEG และ PNG ขนาดสูงสุดต่อไฟล์เริ่มต้น 10 MB
+Analysis uses multipart fields `plant_code` and one to three repeated `images`
+files. Images must be JPG, JPEG, or PNG and are limited to 10 MB each by
+default.
 
 ```powershell
 curl.exe -X POST "http://127.0.0.1:8000/api/v1/analyze" `
-  -F "images=@C:\path\to\leaf-1.jpg" `
-  -F "images=@C:\path\to\leaf-2.jpg"
+  -F "plant_code=rose" `
+  -F "images=@C:\path\to\rose-leaf.jpg"
 ```
 
-Success response:
+For multiple images, the model processes a single batch and the result uses the
+mean class probabilities. Model-load failures return 503; inference failures
+return 500; unsupported plants return 400.
 
-```json
-{
-  "success": true,
-  "image_count": 2,
-  "plant": {
-    "code": "eggplant",
-    "name_th": "มะเขือยาว",
-    "name_en": "Eggplant",
-    "confidence": 0.94
-  },
-  "disease": {
-    "code": "leaf_spot",
-    "name_th": "โรคใบจุด",
-    "name_en": "Leaf Spot",
-    "confidence": 0.84
-  },
-  "symptoms": ["..."],
-  "care": ["..."],
-  "prevention": ["..."]
-}
-```
+The response keeps the aggregate `disease`, `symptoms`, `care`, and
+`prevention` fields for backward compatibility and also returns
+`image_results`. Each image result preserves upload order and contains its own
+filename, disease, confidence, and metadata. These values come from the same
+single-batch inference call; the service does not run a second prediction pass.
 
-## Error Codes
+## Disease metadata status
 
-Error response ใช้รูปแบบเดียวกันทุกกรณี:
-
-```json
-{
-  "success": false,
-  "error_code": "INVALID_IMAGE",
-  "message": "ไฟล์ภาพไม่ถูกต้องหรือไฟล์เสีย"
-}
-```
-
-รหัสที่ใช้งานแล้ว: `INVALID_IMAGE`, `UNSUPPORTED_FILE_TYPE`, `TOO_MANY_IMAGES`, `NO_IMAGES`, `FILE_TOO_LARGE`
-
-รหัสที่เตรียมไว้สำหรับ AI จริง: `LOW_CONFIDENCE`, `UNSUPPORTED_PLANT`, `MULTIPLE_PLANT_TYPES`
+The API schema supports `symptoms`, `care`, and `prevention`, but those fields
+are intentionally empty for Rose and Sunflower until reviewed source data is
+provided. The service does not invent treatment or disease guidance.
 
 ## Tests
 
 ```powershell
-pytest -q
+cd C:\phytoscan\backend
+.\.venv\Scripts\python.exe -m pytest -q
 ```
-
-## Flutter Integration
-
-Flutter ต้องส่ง multipart request โดยใช้ key `images` สำหรับแต่ละไฟล์ Android Emulator เข้าถึง server บนเครื่องผ่าน `http://10.0.2.2:8000` แทน `localhost` ส่วนอุปกรณ์จริงต้องใช้ IP ในเครือข่ายของเครื่องที่เปิด backend
-
-## MVP Limitations
-
-- ผลวิเคราะห์ยังเป็น Mock: มะเขือยาวและโรคใบจุด
-- ไม่มีการ train หรือเรียกโมเดล AI จริง
-- ไม่มีฐานข้อมูล, authentication หรือ history API
-- ข้อความอาการ การดูแล และการป้องกันใน `app/data/diseases.json` เป็น Mock Content ต้องตรวจสอบกับแหล่งวิชาการหรือผู้เชี่ยวชาญก่อนใช้จริง
-- CORS ค่าเริ่มต้นอนุญาตเฉพาะ development origins ที่ระบุไว้ ห้ามใช้ wildcard ใน production
