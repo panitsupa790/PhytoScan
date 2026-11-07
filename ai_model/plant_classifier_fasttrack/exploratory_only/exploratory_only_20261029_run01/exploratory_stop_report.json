@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "stopped_before_training",
+  "experiment_role": "exploratory_only",
+  "stop_reason": "cross_class_phash_candidates_require_visual_adjudication_and_reveal_uniform_background_dataset_abnormality",
+  "split_audit": {
+    "semantic_groups": 3264,
+    "exact_duplicate_pairs": 0,
+    "near_duplicate_pairs_at_or_below_distance_4": 1552,
+    "cross_class_near_duplicate_candidates": 15
+  },
+  "visual_screening_observation": "The 15 cross-class pairs appear visually different, but many share a small isolated leaf on a uniform white or black background. This causes pHash collisions and is consistent with the known background/source shortcut risk.",
+  "training_started": false,
+  "checkpoint_created": false,
+  "internal_debug_metrics_available": false,
+  "known_failures_evaluated": false,
+  "production_preflight_changed": false,
+  "production_model_changed": false,
+  "deployment_performed": false,
+  "required_next_step": "Complete and record visual adjudication for all 15 pairs, then decide whether to keep both images grouped, quarantine ambiguous samples, or revise the debug-only duplicate rule without changing the production gate."
+}

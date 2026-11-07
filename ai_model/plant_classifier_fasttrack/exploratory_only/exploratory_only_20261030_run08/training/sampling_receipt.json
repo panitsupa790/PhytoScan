@@ -1,0 +1,51 @@
+{
+  "strategy": "class_target_with_inverse_sqrt_source_weight_finite_pool",
+  "seed": 42,
+  "input_samples": 4794,
+  "epoch_samples": 5532,
+  "target_per_class": 922,
+  "max_repeats_per_image": 2,
+  "observed_max_repeats": 2,
+  "repeat_histogram": {
+    "1": 1540,
+    "2": 1996
+  },
+  "scheduled_class_counts": {
+    "chrysanthemum": 922,
+    "marigold": 922,
+    "money_plant": 922,
+    "rose": 922,
+    "snake_plant": 922,
+    "spider_plant": 922
+  },
+  "scheduled_source_counts": {
+    "chrysanthemum": {
+      "mendeley_chrysanthemum_leaf_disease_v2": 443,
+      "v1_original_train": 479
+    },
+    "marigold": {
+      "inaturalist_dev_train": 2,
+      "mendeley_flower_leaf_original_v4": 293,
+      "v1_original_train": 627
+    },
+    "money_plant": {
+      "inaturalist_dev_train": 40,
+      "mendeley_indoor_plants_classification_v1": 158,
+      "v1_original_train": 724
+    },
+    "rose": {
+      "mendeley_flower_leaf_original_v4": 208,
+      "v1_original_train": 714
+    },
+    "snake_plant": {
+      "inaturalist_dev_train": 26,
+      "mendeley_indoor_plants_classification_v1": 126,
+      "v1_original_train": 770
+    },
+    "spider_plant": {
+      "inaturalist_dev_train": 26,
+      "mendeley_indoor_plants_classification_v1": 119,
+      "v1_original_train": 777
+    }
+  }
+}

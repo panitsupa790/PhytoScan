@@ -1,0 +1,328 @@
+{
+  "split": "test",
+  "generated_at_utc": "2026-10-25T22:33:28.316672+00:00",
+  "thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.4026440382003784
+  },
+  "dataset_counts": {
+    "total": 1580,
+    "per_true_plant": {
+      "rose": 1173,
+      "chrysanthemum": 161,
+      "marigold": 73,
+      "money_plant": 49,
+      "snake_plant": 58,
+      "spider_plant": 66
+    }
+  },
+  "metrics": {
+    "overall": {
+      "sample_counts": {
+        "total": 1580,
+        "correct_predictions": 1577,
+        "incorrect_predictions": 3,
+        "accepted": 1576,
+        "accepted_correct": 1575,
+        "accepted_incorrect": 1,
+        "rejected": 4
+      },
+      "coverage": {
+        "numerator": 1576,
+        "denominator": 1580,
+        "percentage": 99.74683544303798
+      },
+      "accepted_accuracy": {
+        "numerator": 1575,
+        "denominator": 1576,
+        "percentage": 99.93654822335026
+      },
+      "false_acceptance_rate_among_incorrect_predictions": {
+        "numerator": 1,
+        "denominator": 3,
+        "percentage": 33.333333333333336
+      },
+      "accepted_error_rate": {
+        "numerator": 1,
+        "denominator": 1576,
+        "percentage": 0.06345177664974619
+      },
+      "correct_rejections": {
+        "numerator": 2,
+        "denominator": 3,
+        "percentage": 66.66666666666667
+      },
+      "wrongful_rejections": {
+        "numerator": 2,
+        "denominator": 1577,
+        "percentage": 0.12682308180088775
+      }
+    },
+    "per_true_plant": {
+      "chrysanthemum": {
+        "sample_counts": {
+          "total": 161,
+          "correct_predictions": 161,
+          "incorrect_predictions": 0,
+          "accepted": 161,
+          "accepted_correct": 161,
+          "accepted_incorrect": 0,
+          "rejected": 0
+        },
+        "coverage": {
+          "numerator": 161,
+          "denominator": 161,
+          "percentage": 100.0
+        },
+        "accepted_accuracy": {
+          "numerator": 161,
+          "denominator": 161,
+          "percentage": 100.0
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "accepted_error_rate": {
+          "numerator": 0,
+          "denominator": 161,
+          "percentage": 0.0
+        },
+        "correct_rejections": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "wrongful_rejections": {
+          "numerator": 0,
+          "denominator": 161,
+          "percentage": 0.0
+        }
+      },
+      "marigold": {
+        "sample_counts": {
+          "total": 73,
+          "correct_predictions": 73,
+          "incorrect_predictions": 0,
+          "accepted": 73,
+          "accepted_correct": 73,
+          "accepted_incorrect": 0,
+          "rejected": 0
+        },
+        "coverage": {
+          "numerator": 73,
+          "denominator": 73,
+          "percentage": 100.0
+        },
+        "accepted_accuracy": {
+          "numerator": 73,
+          "denominator": 73,
+          "percentage": 100.0
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "accepted_error_rate": {
+          "numerator": 0,
+          "denominator": 73,
+          "percentage": 0.0
+        },
+        "correct_rejections": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "wrongful_rejections": {
+          "numerator": 0,
+          "denominator": 73,
+          "percentage": 0.0
+        }
+      },
+      "money_plant": {
+        "sample_counts": {
+          "total": 49,
+          "correct_predictions": 49,
+          "incorrect_predictions": 0,
+          "accepted": 49,
+          "accepted_correct": 49,
+          "accepted_incorrect": 0,
+          "rejected": 0
+        },
+        "coverage": {
+          "numerator": 49,
+          "denominator": 49,
+          "percentage": 100.0
+        },
+        "accepted_accuracy": {
+          "numerator": 49,
+          "denominator": 49,
+          "percentage": 100.0
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "accepted_error_rate": {
+          "numerator": 0,
+          "denominator": 49,
+          "percentage": 0.0
+        },
+        "correct_rejections": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "wrongful_rejections": {
+          "numerator": 0,
+          "denominator": 49,
+          "percentage": 0.0
+        }
+      },
+      "rose": {
+        "sample_counts": {
+          "total": 1173,
+          "correct_predictions": 1171,
+          "incorrect_predictions": 2,
+          "accepted": 1170,
+          "accepted_correct": 1169,
+          "accepted_incorrect": 1,
+          "rejected": 3
+        },
+        "coverage": {
+          "numerator": 1170,
+          "denominator": 1173,
+          "percentage": 99.74424552429667
+        },
+        "accepted_accuracy": {
+          "numerator": 1169,
+          "denominator": 1170,
+          "percentage": 99.91452991452991
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 1,
+          "denominator": 2,
+          "percentage": 50.0
+        },
+        "accepted_error_rate": {
+          "numerator": 1,
+          "denominator": 1170,
+          "percentage": 0.08547008547008547
+        },
+        "correct_rejections": {
+          "numerator": 1,
+          "denominator": 2,
+          "percentage": 50.0
+        },
+        "wrongful_rejections": {
+          "numerator": 2,
+          "denominator": 1171,
+          "percentage": 0.1707941929974381
+        }
+      },
+      "snake_plant": {
+        "sample_counts": {
+          "total": 58,
+          "correct_predictions": 58,
+          "incorrect_predictions": 0,
+          "accepted": 58,
+          "accepted_correct": 58,
+          "accepted_incorrect": 0,
+          "rejected": 0
+        },
+        "coverage": {
+          "numerator": 58,
+          "denominator": 58,
+          "percentage": 100.0
+        },
+        "accepted_accuracy": {
+          "numerator": 58,
+          "denominator": 58,
+          "percentage": 100.0
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "accepted_error_rate": {
+          "numerator": 0,
+          "denominator": 58,
+          "percentage": 0.0
+        },
+        "correct_rejections": {
+          "numerator": 0,
+          "denominator": 0,
+          "percentage": null
+        },
+        "wrongful_rejections": {
+          "numerator": 0,
+          "denominator": 58,
+          "percentage": 0.0
+        }
+      },
+      "spider_plant": {
+        "sample_counts": {
+          "total": 66,
+          "correct_predictions": 65,
+          "incorrect_predictions": 1,
+          "accepted": 65,
+          "accepted_correct": 65,
+          "accepted_incorrect": 0,
+          "rejected": 1
+        },
+        "coverage": {
+          "numerator": 65,
+          "denominator": 66,
+          "percentage": 98.48484848484848
+        },
+        "accepted_accuracy": {
+          "numerator": 65,
+          "denominator": 65,
+          "percentage": 100.0
+        },
+        "false_acceptance_rate_among_incorrect_predictions": {
+          "numerator": 0,
+          "denominator": 1,
+          "percentage": 0.0
+        },
+        "accepted_error_rate": {
+          "numerator": 0,
+          "denominator": 65,
+          "percentage": 0.0
+        },
+        "correct_rejections": {
+          "numerator": 1,
+          "denominator": 1,
+          "percentage": 100.0
+        },
+        "wrongful_rejections": {
+          "numerator": 0,
+          "denominator": 65,
+          "percentage": 0.0
+        }
+      }
+    }
+  },
+  "metric_definitions": {
+    "coverage": "accepted_samples / total_samples",
+    "accepted_accuracy": "accepted_correct / accepted_samples (N/A when accepted_samples is 0)",
+    "false_acceptance_rate_among_incorrect_predictions": "accepted_incorrect / total_incorrect_predictions (N/A when total_incorrect_predictions is 0)",
+    "accepted_error_rate": "accepted_incorrect / accepted_samples (N/A when accepted_samples is 0)",
+    "correct_rejections": "rejected_incorrect_predictions; percentage denominator is total_incorrect_predictions",
+    "wrongful_rejections": "rejected_correct_predictions; percentage denominator is total_correct_predictions",
+    "per_class_basis": "true plant label"
+  },
+  "limitations": [
+    "No unsupported/OOD dataset was evaluated; thresholds only filter low-confidence predictions among supported plants.",
+    "This evaluation observed only 2 incorrect validation predictions (the supplied prior expectation was 7), so zero accepted validation errors cannot guarantee zero errors in production.",
+    "This is not an external test set and may overlap with data used by one or more disease classifiers."
+  ],
+  "integrity_checks": {
+    "path_leakage": 0,
+    "group_id_leakage": 0
+  }
+}

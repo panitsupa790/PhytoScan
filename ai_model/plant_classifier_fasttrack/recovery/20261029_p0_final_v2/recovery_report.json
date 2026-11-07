@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T13:11:23.141051+00:00",
+  "status": "pending_manual_review",
+  "training_unlocked": false,
+  "candidate_images_scanned": 1477,
+  "candidate_source_counts": {
+    "mendeley_indoor_candidates_v2": 576,
+    "windows_rose_dataset_20261029": 300,
+    "windows_marigold_dataset_20261029": 300,
+    "windows_chrysanthemum_copy_20261029": 300,
+    "windows_standalone_spider_candidate_20261027": 1
+  },
+  "filesystem_discovery": [
+    {
+      "source_id": "windows_rose_dataset_20261029",
+      "plant": "rose",
+      "directory": "/mnt/c/Users/HP/Downloads/dataset for various disease detect/dataset for various disease detection of Rose ,Tagetes erecta  Hibiscus rosa-sinensis/Rosa",
+      "images_discovered": 3010,
+      "images_screened": 300,
+      "screening": "deterministic_stratified_by_condition_directory"
+    },
+    {
+      "source_id": "windows_marigold_dataset_20261029",
+      "plant": "marigold",
+      "directory": "/mnt/c/Users/HP/Downloads/dataset for various disease detect/dataset for various disease detection of Rose ,Tagetes erecta  Hibiscus rosa-sinensis/Tagetes erecta",
+      "images_discovered": 902,
+      "images_screened": 300,
+      "screening": "deterministic_stratified_by_condition_directory"
+    },
+    {
+      "source_id": "windows_chrysanthemum_copy_20261029",
+      "plant": "chrysanthemum",
+      "directory": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset",
+      "images_discovered": 2580,
+      "images_screened": 300,
+      "screening": "deterministic_stratified_by_condition_directory"
+    }
+  ],
+  "selected_for_manual_review_counts": {
+    "chrysanthemum": 17,
+    "marigold": 30,
+    "money_plant": 0,
+    "rose": 30,
+    "snake_plant": 0,
+    "spider_plant": 1
+  },
+  "manual_approved_counts": {
+    "chrysanthemum": 0,
+    "marigold": 0,
+    "money_plant": 0,
+    "rose": 0,
+    "snake_plant": 0,
+    "spider_plant": 0
+  },
+  "technically_missing_to_offer_20_for_review": {
+    "chrysanthemum": 3,
+    "marigold": 0,
+    "money_plant": 20,
+    "rose": 0,
+    "snake_plant": 20,
+    "spider_plant": 19
+  },
+  "manual_approval_missing_to_reach_20": {
+    "chrysanthemum": 20,
+    "marigold": 20,
+    "money_plant": 20,
+    "rose": 20,
+    "snake_plant": 20,
+    "spider_plant": 20
+  },
+  "selected_source_counts": {
+    "windows_chrysanthemum_copy_20261029": 17,
+    "windows_marigold_dataset_20261029": 30,
+    "windows_rose_dataset_20261029": 30,
+    "windows_standalone_spider_candidate_20261027": 1
+  },
+  "exclusion_counts": {
+    "path_used_by_training_or_history": 674,
+    "sha256_used_by_training_or_history": 988,
+    "source_group_intersects_training": 454,
+    "near_duplicate_training_or_history": 60,
+    "near_duplicate_within_review_selection": 2
+  },
+  "leakage_policy": {
+    "exact_sha256_excluded": true,
+    "near_training_phash_distance_max_excluded": 4,
+    "candidate_diversity_phash_distance_max_excluded": 6,
+    "source_groups_intersecting_training_excluded": true,
+    "legacy_validation_test_excluded": true,
+    "overused_external_development_excluded": true
+  },
+  "exclusion_registry": {
+    "hash_registry_rows": 9520,
+    "phash_registry_rows": 9520,
+    "missing_v5_training_registry_entries_computed": 97,
+    "history_manifest_counts": {
+      "legacy_validation": 2340,
+      "legacy_test": 1580,
+      "overused_external_development": 104
+    }
+  },
+  "inventory_manifests": [
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/indoor_external_dev_candidates.csv",
+      "rows": 576,
+      "columns": [
+        "path",
+        "plant",
+        "label",
+        "source",
+        "duplicate_group",
+        "sha256",
+        "phash",
+        "variant",
+        "code",
+        "number",
+        "dataset_role",
+        "review_status"
+      ],
+      "plant_counts": {
+        "money_plant": 192,
+        "snake_plant": 192,
+        "spider_plant": 192
+      },
+      "status_counts": {
+        "review_status": {
+          "sample_reviewed_pending_full_label_audit": 576
+        },
+        "dataset_role": {
+          "external_development_candidate": 576
+        }
+      },
+      "sha256": "ecf996597b970cfe778cef74d500d53ad6804e0a5fb3a3c5c4ce8e3bf4d5ee99"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/mendeley_external_dev_candidates.csv",
+      "rows": 540,
+      "columns": [
+        "path",
+        "plant",
+        "label",
+        "source",
+        "duplicate_group",
+        "sha256",
+        "phash",
+        "dataset_role",
+        "review_status"
+      ],
+      "plant_counts": {
+        "rose": 270,
+        "marigold": 270
+      },
+      "status_counts": {
+        "review_status": {
+          "visual_sample_reviewed": 540
+        },
+        "dataset_role": {
+          "external_development_candidate": 540
+        }
+      },
+      "sha256": "e3a23af51798624db7260004313270167c7dde81b899f454711e460e77cecf5a"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/inaturalist_external_candidates.csv",
+      "rows": 180,
+      "columns": [
+        "plant",
+        "query_taxon",
+        "observed_taxon",
+        "observation_id",
+        "observation_url",
+        "photo_url",
+        "photo_license",
+        "quality_grade",
+        "review_status"
+      ],
+      "plant_counts": {
+        "chrysanthemum": 30,
+        "marigold": 30,
+        "money_plant": 30,
+        "rose": 30,
+        "snake_plant": 30,
+        "spider_plant": 30
+      },
+      "status_counts": {
+        "review_status": {
+          "pending": 180
+        }
+      },
+      "sha256": "e187fd7c81927614d081f61624d72c8137dd10f88b95f5e21bbb8e9f241dba4c"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/inaturalist_manual_review.csv",
+      "rows": 180,
+      "columns": [
+        "plant",
+        "observation_id",
+        "path",
+        "observed_taxon",
+        "observation_url",
+        "photo_license",
+        "sha256",
+        "review_status",
+        "leaf_visible",
+        "correct_plant",
+        "image_quality",
+        "review_notes"
+      ],
+      "plant_counts": {
+        "chrysanthemum": 30,
+        "marigold": 30,
+        "money_plant": 30,
+        "rose": 30,
+        "snake_plant": 30,
+        "spider_plant": 30
+      },
+      "status_counts": {
+        "review_status": {
+          "rejected": 76,
+          "approved": 104
+        }
+      },
+      "sha256": "f7a08314f574a0f85a724423bb55f874aea7ff905adcdc51cbe5f1c622f6633f"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/v3_external_development_pool.csv",
+      "rows": 104,
+      "columns": [
+        "plant",
+        "observation_id",
+        "path",
+        "observed_taxon",
+        "observation_url",
+        "photo_license",
+        "sha256",
+        "review_status",
+        "leaf_visible",
+        "correct_plant",
+        "image_quality",
+        "review_notes",
+        "observer_id",
+        "observed_on",
+        "source_status",
+        "source_group",
+        "data_role"
+      ],
+      "plant_counts": {
+        "chrysanthemum": 14,
+        "marigold": 11,
+        "money_plant": 27,
+        "rose": 3,
+        "snake_plant": 28,
+        "spider_plant": 21
+      },
+      "status_counts": {
+        "review_status": {
+          "approved": 104
+        }
+      },
+      "sha256": "1d5c11eaed9c8bbfc4520e8f0e478b6c238320d966ab78fb6c4bb0ec161a2532"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/v5_marigold_final_decisions.csv",
+      "rows": 14,
+      "columns": [
+        "candidate_index",
+        "observation_id",
+        "observer_id",
+        "local_path",
+        "review_status",
+        "final_approval",
+        "review_notes",
+        "requires_group_review",
+        "species_verified",
+        "leaf_visible",
+        "leaf_sufficient",
+        "other_species_present",
+        "final_status",
+        "final_notes",
+        "manual_decision",
+        "manual_notes"
+      ],
+      "plant_counts": {},
+      "status_counts": {
+        "review_status": {
+          "provisional_approve": 14
+        },
+        "manual_decision": {
+          "approved": 13,
+          "rejected": 1
+        },
+        "final_status": {
+          "approved": 13,
+          "rejected": 1
+        }
+      },
+      "sha256": "d799987f829e7b721aa52ad715514577c6cdc76cc3c5d11eef0216c4e94bce5f"
+    }
+  ],
+  "contact_sheets": [
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/chrysanthemum_review_01.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/chrysanthemum_review_02.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/marigold_review_01.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/marigold_review_02.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/rose_review_01.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/rose_review_02.jpg",
+    "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final_v2/contact_sheets/spider_plant_review_01.jpg"
+  ],
+  "limitations": [
+    "Folder/source labels are proposals only; no candidate is approved automatically.",
+    "License/attribution remains not verified for the Windows and Mendeley candidate sources.",
+    "pHash distance is a screening tool; selected sheets still require visual duplicate adjudication.",
+    "The draft cannot unlock training until at least 20 manually approved, quality-valid images exist in every class."
+  ]
+}

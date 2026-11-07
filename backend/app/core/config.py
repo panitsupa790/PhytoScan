@@ -11,6 +11,18 @@ def _cors_origins_from_env() -> tuple[str, ...]:
     return tuple(origin.strip() for origin in raw_origins.split(",") if origin.strip())
 
 
+def _bool_from_env(name: str, default: bool) -> bool:
+    raw_value = os.getenv(name)
+    if raw_value is None:
+        return default
+    normalized = raw_value.strip().lower()
+    if normalized in {"1", "true", "yes", "on"}:
+        return True
+    if normalized in {"0", "false", "no", "off"}:
+        return False
+    raise ValueError(f"{name} must be a boolean value")
+
+
 @dataclass(frozen=True)
 class Settings:
     app_name: str = "PhytoScan API"
@@ -24,6 +36,19 @@ class Settings:
         "MODEL_MANIFEST",
         "app/data/model_manifest.json",
     )
+    plant_threshold_config: str = os.getenv(
+        "PLANT_THRESHOLD_CONFIG",
+        "app/data/plant_classifier_evaluation_corrective.json",
+    )
+    plant_threshold_receipt: str = os.getenv(
+        "PLANT_THRESHOLD_RECEIPT",
+        "app/data/plant_classifier_corrective_test_receipt.json",
+    )
+    plant_threshold_require_test_receipt: bool = _bool_from_env(
+        "PLANT_THRESHOLD_REQUIRE_TEST_RECEIPT",
+        True,
+    )
+    database_path: str = os.getenv("DATABASE_PATH", "data/phytoscan.db")
     # Kept only so the previous Eggplant research tests/artifacts remain usable.
     eggplant_model_manifest: str = os.getenv(
         "EGGPLANT_MODEL_MANIFEST",

@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "completed_at_utc": "2026-10-29T18:08:48.754367+00:00",
+  "experiment_role": "exploratory_only",
+  "production_promotion_allowed": false,
+  "deployment_allowed": false,
+  "fresh_imagenet_initialization": true,
+  "loaded_v2_to_v5_weights": false,
+  "duration_seconds": 631.8047991589992,
+  "seed": 42,
+  "config_sha256": "95201d3d83cc2dc0bab2707cdf41ed8410d98eca71a464114bc811c2d7701d11",
+  "runtime": {
+    "gpu_devices": [
+      "/physical_device:GPU:0"
+    ],
+    "mixed_precision_policy": "mixed_float16",
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026100104"
+  },
+  "checkpoints": {
+    "head": {
+      "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/training/head_best.exploratory_only.keras",
+      "sha256": "b545cb87953c78fab41f3f7a6be2aac96bedbb42d205c67fe2bd84d78916f905",
+      "metrics": {
+        "samples": 680,
+        "correct": 646,
+        "accuracy": 0.95,
+        "macro_f1": 0.9442777480824017,
+        "macro_recall": 0.9449192597237439,
+        "per_class_recall": {
+          "chrysanthemum": 0.920863309352518,
+          "marigold": 0.7931034482758621,
+          "money_plant": 0.9876543209876543,
+          "rose": 0.9891304347826086,
+          "snake_plant": 0.9887640449438202,
+          "spider_plant": 0.99
+        },
+        "classification_report": {
+          "chrysanthemum": {
+            "precision": 0.9922480620155039,
+            "recall": 0.920863309352518,
+            "f1-score": 0.9552238805970149,
+            "support": 139.0
+          },
+          "marigold": {
+            "precision": 1.0,
+            "recall": 0.7931034482758621,
+            "f1-score": 0.8846153846153846,
+            "support": 87.0
+          },
+          "money_plant": {
+            "precision": 0.8695652173913043,
+            "recall": 0.9876543209876543,
+            "f1-score": 0.9248554913294798,
+            "support": 81.0
+          },
+          "rose": {
+            "precision": 0.9479166666666666,
+            "recall": 0.9891304347826086,
+            "f1-score": 0.9680851063829787,
+            "support": 184.0
+          },
+          "snake_plant": {
+            "precision": 0.946236559139785,
+            "recall": 0.9887640449438202,
+            "f1-score": 0.967032967032967,
+            "support": 89.0
+          },
+          "spider_plant": {
+            "precision": 0.9428571428571428,
+            "recall": 0.99,
+            "f1-score": 0.9658536585365853,
+            "support": 100.0
+          },
+          "accuracy": 0.95,
+          "macro avg": {
+            "precision": 0.9498039413450671,
+            "recall": 0.9449192597237439,
+            "f1-score": 0.9442777480824017,
+            "support": 680.0
+          },
+          "weighted avg": {
+            "precision": 0.953345144036283,
+            "recall": 0.95,
+            "f1-score": 0.9491616355239295,
+            "support": 680.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            3,
+            5,
+            2,
+            1
+          ],
+          [
+            1,
+            69,
+            7,
+            4,
+            2,
+            4
+          ],
+          [
+            0,
+            0,
+            80,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            182,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            88,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            99
+          ]
+        ]
+      }
+    },
+    "fine_tune": {
+      "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/training/fine_tune_best.exploratory_only.keras",
+      "sha256": "27948ebd4355c13c6e98354efdc748aefd695c73494fe5c795b51eacff687c82",
+      "metrics": {
+        "samples": 680,
+        "correct": 647,
+        "accuracy": 0.9514705882352941,
+        "macro_f1": 0.9457178710630996,
+        "macro_recall": 0.9478448802468157,
+        "per_class_recall": {
+          "chrysanthemum": 0.920863309352518,
+          "marigold": 0.8160919540229885,
+          "money_plant": 0.9876543209876543,
+          "rose": 0.9836956521739131,
+          "snake_plant": 0.9887640449438202,
+          "spider_plant": 0.99
+        },
+        "classification_report": {
+          "chrysanthemum": {
+            "precision": 0.9922480620155039,
+            "recall": 0.920863309352518,
+            "f1-score": 0.9552238805970149,
+            "support": 139.0
+          },
+          "marigold": {
+            "precision": 1.0,
+            "recall": 0.8160919540229885,
+            "f1-score": 0.8987341772151899,
+            "support": 87.0
+          },
+          "money_plant": {
+            "precision": 0.8695652173913043,
+            "recall": 0.9876543209876543,
+            "f1-score": 0.9248554913294798,
+            "support": 81.0
+          },
+          "rose": {
+            "precision": 0.9627659574468085,
+            "recall": 0.9836956521739131,
+            "f1-score": 0.9731182795698925,
+            "support": 184.0
+          },
+          "snake_plant": {
+            "precision": 0.9263157894736842,
+            "recall": 0.9887640449438202,
+            "f1-score": 0.9565217391304348,
+            "support": 89.0
+          },
+          "spider_plant": {
+            "precision": 0.9428571428571428,
+            "recall": 0.99,
+            "f1-score": 0.9658536585365853,
+            "support": 100.0
+          },
+          "accuracy": 0.9514705882352941,
+          "macro avg": {
+            "precision": 0.948958694864074,
+            "recall": 0.9478448802468157,
+            "f1-score": 0.9457178710630996,
+            "support": 680.0
+          },
+          "weighted avg": {
+            "precision": 0.9547559102175526,
+            "recall": 0.9514705882352941,
+            "f1-score": 0.9509541936698851,
+            "support": 680.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            4,
+            4,
+            2,
+            1
+          ],
+          [
+            1,
+            71,
+            5,
+            2,
+            4,
+            4
+          ],
+          [
+            0,
+            0,
+            80,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            181,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            88,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            99
+          ]
+        ]
+      }
+    },
+    "selected_for_debug_report_only": {
+      "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/training/fine_tune_best.exploratory_only.keras",
+      "sha256": "27948ebd4355c13c6e98354efdc748aefd695c73494fe5c795b51eacff687c82",
+      "metrics": {
+        "samples": 680,
+        "correct": 647,
+        "accuracy": 0.9514705882352941,
+        "macro_f1": 0.9457178710630996,
+        "macro_recall": 0.9478448802468157,
+        "per_class_recall": {
+          "chrysanthemum": 0.920863309352518,
+          "marigold": 0.8160919540229885,
+          "money_plant": 0.9876543209876543,
+          "rose": 0.9836956521739131,
+          "snake_plant": 0.9887640449438202,
+          "spider_plant": 0.99
+        },
+        "classification_report": {
+          "chrysanthemum": {
+            "precision": 0.9922480620155039,
+            "recall": 0.920863309352518,
+            "f1-score": 0.9552238805970149,
+            "support": 139.0
+          },
+          "marigold": {
+            "precision": 1.0,
+            "recall": 0.8160919540229885,
+            "f1-score": 0.8987341772151899,
+            "support": 87.0
+          },
+          "money_plant": {
+            "precision": 0.8695652173913043,
+            "recall": 0.9876543209876543,
+            "f1-score": 0.9248554913294798,
+            "support": 81.0
+          },
+          "rose": {
+            "precision": 0.9627659574468085,
+            "recall": 0.9836956521739131,
+            "f1-score": 0.9731182795698925,
+            "support": 184.0
+          },
+          "snake_plant": {
+            "precision": 0.9263157894736842,
+            "recall": 0.9887640449438202,
+            "f1-score": 0.9565217391304348,
+            "support": 89.0
+          },
+          "spider_plant": {
+            "precision": 0.9428571428571428,
+            "recall": 0.99,
+            "f1-score": 0.9658536585365853,
+            "support": 100.0
+          },
+          "accuracy": 0.9514705882352941,
+          "macro avg": {
+            "precision": 0.948958694864074,
+            "recall": 0.9478448802468157,
+            "f1-score": 0.9457178710630996,
+            "support": 680.0
+          },
+          "weighted avg": {
+            "precision": 0.9547559102175526,
+            "recall": 0.9514705882352941,
+            "f1-score": 0.9509541936698851,
+            "support": 680.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            4,
+            4,
+            2,
+            1
+          ],
+          [
+            1,
+            71,
+            5,
+            2,
+            4,
+            4
+          ],
+          [
+            0,
+            0,
+            80,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            181,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            88,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            99
+          ]
+        ]
+      }
+    }
+  },
+  "selection_data": "internal_debug_validation_only",
+  "known_failures_used_for_selection": false,
+  "external_development_20_accessed": false,
+  "legacy_or_locked_test_accessed": false
+}

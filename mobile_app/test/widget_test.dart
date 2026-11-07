@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_app/main.dart';
+import 'package:mobile_app/models/analyze_outcome.dart';
 import 'package:mobile_app/models/analyze_result.dart';
 import 'package:mobile_app/models/plant.dart';
+import 'package:mobile_app/screens/profile_screen.dart';
 import 'package:mobile_app/screens/result_screen.dart';
 import 'package:mobile_app/services/api_service.dart';
 import 'package:mobile_app/theme/app_theme.dart';
@@ -17,16 +19,16 @@ class FakeApi implements PhytoScanApi {
   Future<List<Plant>> fetchPlants() async => const [
     Plant(code: 'rose', nameTh: 'กุหลาบ', nameEn: 'Rose', diseaseCount: 8),
     Plant(
-      code: 'sunflower',
-      nameTh: 'ทานตะวัน',
-      nameEn: 'Sunflower',
-      diseaseCount: 4,
+      code: 'marigold',
+      nameTh: 'ดาวเรือง',
+      nameEn: 'Marigold',
+      diseaseCount: 3,
     ),
   ];
 
   @override
-  Future<AnalyzeResult> analyze({
-    required String plantCode,
+  Future<AnalyzeOutcome> analyze({
+    String? plantCode,
     required List<XFile> images,
   }) {
     throw UnimplementedError();
@@ -41,6 +43,20 @@ const plantPrediction = PredictionLabel(
 );
 
 void main() {
+  testWidgets('profile reflects the six-plant registry without sunflower', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: const Scaffold(body: ProfileScreen()),
+      ),
+    );
+
+    expect(find.text('รองรับพืช 6 ชนิด'), findsOneWidget);
+    expect(find.textContaining('Sunflower'), findsNothing);
+  });
+
   testWidgets('splash allows guest access without authentication', (
     WidgetTester tester,
   ) async {
@@ -49,28 +65,42 @@ void main() {
 
     await tester.pump(const Duration(seconds: 1));
     await tester.pumpAndSettle();
-    expect(find.text('ใช้งานแบบ Guest'), findsOneWidget);
+    expect(find.text('ใช้งานแบบผู้ใช้ทั่วไป'), findsOneWidget);
 
-    await tester.tap(find.text('ใช้งานแบบ Guest'));
+    await tester.ensureVisible(find.text('ใช้งานแบบผู้ใช้ทั่วไป'));
+    await tester.tap(find.text('ใช้งานแบบผู้ใช้ทั่วไป'));
     await tester.pumpAndSettle();
-    expect(find.text('ตรวจสุขภาพต้นไม้'), findsOneWidget);
+    expect(find.text('ระบุชนิดพืช'), findsOneWidget);
   });
 
-  testWidgets('home dashboard is data driven and opens plant selection', (
-    WidgetTester tester,
-  ) async {
-    await tester.pumpWidget(MyApp(api: FakeApi(), startAtHome: true));
-    await tester.pumpAndSettle();
+  testWidgets(
+    'home dashboard offers automatic scan and manual plant selection',
+    (WidgetTester tester) async {
+      await tester.pumpWidget(MyApp(api: FakeApi(), startAtHome: true));
+      await tester.pumpAndSettle();
 
-    expect(find.text('ตรวจสุขภาพต้นไม้'), findsOneWidget);
-    expect(find.text('กุหลาบ'), findsOneWidget);
-    expect(find.text('รองรับ 8 อาการ'), findsOneWidget);
+      expect(find.text('ระบุชนิดพืช'), findsOneWidget);
+      expect(find.text('กุหลาบ'), findsOneWidget);
+      expect(find.text('ตรวจโรคพืช'), findsOneWidget);
 
-    await tester.tap(find.text('เริ่ม Scan'));
-    await tester.pumpAndSettle();
-    expect(find.text('คุณกำลังตรวจพืชอะไร?'), findsOneWidget);
-    expect(find.text('ทานตะวัน'), findsOneWidget);
-  });
+      await tester.tap(find.byKey(const Key('identifyPlantButton')));
+      await tester.pumpAndSettle();
+      expect(find.text('จำแนกชนิดพืชอัตโนมัติ'), findsOneWidget);
+
+      await tester.pageBack();
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(
+        find.byKey(const Key('diagnosePlantButton')),
+        220,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('diagnosePlantButton')));
+      await tester.pumpAndSettle();
+      expect(find.text('คุณกำลังตรวจพืชอะไร?'), findsOneWidget);
+      expect(find.text('ดาวเรือง'), findsOneWidget);
+    },
+  );
 
   testWidgets('result screen prioritizes one result per image', (
     WidgetTester tester,
@@ -134,21 +164,30 @@ void main() {
 
     expect(find.text('Rose Rust'), findsOneWidget);
     expect(find.text('Rose Black Spot'), findsOneWidget);
-    expect(find.text('ความมั่นใจสูง'), findsOneWidget);
+    expect(find.byKey(const ValueKey('result-home-button')), findsOneWidget);
+    expect(find.byKey(const ValueKey('analyze-again-button')), findsOneWidget);
+    expect(find.text('ผลการวินิจฉัยเบื้องต้นจากภาพถ่าย'), findsWidgets);
+    expect(find.textContaining('%'), findsNothing);
     expect(
       find.text('ผลจากภาพที่ส่งมามีความแตกต่างกัน กรุณาตรวจผลแต่ละภาพ'),
       findsOneWidget,
     );
 
-    await tester.ensureVisible(find.byType(DiagnosisResultCard).first);
-    await tester.tap(find.byType(DiagnosisResultCard).first);
+    final firstResultCard = find.byType(DiagnosisResultCard).first;
+    await Scrollable.ensureVisible(
+      tester.element(firstResultCard),
+      alignment: 0.35,
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(firstResultCard);
     await tester.pumpAndSettle();
     expect(find.text('รายละเอียดผลตรวจ'), findsOneWidget);
     await tester.scrollUntilVisible(
-      find.text('ความมั่นใจในการจำแนก'),
+      find.text('ผลการวินิจฉัยเบื้องต้นจากภาพถ่าย'),
       220,
     );
-    expect(find.text('ความมั่นใจในการจำแนก'), findsOneWidget);
+    expect(find.text('ผลการวินิจฉัยเบื้องต้นจากภาพถ่าย'), findsOneWidget);
+    expect(find.textContaining('%'), findsNothing);
     await tester.scrollUntilVisible(
       find.text('รายละเอียดสำหรับรายการนี้ยังไม่พร้อมใช้งาน'),
       180,

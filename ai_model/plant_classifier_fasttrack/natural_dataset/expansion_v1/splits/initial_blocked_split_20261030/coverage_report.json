@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:32:40.429007+00:00",
+  "targets": {
+    "training": 50,
+    "development": 20,
+    "locked_test": 20
+  },
+  "target_totals": {
+    "training": 300,
+    "development": 120,
+    "locked_test": 120
+  },
+  "approved_total": 0,
+  "classes": {
+    "chrysanthemum": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "marigold": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "money_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "rose": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "snake_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "spider_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    }
+  },
+  "ready_for_group_split": false,
+  "training_performed": false
+}

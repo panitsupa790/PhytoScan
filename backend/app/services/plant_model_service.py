@@ -4,13 +4,10 @@ import hashlib
 import threading
 from dataclasses import dataclass
 from functools import lru_cache
-from io import BytesIO
 from typing import Any, Sequence
 
 import numpy as np
 import tensorflow as tf
-from PIL import Image, UnidentifiedImageError
-
 from app.schemas.analyze import (
     AnalyzeResponse,
     DiseasePrediction,
@@ -19,6 +16,7 @@ from app.schemas.analyze import (
 )
 from app.services.disease_catalog import get_disease_record
 from app.services.image_service import ValidatedImage
+from app.services.model_input import ModelInputError, prepare_model_input
 from app.services.model_registry import PlantModelConfig, get_plant_config
 
 
@@ -96,21 +94,15 @@ class PlantModelService:
 
     def _prepare(self, image: ValidatedImage) -> np.ndarray:
         try:
-            with Image.open(BytesIO(image.content)) as decoded:
-                decoded.load()
-                rgb = decoded.convert("RGB")
-            height, width, channels = self.config.input_shape
-            if channels != 3 or self.config.preprocessing != "efficientnet_0_255":
-                raise InferenceError("Unsupported preprocessing configuration")
-            resized = rgb.resize((width, height), Image.Resampling.BILINEAR)
-            array = np.asarray(resized, dtype=np.float32)
-        except InferenceError:
-            raise
-        except (UnidentifiedImageError, OSError, ValueError) as error:
+            return prepare_model_input(
+                image.content,
+                self.config.input_shape,
+                self.config.preprocessing,
+                self.config.decoder,
+                self.config.resize_method,
+            )
+        except ModelInputError as error:
             raise InferenceError("Validated image could not be preprocessed") from error
-        if array.shape != self.config.input_shape or not np.isfinite(array).all():
-            raise InferenceError("Preprocessing output is invalid")
-        return array
 
     def predict_many(self, images: Sequence[ValidatedImage]) -> AggregatePrediction:
         if not 1 <= len(images) <= 3:
@@ -157,7 +149,9 @@ class PlantModelService:
             probabilities=values,
         )
 
-    def analyze(self, images: Sequence[ValidatedImage]) -> AnalyzeResponse:
+    def analyze(
+        self, images: Sequence[ValidatedImage], plant_confidence: float = 1.0
+    ) -> AnalyzeResponse:
         prediction = self.predict_many(images)
         try:
             disease = get_disease_record(self.config.plant_code, prediction.class_name)
@@ -191,7 +185,7 @@ class PlantModelService:
                 code=self.config.plant_code,
                 name_th=self.config.name_th,
                 name_en=self.config.name_en,
-                confidence=1.0,
+                confidence=plant_confidence,
             ),
             disease=DiseasePrediction(
                 code=prediction.class_name,

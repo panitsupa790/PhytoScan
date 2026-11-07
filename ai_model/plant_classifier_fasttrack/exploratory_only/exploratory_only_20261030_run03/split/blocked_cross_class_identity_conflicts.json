@@ -1,0 +1,212 @@
+{
+  "semantic_groups": 3264,
+  "cross_class_semantic_group_count": 11,
+  "cross_class_semantic_group_examples": [
+    {
+      "group": "inat_v3::inat_observer_1128020",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/chrysanthemum/chrysanthemum_332278842.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/money_plant/money_plant_410724008.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_1128020",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/chrysanthemum/chrysanthemum_332278842.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/money_plant/money_plant_410633396.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_10191767",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/chrysanthemum/chrysanthemum_343440528.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_375531847.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_10191767",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/chrysanthemum/chrysanthemum_343440528.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_375512926.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_6846479",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/marigold/marigold_390492954.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_403758139.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_6815041",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_407452019.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_398918067.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_5760205",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_386513781.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_388386799.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_6723505",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_394551983.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_372032542.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_2263809",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_379035004.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_368548070.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_6723505",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_394551983.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_360375538.jpg"
+    },
+    {
+      "group": "inat_v3::inat_observer_6723505",
+      "left": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/snake_plant/snake_plant_394551983.jpg",
+      "right": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/candidate_review/inaturalist/spider_plant/spider_plant_360372328.jpg"
+    }
+  ],
+  "exact_duplicate_pairs": 0,
+  "cross_class_exact_duplicate_count": 0,
+  "cross_class_exact_duplicate_examples": [],
+  "near_duplicate_pairs_at_or_below_limit": 1552,
+  "same_class_near_candidate_pairs": 1537,
+  "same_class_source_related_pairs": 834,
+  "same_class_phash_similarity_only_pairs": 703,
+  "cross_class_near_duplicate_count": 15,
+  "cross_class_near_duplicate_examples": [
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0402_Leaf41_Tree21_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Spider_Plant_Fungal_leaf_spot/Spider_Plant_Fungal_leaf_spot_078_jpg.rf.3636d8d0f2d6ab08c6bba534c7f65f2a.jpg",
+      "left_plant": "spider_plant",
+      "right": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Snake_Plant_Leaf_Withering/Snake_Plant_Leaf_Withering_048_jpg.rf.081473c4529ab0d763543189caa0978c.jpg",
+      "right_plant": "snake_plant",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_1949.jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Healthy/Image0821_Leaf83_Tree42_Healthy.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0842_Leaf85_Tree43_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (138).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/IMG (80).jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Septoria/Image0220_Leaf22_Tree11_Septoria.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/IMG (80).jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Septoria/Image0221_Leaf23_Tree12_Septoria.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_1806.jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Healthy/Image0305_Leaf31_Tree16_Healthy.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0227_Leaf23_Tree12_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0302_Leaf31_Tree16_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (178).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0403_Leaf41_Tree21_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0547_Leaf55_Tree28_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0599_Leaf60_Tree30_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0600_Leaf60_Tree30_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0802_Leaf81_Tree41_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (268).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Marigold/Marigold (148).jpg",
+      "left_plant": "marigold",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (28).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    }
+  ],
+  "pool_audit": {
+    "pool_manifest_rows": 5474,
+    "loaded_rows": 5474,
+    "missing_files": [],
+    "missing_file_count": 0,
+    "missing_group_examples": [],
+    "missing_group_count": 0,
+    "computed_sha256_count": 97,
+    "computed_phash_count": 97,
+    "semantic_group_count": 3264,
+    "class_counts": {
+      "money_plant": 542,
+      "spider_plant": 664,
+      "rose": 1228,
+      "chrysanthemum": 1871,
+      "snake_plant": 592,
+      "marigold": 577
+    },
+    "source_counts": {
+      "v1_original_train": 3599,
+      "mendeley_chrysanthemum_leaf_disease_v2": 883,
+      "mendeley_flower_leaf_original_v4": 441,
+      "mendeley_indoor_plants_classification_v1": 454,
+      "inaturalist_dev_train": 84,
+      "v5_natural_approved": 13
+    }
+  },
+  "planned_debug_targets_before_component_overshoot": {
+    "chrysanthemum": 281,
+    "marigold": 87,
+    "money_plant": 81,
+    "rose": 184,
+    "snake_plant": 89,
+    "spider_plant": 100
+  },
+  "training_started": false
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "experiment_role": "exploratory_only",
+  "experiment_name": "fresh_imagenet_efficientnetb0_internal_debug",
+  "seed": 42,
+  "classes": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "training_pool_manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/plant_classifier_v5_train.csv",
+  "hash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_hash_registry.csv",
+  "phash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_phash_registry.csv",
+  "source_manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/plant_classifier_v2_train.csv",
+  "group_manifests": [
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/train_split.csv",
+      "path_column": "path",
+      "group_column": "group_id",
+      "group_prefix": "v1"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/chrysanthemum_v2_candidates.csv",
+      "path_column": "path",
+      "group_column": "duplicate_group",
+      "group_prefix": "chrys_v2"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/mendeley_initial_groups.csv",
+      "path_column": "path",
+      "group_column": "duplicate_group",
+      "group_prefix": "mendeley_flower"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/indoor_external_dev_candidates.csv",
+      "path_column": "path",
+      "group_column": "duplicate_group",
+      "group_prefix": "indoor_v2"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v3/manifests/external_development_split_v3.csv",
+      "path_column": "path",
+      "group_column": "source_group",
+      "group_prefix": "inat_v3",
+      "filter_column": "v3_split",
+      "filter_value": "dev_train"
+    },
+    {
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/v5_marigold_final_decisions.csv",
+      "path_column": "local_path",
+      "group_column": "observer_id",
+      "group_prefix": "inat_v5_marigold",
+      "filter_column": "final_status",
+      "filter_value": "approved"
+    }
+  ],
+  "known_failures_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/known_failures.csv",
+  "cross_class_adjudication": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/exploratory_cross_class_adjudication_20261030.json",
+  "output_root": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only",
+  "split": {
+    "internal_debug_fraction": 0.15,
+    "minimum_debug_per_class": 30,
+    "near_duplicate_phash_distance": 4
+  },
+  "sampling": {
+    "max_repeats_per_image": 2
+  },
+  "augmentation": {
+    "rotation_factor": 0.06,
+    "zoom_factor": 0.08,
+    "brightness_factor": 0.1,
+    "contrast_factor": 0.12,
+    "background_replacement": false
+  },
+  "model": {
+    "architecture": "EfficientNetB0",
+    "initialization": "imagenet_fresh_no_v2_to_v5_checkpoint",
+    "dropout_rate": 0.3,
+    "input_shape": [
+      224,
+      224,
+      3
+    ]
+  },
+  "training": {
+    "batch_size": 16,
+    "mixed_precision": true,
+    "head_epochs": 6,
+    "head_learning_rate": 0.001,
+    "fine_tune_epochs": 10,
+    "fine_tune_learning_rate": 1e-05,
+    "fine_tune_tail_layers": 40,
+    "freeze_batch_normalization": true,
+    "early_stopping_patience": 3,
+    "checkpoint_monitor": "val_macro_f1"
+  },
+  "evaluation": {
+    "batch_size": 16,
+    "save_row_predictions": true
+  },
+  "safety": {
+    "production_preflight_unchanged": true,
+    "external_development_20_used": false,
+    "legacy_test_used": false,
+    "locked_test_used": false,
+    "known_failures_select_hyperparameters": false,
+    "deploy_automatically": false,
+    "promotion_allowed": false
+  }
+}

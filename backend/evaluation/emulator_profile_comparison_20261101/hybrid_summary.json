@@ -1,0 +1,31 @@
+{
+  "profile": "hybrid",
+  "generated_at_utc": "2026-10-31T22:41:42.791081+00:00",
+  "source": "Android emulator /sdcard/Download",
+  "image_directory": "C:\\phytoscan\\backend\\evaluation\\emulator_profile_comparison_20261101\\images",
+  "image_count": 25,
+  "model_manifest": "app/data/model_manifest.hybrid_candidate.json",
+  "plant_classifier": {
+    "architecture": "MobileNetV2",
+    "model_version": "plant-classifier-mobilenetv2-phase2-20261101",
+    "sha256": "fa53ab449421b12c9b3244d380ecd68633514d5752d1b4167772b0453abdfad4"
+  },
+  "thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.34551629424095154
+  },
+  "decision_counts": {
+    "manual_confirmation_required": 3,
+    "completed": 22
+  },
+  "predicted_plant_counts": {
+    "rose": 16,
+    "money_plant": 3,
+    "marigold": 1,
+    "snake_plant": 1,
+    "chrysanthemum": 2,
+    "spider_plant": 2
+  },
+  "ground_truth_status": "NOT VERIFIED",
+  "unsupported_ood_status": "NOT VERIFIED"
+}

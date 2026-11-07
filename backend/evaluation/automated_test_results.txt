@@ -1,0 +1,24 @@
+PhytoScan Phase 1 automated test evidence
+==========================================
+
+Executed at: 2026-10-26T06:06:47.4840604+07:00
+Working directory: C:\phytoscan\backend
+Command: .\.venv\Scripts\python.exe -m pytest -q
+
+Environment:
+- Python 3.12.4
+- TensorFlow 2.21.0
+- Keras 3.15.1
+- Pillow 11.2.1
+- NumPy 2.5.3
+
+Result:
+..............................................................           [100%]
+62 passed in 20.06s
+
+The suite includes model registry and SHA validation, exact class order,
+Notebook/runtime preprocessing parity, threshold boundaries, fail-closed
+threshold contract validation, manual confirmation, unsupported plant codes,
+mixed-plant multi-image routing, invalid images, API schemas, real loading of
+the plant classifier and all six disease classifiers, real API fail-closed and
+manual-confirmation smoke tests, and regression coverage.

@@ -1,38 +1,69 @@
 {
+  "input_contract": {
+    "decoder": "tensorflow_decode_image_rgb",
+    "resize_method": "tensorflow_bilinear",
+    "dtype": "float32",
+    "pixel_range": [0, 255],
+    "external_normalization": false
+  },
+  "plant_classifier": {
+    "model_version": "plant-classifier-v1",
+    "selection_status": "final_integration_baseline",
+    "operating_scope": "controlled_plain_background_leaf_images",
+    "metadata_path": "data/plant_classifier_final_metadata.json",
+    "model_path": "models/plant-classifier-v1.keras",
+    "architecture": "EfficientNetB0",
+    "input_shape": [224, 224, 3],
+    "class_order": ["chrysanthemum", "marigold", "money_plant", "rose", "snake_plant", "spider_plant"],
+    "preprocessing": "efficientnet_0_255",
+    "sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165"
+  },
   "models": {
-    "rose": {
-      "plant_code": "rose",
-      "model_version": "rose-v1",
-      "model_path": "models/rose-v1.keras",
-      "architecture": "EfficientNetB0",
+    "chrysanthemum": {
+      "plant_code": "chrysanthemum", "model_version": "chrysanthemum-v1",
+      "model_path": "models/chrysanthemum-v1.keras", "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3], "class_order": ["Bacterial", "Healthy", "Septoria"],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "61ee3c4cadb109c7d61d0e6e8e8b4a97d2522fcd79d06be9cd839d61407ea470"
+    },
+    "marigold": {
+      "plant_code": "marigold", "model_version": "marigold-v1",
+      "model_path": "models/marigold-v1.keras", "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3], "class_order": ["Alternaria Leaf Blight", "Helathy Leaves", "Pest Damaged"],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "68b4ea44f8a6abdfc74f5e46b6aa6432857d4aac89e5c55f0afa61b2aee68635"
+    },
+    "money_plant": {
+      "plant_code": "money_plant", "model_version": "money-plant-v1",
+      "model_path": "models/money-plant-v1.keras", "architecture": "EfficientNetB0",
       "input_shape": [224, 224, 3],
-      "class_order": [
-        "Rose_Yellow_Mosaic_Virus",
-        "Rose_Rust",
-        "Rose_Powdery_Mildew",
-        "Rose_Mosaic_Virus",
-        "Rose_Insect_Damage",
-        "Rose_Healthy",
-        "Rose_Downy_Mildew",
-        "Rose_Black_Spot"
-      ],
+      "class_order": ["Money_Plant_Bacterial_wilt_disease", "Money_Plant_Healthy", "Money_Plant_Manganese_Toxicity"],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "2f8ebf9021548ee4ec4562241e79b6ba4139100c7e1c481bf10e22ece6e63dae"
+    },
+    "rose": {
+      "plant_code": "rose", "model_version": "rose-v1",
+      "model_path": "models/rose-v1.keras", "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3],
+      "class_order": ["Rose_Yellow_Mosaic_Virus", "Rose_Rust", "Rose_Powdery_Mildew", "Rose_Mosaic_Virus", "Rose_Insect_Damage", "Rose_Healthy", "Rose_Downy_Mildew", "Rose_Black_Spot"],
       "preprocessing": "efficientnet_0_255",
       "sha256": "e284c7c693f612a31d3620526d59eff680d026d78dffebef67e22f18a2488c04"
     },
-    "sunflower": {
-      "plant_code": "sunflower",
-      "model_version": "sunflower-v1",
-      "model_path": "models/sunflower-v1.keras",
-      "architecture": "EfficientNetB0",
+    "snake_plant": {
+      "plant_code": "snake_plant", "model_version": "snake-plant-v1",
+      "model_path": "models/snake-plant-v1.keras", "architecture": "EfficientNetB0",
       "input_shape": [224, 224, 3],
-      "class_order": [
-        "downy_mildew",
-        "gray_mold",
-        "healthy",
-        "leaf_scars"
-      ],
+      "class_order": ["Snake_Plant_Anthracnose", "Snake_Plant_Healthy", "Snake_Plant_Leaf_Withering"],
       "preprocessing": "efficientnet_0_255",
-      "sha256": "a6e2174ab5c4b480f9c15f425222ad52768167075e2d6637d6693c08cb023fc3"
+      "sha256": "aec49000cc31fa5106d9358a603b5a47e263c4caebfa428a39c8f820274f1e41"
+    },
+    "spider_plant": {
+      "plant_code": "spider_plant", "model_version": "spider-plant-v1",
+      "model_path": "models/spider-plant-v1.keras", "architecture": "EfficientNetB0",
+      "input_shape": [224, 224, 3],
+      "class_order": ["Spider_Plant_Fungal_leaf_spot", "Spider_Plant_Healthy", "Spider_Plant_Leaf_Tip_Necrosis"],
+      "preprocessing": "efficientnet_0_255",
+      "sha256": "6b80c7a02ae979b94b7854cdb2e54ff0f1688e6633f4192d01cb7e7a6850999a"
     }
   }
 }

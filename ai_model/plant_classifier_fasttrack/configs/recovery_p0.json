@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "target_per_class": 20,
+  "review_candidates_per_class": 30,
+  "max_files_per_filesystem_source": 300,
+  "minimum_image_side": 224,
+  "training_manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/plant_classifier_v5_train.csv",
+  "hash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_hash_registry.csv",
+  "phash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_phash_registry.csv",
+  "excluded_history_manifests": [
+    {
+      "role": "legacy_validation",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/valid_split.csv"
+    },
+    {
+      "role": "legacy_test",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/test_split.csv"
+    },
+    {
+      "role": "overused_external_development",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v3/manifests/external_development_split_v3.csv"
+    }
+  ],
+  "extra_excluded_images": [
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/known_failures/marigold_v1_v2_failure.jpg",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/known_failures/snake_plant_v1_v2_failure.jpg"
+  ],
+  "manifest_candidate_sources": [
+    {
+      "source_id": "mendeley_indoor_candidates_v2",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/indoor_external_dev_candidates.csv",
+      "source_history": "partially_used_by_v2_training; unused groups require manual review",
+      "license_status": "not_verified"
+    }
+  ],
+  "filesystem_candidate_sources": [
+    {
+      "source_id": "windows_rose_dataset_20261029",
+      "root": "/mnt/c/Users/HP/Downloads/dataset for various disease detect",
+      "plant": "rose",
+      "plant_directory_name": "Rosa",
+      "group_regex": "(?:IMG_)?(20[0-9]{6})",
+      "group_namespace": "rose_capture_date",
+      "compare_groups_to_history": false,
+      "source_history": "downloaded_2026-10-29; not present in V1-V5 manifests by path; hash audit required",
+      "license_status": "not_verified"
+    },
+    {
+      "source_id": "windows_marigold_dataset_20261029",
+      "root": "/mnt/c/Users/HP/Downloads/dataset for various disease detect",
+      "plant": "marigold",
+      "plant_directory_name": "Tagetes erecta",
+      "group_regex": "(?:IMG_)?(20[0-9]{6})",
+      "group_namespace": "marigold_capture_date",
+      "compare_groups_to_history": false,
+      "source_history": "downloaded_2026-10-29; not present in V1-V5 manifests by path; hash audit required",
+      "license_status": "not_verified"
+    },
+    {
+      "source_id": "windows_chrysanthemum_copy_20261029",
+      "root": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)",
+      "plant": "chrysanthemum",
+      "plant_directory_name": "Chrysanthemum Leaf_Dataset",
+      "group_regex": "Tree([0-9]+)",
+      "group_namespace": "chrysanthemum_tree",
+      "compare_groups_to_history": true,
+      "historical_path_contains": "Chrysanthemum Leaf_Dataset",
+      "source_history": "same named source family as legacy Chrysanthemum data; strict hash and pHash exclusion required",
+      "license_status": "not_verified"
+    }
+  ],
+  "extra_image_candidates": [
+    {
+      "source_id": "windows_standalone_spider_candidate_20261027",
+      "path": "/mnt/c/Users/HP/Downloads/Spider-Plants-with-Brown-Tips.jpg",
+      "plant": "spider_plant",
+      "source_history": "standalone Windows download; identity and prior use not verified",
+      "license_status": "not_verified"
+    }
+  ],
+  "inventory_manifests": [
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/indoor_external_dev_candidates.csv",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/mendeley_external_dev_candidates.csv",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/inaturalist_external_candidates.csv",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/inaturalist_manual_review.csv",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/manifests/v3_external_development_pool.csv",
+    "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/v5_marigold_final_decisions.csv"
+  ],
+  "fasttrack_config_template": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/configs/fresh_b0_fasttrack.json",
+  "near_training_phash_distance": 4,
+  "review_diversity_phash_distance": 6,
+  "contact_sheet": {
+    "columns": 4,
+    "rows": 4,
+    "thumbnail_width": 260,
+    "thumbnail_height": 190
+  }
+}

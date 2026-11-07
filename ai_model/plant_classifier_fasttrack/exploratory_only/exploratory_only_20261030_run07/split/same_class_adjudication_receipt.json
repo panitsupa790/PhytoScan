@@ -1,0 +1,12 @@
+{
+  "adjudication_path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/artifacts/same_class_phash_adjudication_20261030/same_class_phash_adjudication.json",
+  "adjudication_sha256": "d8ae40a8e02ade5900a75932bd897ed5d5aa741fec47c62233cf93677c643bf0",
+  "source_metrics_csv": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/artifacts/same_class_phash_adjudication_20261030/same_class_phash_candidate_metrics.csv",
+  "source_metrics_csv_sha256": "f9e1616894b9b3f6e2cd37fb9e32630acc843111b71892b186dfd8632c3dc74d",
+  "decision_counts": {
+    "false_phash_collision": 276,
+    "uncertain": 85
+  },
+  "quarantined_endpoint_count": 119,
+  "phash_threshold_changed": false
+}

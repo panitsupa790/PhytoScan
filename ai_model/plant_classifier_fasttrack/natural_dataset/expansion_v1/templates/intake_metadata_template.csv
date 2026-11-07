@@ -1,0 +1,2 @@
+external_id,file_path,plant,plant_id,observer_id,session_id,source,capture_date,device,health_state,license,source_url,license_url,attribution,natural_background,notes
+unique_source_record_id,/absolute/path/to/image.jpg,marigold,plant_001,observer_001,session_2026_10_30_a,mobile_collection,2026-10-30,phone_model,healthy,own_photo,N/A,N/A,Photographer name,yes,

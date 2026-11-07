@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "corrective_frozen_before_test",
+  "frozen_at_utc": "2026-10-25T23:22:22.613260+00:00",
+  "reason": "Recalibrated after replacing Pillow preprocessing with the Notebook-compatible TensorFlow input contract",
+  "thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.6936511993408203
+  },
+  "selection_criteria": [
+    "Candidates are 0.0, nextafter(each observed validation value, +inf), and 1.0 in inference float precision.",
+    "Accept when confidence >= MIN_CONFIDENCE and margin >= MIN_MARGIN.",
+    "Require at least one accepted sample for every true plant class; reject-all is forbidden.",
+    "Minimize accepted errors (therefore prefer zero), then maximize coverage.",
+    "Break remaining ties by lowest MIN_CONFIDENCE, then lowest MIN_MARGIN.",
+    "Test data is not used to construct candidates, select, or adjust thresholds."
+  ],
+  "metric_definitions": {
+    "coverage": "accepted_samples / total_samples",
+    "accepted_accuracy": "accepted_correct / accepted_samples (N/A when accepted_samples is 0)",
+    "false_acceptance_rate_among_incorrect_predictions": "accepted_incorrect / total_incorrect_predictions (N/A when total_incorrect_predictions is 0)",
+    "accepted_error_rate": "accepted_incorrect / accepted_samples (N/A when accepted_samples is 0)",
+    "correct_rejections": "rejected_incorrect_predictions; percentage denominator is total_incorrect_predictions",
+    "wrongful_rejections": "rejected_correct_predictions; percentage denominator is total_correct_predictions",
+    "per_class_basis": "true plant label"
+  },
+  "model": {
+    "model_version": "plant-classifier-v1",
+    "sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+    "class_order": [
+      "chrysanthemum",
+      "marigold",
+      "money_plant",
+      "rose",
+      "snake_plant",
+      "spider_plant"
+    ],
+    "input_shape": [
+      224,
+      224,
+      3
+    ],
+    "preprocessing": "efficientnet_0_255",
+    "input_contract": {
+      "decoder": "tensorflow_decode_image_rgb",
+      "resize_method": "tensorflow_bilinear",
+      "channels": 3,
+      "expand_animations": false,
+      "target_size": [
+        224,
+        224
+      ],
+      "dtype": "float32",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "external_normalization": false,
+      "preprocessing": "efficientnet_0_255"
+    },
+    "inference_float_precision": "float32"
+  },
+  "validation_dataset": {
+    "manifest": "\\\\wsl.localhost\\Ubuntu\\home\\mind_hp\\phytoscan\\phytoscan\\models\\plant_classifier_v1\\valid_split.csv",
+    "manifest_sha256": "8d0121c11c9845fedc276caa3139f820d07da03cec5694d42379728b1f296860",
+    "total": 2340,
+    "per_true_plant": {
+      "rose": 1775,
+      "chrysanthemum": 233,
+      "marigold": 73,
+      "money_plant": 74,
+      "snake_plant": 86,
+      "spider_plant": 99
+    }
+  },
+  "test_protocol": {
+    "manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/test_split.csv",
+    "purpose": "evaluation_only",
+    "threshold_adjustment_permitted": false
+  },
+  "limitations": [
+    "No unsupported/OOD dataset was evaluated; thresholds only filter low-confidence predictions among supported plants.",
+    "This evaluation observed only 7 incorrect validation predictions (the supplied prior expectation was 7), so zero accepted validation errors cannot guarantee zero errors in production.",
+    "This is not an external test set and may overlap with data used by one or more disease classifiers."
+  ],
+  "artifacts": {
+    "validation_report": "evaluation\\plant_classifier_validation_corrective_report.json",
+    "validation_predictions": "evaluation\\plant_classifier_validation_corrective_predictions.csv"
+  }
+}

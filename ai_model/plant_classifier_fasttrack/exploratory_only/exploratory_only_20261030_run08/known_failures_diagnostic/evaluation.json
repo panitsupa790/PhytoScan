@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:09:05.153388+00:00",
+  "dataset_role": "known_failures_diagnostic_not_for_selection",
+  "notes": [
+    "Known failures were evaluated after checkpoint selection and did not tune any hyperparameter."
+  ],
+  "metrics": {
+    "samples": 2,
+    "correct": 1,
+    "accuracy": 0.5,
+    "macro_f1": 0.16666666666666666,
+    "macro_recall": 0.16666666666666666,
+    "per_class_recall": {
+      "chrysanthemum": 0.0,
+      "marigold": 0.0,
+      "money_plant": 0.0,
+      "rose": 0.0,
+      "snake_plant": 1.0,
+      "spider_plant": 0.0
+    },
+    "classification_report": {
+      "chrysanthemum": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "marigold": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "money_plant": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "rose": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "snake_plant": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "spider_plant": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.16666666666666666,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.16666666666666666,
+        "support": 2.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 2.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "class_counts": {
+    "chrysanthemum": 0,
+    "marigold": 1,
+    "money_plant": 0,
+    "rose": 0,
+    "snake_plant": 1,
+    "spider_plant": 0
+  },
+  "class_order": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "preprocessing_contract": {
+    "decode": "tf.io.decode_image(channels=3, expand_animations=False)",
+    "dtype": "float32",
+    "resize": "tf.image.resize(224x224, bilinear, antialias=False)",
+    "pixel_range": "0-255",
+    "normalization": "EfficientNet embedded rescaling"
+  },
+  "model": {
+    "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/training/fine_tune_best.exploratory_only.keras",
+    "sha256": "27948ebd4355c13c6e98354efdc748aefd695c73494fe5c795b51eacff687c82"
+  },
+  "manifest": {
+    "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/known_failures.csv",
+    "sha256": "fa0d37c9f96c68310a33360e579f702fab22dd3e9db82d006815773b5a044c3a"
+  },
+  "runtime": {
+    "duration_seconds": 4.758940756000811,
+    "images_per_second": 0.4202615881439771,
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026100104",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  }
+}

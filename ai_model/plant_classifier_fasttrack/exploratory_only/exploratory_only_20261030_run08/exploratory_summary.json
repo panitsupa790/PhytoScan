@@ -1,0 +1,244 @@
+{
+  "status": "exploratory_only_completed",
+  "pipeline_succeeded": true,
+  "production_model_changed": false,
+  "deployment_performed": false,
+  "promotion_allowed": false,
+  "internal_debug_metrics": {
+    "samples": 680,
+    "correct": 647,
+    "accuracy": 0.9514705882352941,
+    "macro_f1": 0.9457178710630996,
+    "macro_recall": 0.9478448802468157,
+    "per_class_recall": {
+      "chrysanthemum": 0.920863309352518,
+      "marigold": 0.8160919540229885,
+      "money_plant": 0.9876543209876543,
+      "rose": 0.9836956521739131,
+      "snake_plant": 0.9887640449438202,
+      "spider_plant": 0.99
+    },
+    "classification_report": {
+      "chrysanthemum": {
+        "precision": 0.9922480620155039,
+        "recall": 0.920863309352518,
+        "f1-score": 0.9552238805970149,
+        "support": 139.0
+      },
+      "marigold": {
+        "precision": 1.0,
+        "recall": 0.8160919540229885,
+        "f1-score": 0.8987341772151899,
+        "support": 87.0
+      },
+      "money_plant": {
+        "precision": 0.8695652173913043,
+        "recall": 0.9876543209876543,
+        "f1-score": 0.9248554913294798,
+        "support": 81.0
+      },
+      "rose": {
+        "precision": 0.9627659574468085,
+        "recall": 0.9836956521739131,
+        "f1-score": 0.9731182795698925,
+        "support": 184.0
+      },
+      "snake_plant": {
+        "precision": 0.9263157894736842,
+        "recall": 0.9887640449438202,
+        "f1-score": 0.9565217391304348,
+        "support": 89.0
+      },
+      "spider_plant": {
+        "precision": 0.9428571428571428,
+        "recall": 0.99,
+        "f1-score": 0.9658536585365853,
+        "support": 100.0
+      },
+      "accuracy": 0.9514705882352941,
+      "macro avg": {
+        "precision": 0.948958694864074,
+        "recall": 0.9478448802468157,
+        "f1-score": 0.9457178710630996,
+        "support": 680.0
+      },
+      "weighted avg": {
+        "precision": 0.9547559102175526,
+        "recall": 0.9514705882352941,
+        "f1-score": 0.9509541936698851,
+        "support": 680.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        128,
+        0,
+        4,
+        4,
+        2,
+        1
+      ],
+      [
+        1,
+        71,
+        5,
+        2,
+        4,
+        4
+      ],
+      [
+        0,
+        0,
+        80,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        181,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        88,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        99
+      ]
+    ]
+  },
+  "known_failure_metrics": {
+    "samples": 2,
+    "correct": 1,
+    "accuracy": 0.5,
+    "macro_f1": 0.16666666666666666,
+    "macro_recall": 0.16666666666666666,
+    "per_class_recall": {
+      "chrysanthemum": 0.0,
+      "marigold": 0.0,
+      "money_plant": 0.0,
+      "rose": 0.0,
+      "snake_plant": 1.0,
+      "spider_plant": 0.0
+    },
+    "classification_report": {
+      "chrysanthemum": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "marigold": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "money_plant": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "rose": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "snake_plant": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "spider_plant": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.16666666666666666,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.16666666666666666,
+        "support": 2.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 2.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "limitations": [
+    "Internal Debug Validation comes from the same audited source pool as training.",
+    "It is not an external natural/mobile validation set.",
+    "The result cannot establish that this model is better than V5."
+  ]
+}

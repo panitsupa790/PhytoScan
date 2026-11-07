@@ -1,0 +1,3 @@
+path,plant,source
+/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/known_failures/marigold_v1_v2_failure.jpg,marigold,known_failure_regression
+/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/data/known_failures/snake_plant_v1_v2_failure.jpg,snake_plant,known_failure_regression

@@ -1,0 +1,277 @@
+{
+  "generated_at_utc": "2026-10-26T17:25:47.153150+00:00",
+  "source_root": "C:\\Users\\HP\\Desktop\\PhytoScan",
+  "runtime_models_gitignored": true,
+  "required_deployment_action": "Provision all seven .keras files separately and verify SHA-256 before startup.",
+  "models": {
+    "plant_classifier": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\plant-classifier-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\plant_classifier\\plant-classifier-v1.keras",
+      "runtime_size_bytes": 17156154,
+      "source_size_bytes": 17156154,
+      "manifest_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+      "runtime_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+      "source_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "chrysanthemum",
+        "marigold",
+        "money_plant",
+        "rose",
+        "snake_plant",
+        "spider_plant"
+      ],
+      "source_class_order": [
+        "chrysanthemum",
+        "marigold",
+        "money_plant",
+        "rose",
+        "snake_plant",
+        "spider_plant"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "chrysanthemum": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\chrysanthemum-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\chrysanthemum-v1\\chrysanthemum-v1.keras",
+      "runtime_size_bytes": 33402583,
+      "source_size_bytes": 33402583,
+      "manifest_sha256": "61ee3c4cadb109c7d61d0e6e8e8b4a97d2522fcd79d06be9cd839d61407ea470",
+      "runtime_sha256": "61ee3c4cadb109c7d61d0e6e8e8b4a97d2522fcd79d06be9cd839d61407ea470",
+      "source_sha256": "61ee3c4cadb109c7d61d0e6e8e8b4a97d2522fcd79d06be9cd839d61407ea470",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Bacterial",
+        "Healthy",
+        "Septoria"
+      ],
+      "source_class_order": [
+        "Bacterial",
+        "Healthy",
+        "Septoria"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "marigold": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\marigold-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\marigold-v1\\marigold-v1.keras",
+      "runtime_size_bytes": 33402578,
+      "source_size_bytes": 33402578,
+      "manifest_sha256": "68b4ea44f8a6abdfc74f5e46b6aa6432857d4aac89e5c55f0afa61b2aee68635",
+      "runtime_sha256": "68b4ea44f8a6abdfc74f5e46b6aa6432857d4aac89e5c55f0afa61b2aee68635",
+      "source_sha256": "68b4ea44f8a6abdfc74f5e46b6aa6432857d4aac89e5c55f0afa61b2aee68635",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Alternaria Leaf Blight",
+        "Helathy Leaves",
+        "Pest Damaged"
+      ],
+      "source_class_order": [
+        "Alternaria Leaf Blight",
+        "Helathy Leaves",
+        "Pest Damaged"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "money_plant": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\money-plant-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\money_plant\\money-plant-v1.keras",
+      "runtime_size_bytes": 28977597,
+      "source_size_bytes": 28977597,
+      "manifest_sha256": "2f8ebf9021548ee4ec4562241e79b6ba4139100c7e1c481bf10e22ece6e63dae",
+      "runtime_sha256": "2f8ebf9021548ee4ec4562241e79b6ba4139100c7e1c481bf10e22ece6e63dae",
+      "source_sha256": "2f8ebf9021548ee4ec4562241e79b6ba4139100c7e1c481bf10e22ece6e63dae",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Money_Plant_Bacterial_wilt_disease",
+        "Money_Plant_Healthy",
+        "Money_Plant_Manganese_Toxicity"
+      ],
+      "source_class_order": [
+        "Money_Plant_Bacterial_wilt_disease",
+        "Money_Plant_Healthy",
+        "Money_Plant_Manganese_Toxicity"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "rose": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\rose-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\rose\\rose-v1.keras",
+      "runtime_size_bytes": 33595897,
+      "source_size_bytes": 33595897,
+      "manifest_sha256": "e284c7c693f612a31d3620526d59eff680d026d78dffebef67e22f18a2488c04",
+      "runtime_sha256": "e284c7c693f612a31d3620526d59eff680d026d78dffebef67e22f18a2488c04",
+      "source_sha256": "e284c7c693f612a31d3620526d59eff680d026d78dffebef67e22f18a2488c04",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Rose_Yellow_Mosaic_Virus",
+        "Rose_Rust",
+        "Rose_Powdery_Mildew",
+        "Rose_Mosaic_Virus",
+        "Rose_Insect_Damage",
+        "Rose_Healthy",
+        "Rose_Downy_Mildew",
+        "Rose_Black_Spot"
+      ],
+      "source_class_order": [
+        "Rose_Yellow_Mosaic_Virus",
+        "Rose_Rust",
+        "Rose_Powdery_Mildew",
+        "Rose_Mosaic_Virus",
+        "Rose_Insect_Damage",
+        "Rose_Healthy",
+        "Rose_Downy_Mildew",
+        "Rose_Black_Spot"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "snake_plant": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\snake-plant-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\snake_plant\\snake-plant-v1.keras",
+      "runtime_size_bytes": 28977551,
+      "source_size_bytes": 28977551,
+      "manifest_sha256": "aec49000cc31fa5106d9358a603b5a47e263c4caebfa428a39c8f820274f1e41",
+      "runtime_sha256": "aec49000cc31fa5106d9358a603b5a47e263c4caebfa428a39c8f820274f1e41",
+      "source_sha256": "aec49000cc31fa5106d9358a603b5a47e263c4caebfa428a39c8f820274f1e41",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Snake_Plant_Anthracnose",
+        "Snake_Plant_Healthy",
+        "Snake_Plant_Leaf_Withering"
+      ],
+      "source_class_order": [
+        "Snake_Plant_Anthracnose",
+        "Snake_Plant_Healthy",
+        "Snake_Plant_Leaf_Withering"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    },
+    "spider_plant": {
+      "runtime_path": "C:\\phytoscan\\backend\\app\\models\\spider-plant-v1.keras",
+      "source_path": "C:\\Users\\HP\\Desktop\\PhytoScan\\spider_plant\\spider-plant-v1.keras",
+      "runtime_size_bytes": 28977593,
+      "source_size_bytes": 28977593,
+      "manifest_sha256": "6b80c7a02ae979b94b7854cdb2e54ff0f1688e6633f4192d01cb7e7a6850999a",
+      "runtime_sha256": "6b80c7a02ae979b94b7854cdb2e54ff0f1688e6633f4192d01cb7e7a6850999a",
+      "source_sha256": "6b80c7a02ae979b94b7854cdb2e54ff0f1688e6633f4192d01cb7e7a6850999a",
+      "sha256_all_equal": true,
+      "manifest_class_order": [
+        "Spider_Plant_Fungal_leaf_spot",
+        "Spider_Plant_Healthy",
+        "Spider_Plant_Leaf_Tip_Necrosis"
+      ],
+      "source_class_order": [
+        "Spider_Plant_Fungal_leaf_spot",
+        "Spider_Plant_Healthy",
+        "Spider_Plant_Leaf_Tip_Necrosis"
+      ],
+      "class_order_equal": true,
+      "source_input_contract": {
+        "image_size": [
+          224,
+          224
+        ],
+        "channels": 3,
+        "color_mode": "RGB",
+        "dtype": "float32",
+        "pixel_range": [
+          0,
+          255
+        ],
+        "external_normalization": false
+      },
+      "input_contract_valid": true
+    }
+  },
+  "all_models_ready": true
+}

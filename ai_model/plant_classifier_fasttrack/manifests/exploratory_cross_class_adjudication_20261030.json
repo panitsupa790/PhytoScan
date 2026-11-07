@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-30",
+  "review_scope": "exploratory_only",
+  "source_audit_path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261029_run02_audit/split/blocked_cross_class_duplicates.json",
+  "source_audit_sha256": "270e330e09f33df3659135b307a666e1d160fb43109294c578889f393acfb527",
+  "review_method": "Original images and three generated contact sheets were visually inspected; SHA identity remained distinct. Decisions are limited to the listed pairs and do not alter the pHash threshold.",
+  "decision_counts": {
+    "false_phash_collision": 15,
+    "true_duplicate": 0,
+    "label_issue": 0,
+    "uncertain": 0
+  },
+  "pairs": [
+    {
+      "pair_id": "cross-class-001",
+      "decision": "false_phash_collision",
+      "evidence": "Chrysanthemum leaf is deeply lobed; Rose image is a distinct small oval serrated leaf on a similar pale background."
+    },
+    {
+      "pair_id": "cross-class-002",
+      "decision": "false_phash_collision",
+      "evidence": "Spider Plant image has a narrow strap-like leaf; Snake Plant image has a broad rigid leaf with transverse banding."
+    },
+    {
+      "pair_id": "cross-class-003",
+      "decision": "false_phash_collision",
+      "evidence": "Rose image is a damaged simple leaf; Chrysanthemum image is a separate deeply lobed leaf."
+    },
+    {
+      "pair_id": "cross-class-004",
+      "decision": "false_phash_collision",
+      "evidence": "Deeply lobed Chrysanthemum leaf and oval Rose leaflet are visually distinct; only the white background layout is similar."
+    },
+    {
+      "pair_id": "cross-class-005",
+      "decision": "false_phash_collision",
+      "evidence": "Rose leaflet and diseased lobed Chrysanthemum leaf have different morphology and damage patterns."
+    },
+    {
+      "pair_id": "cross-class-006",
+      "decision": "false_phash_collision",
+      "evidence": "Rose simple leaf and Chrysanthemum lobed leaf are separate source images; composition/background caused the hash collision."
+    },
+    {
+      "pair_id": "cross-class-007",
+      "decision": "false_phash_collision",
+      "evidence": "Brown damaged Rose leaf and green lobed Chrysanthemum leaf are distinct images and plant morphologies."
+    },
+    {
+      "pair_id": "cross-class-008",
+      "decision": "false_phash_collision",
+      "evidence": "Small lobed Chrysanthemum leaf and small oval Rose leaflet are visually different despite matching background occupancy."
+    },
+    {
+      "pair_id": "cross-class-009",
+      "decision": "false_phash_collision",
+      "evidence": "Lobed Chrysanthemum leaf and broad oval Rose leaf differ in outline, venation and source image."
+    },
+    {
+      "pair_id": "cross-class-010",
+      "decision": "false_phash_collision",
+      "evidence": "Chrysanthemum leaf is lobed while Rose leaf is oval; the repeated Rose (4) image only shares blank-background composition."
+    },
+    {
+      "pair_id": "cross-class-011",
+      "decision": "false_phash_collision",
+      "evidence": "Chrysanthemum leaf and Rose (4) are visibly different leaves; pHash collision is driven by scale and uniform background."
+    },
+    {
+      "pair_id": "cross-class-012",
+      "decision": "false_phash_collision",
+      "evidence": "Chrysanthemum leaf and Rose (4) differ in species morphology, outline and source identity."
+    },
+    {
+      "pair_id": "cross-class-013",
+      "decision": "false_phash_collision",
+      "evidence": "Chrysanthemum leaf and Rose (4) are separate images; both contain a small centered leaf on a pale background."
+    },
+    {
+      "pair_id": "cross-class-014",
+      "decision": "false_phash_collision",
+      "evidence": "Lobed Chrysanthemum leaf and lanceolate Rose leaflet are distinct in outline and venation."
+    },
+    {
+      "pair_id": "cross-class-015",
+      "decision": "false_phash_collision",
+      "evidence": "Marigold image is a compound pinnate leaf; Rose image is a single simple leaflet."
+    }
+  ],
+  "limitations": [
+    "The decisions resolve only the 15 listed cross-class pHash candidates.",
+    "Uniform-background source bias remains a dataset limitation even when a pair is not a duplicate.",
+    "This adjudication is not a production-promotion artifact."
+  ]
+}

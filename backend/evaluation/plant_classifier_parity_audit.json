@@ -1,0 +1,149 @@
+{
+  "generated_at_utc": "2026-10-25T22:58:14.325983+00:00",
+  "scope": "validation_only_no_threshold_selection",
+  "model": {
+    "manifest_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+    "runtime_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+    "notebook_export_sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+    "all_equal": true
+  },
+  "class_mapping": {
+    "runtime_class_order": [
+      "chrysanthemum",
+      "marigold",
+      "money_plant",
+      "rose",
+      "snake_plant",
+      "spider_plant"
+    ],
+    "notebook_export_class_order": [
+      "chrysanthemum",
+      "marigold",
+      "money_plant",
+      "rose",
+      "snake_plant",
+      "spider_plant"
+    ],
+    "all_equal": true
+  },
+  "validation_manifest": {
+    "path": "\\\\wsl.localhost\\Ubuntu\\home\\mind_hp\\phytoscan\\phytoscan\\models\\plant_classifier_v1\\valid_split.csv",
+    "sha256": "8d0121c11c9845fedc276caa3139f820d07da03cec5694d42379728b1f296860",
+    "ordered_rows_sha256": "3af51243ce085d37243dd11f985f38ef844948a283d3e9a85f26491e24497f42",
+    "rows": 2340,
+    "labels_match_plant_column": true
+  },
+  "preprocessing": {
+    "notebook": "tf.io.decode_image(channels=3) -> tf.cast(float32) -> tf.image.resize(bilinear, 224x224)",
+    "backend_before_fix": "Pillow decode -> convert(RGB) -> Pillow bilinear resize(224x224) -> float32",
+    "images_with_nonzero_pixel_delta": 2340,
+    "maximum_absolute_pixel_delta": 190.06471252441406
+  },
+  "results": {
+    "notebook_compatible": {
+      "correct": 2333,
+      "incorrect": 7,
+      "total": 2340,
+      "accuracy": 0.997008547008547
+    },
+    "backend_before_fix": {
+      "correct": 2338,
+      "incorrect": 2,
+      "total": 2340,
+      "accuracy": 0.9991452991452991
+    },
+    "top1_prediction_disagreements": 7,
+    "maximum_absolute_probability_delta": 0.743466317653656
+  },
+  "affected_rows": [
+    {
+      "row_index": 576,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_1409.JPG",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "money_plant",
+      "notebook_confidence": 0.5852384567260742,
+      "backend_prediction": "money_plant",
+      "backend_confidence": 0.7012788653373718,
+      "max_probability_delta": 0.11609169840812683
+    },
+    {
+      "row_index": 590,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_148.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "rose",
+      "notebook_confidence": 0.9540950655937195,
+      "backend_prediction": "money_plant",
+      "backend_confidence": 0.5242487192153931,
+      "max_probability_delta": 0.4791660010814667
+    },
+    {
+      "row_index": 670,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_2170.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "snake_plant",
+      "notebook_confidence": 0.8458064794540405,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.6509996652603149,
+      "max_probability_delta": 0.49884432554244995
+    },
+    {
+      "row_index": 743,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Healthy/IMG (1102).JPG",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "snake_plant",
+      "notebook_confidence": 0.7125922441482544,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.9496549367904663,
+      "max_probability_delta": 0.662324845790863
+    },
+    {
+      "row_index": 896,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Healthy/resized_Fresh Leaf_107.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "money_plant",
+      "notebook_confidence": 0.6365531086921692,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.5909191370010376,
+      "max_probability_delta": 0.2275846004486084
+    },
+    {
+      "row_index": 1396,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Downy_Mildew/resized_Downy_Mildew_829.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "money_plant",
+      "notebook_confidence": 0.8027235269546509,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.8801195025444031,
+      "max_probability_delta": 0.743466317653656
+    },
+    {
+      "row_index": 1513,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Black_Spot/resized_Black Spot_1733.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "money_plant",
+      "notebook_confidence": 0.8262190818786621,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.7270877361297607,
+      "max_probability_delta": 0.5549432039260864
+    },
+    {
+      "row_index": 1554,
+      "path": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Black_Spot/resized_Black Spot_2069.jpg",
+      "true_label": 3,
+      "true_plant": "rose",
+      "notebook_prediction": "snake_plant",
+      "notebook_confidence": 0.531534731388092,
+      "backend_prediction": "rose",
+      "backend_confidence": 0.8015963435173035,
+      "max_probability_delta": 0.3367847204208374
+    }
+  ],
+  "conclusion": "The model, class mapping, manifest row order, and labels match. The preprocessing implementation differs and changes top-1 predictions near decision boundaries."
+}

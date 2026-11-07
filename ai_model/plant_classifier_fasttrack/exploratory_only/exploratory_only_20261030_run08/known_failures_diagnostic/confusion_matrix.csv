@@ -1,0 +1,7 @@
+true_plant,chrysanthemum,marigold,money_plant,rose,snake_plant,spider_plant
+chrysanthemum,0,0,0,0,0,0
+marigold,0,0,0,1,0,0
+money_plant,0,0,0,0,0,0
+rose,0,0,0,0,0,0
+snake_plant,0,0,0,0,1,0
+spider_plant,0,0,0,0,0,0

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "experiment_name": "phytoscan_fresh_imagenet_efficientnetb0_fasttrack",
+  "seed": 42,
+  "classes": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "output_root": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/artifacts",
+  "data": {
+    "train_manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/plant_classifier_v5_train.csv",
+    "development_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final/development_validation_manual_review.csv",
+    "train": {
+      "status": "audited_v5_training_manifest",
+      "path_column": null,
+      "label_column": null,
+      "source_column": null,
+      "group_column": null,
+      "sha_column": null
+    },
+    "development": {
+      "status": "pending_manual_review",
+      "duplicate_audit_status": "pending_visual_near_duplicate_review",
+      "duplicate_audit_receipt": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final/duplicate_audit_receipt_pending.json",
+      "split_column": null,
+      "split_value": null,
+      "path_column": "path",
+      "label_column": "plant",
+      "source_column": "source",
+      "group_column": "group_id",
+      "sha_column": "sha256",
+      "min_samples_per_class": 20,
+      "required_manifest_flags": {
+        "review_status": [
+          "approved"
+        ],
+        "label_confirmed": [
+          "yes"
+        ],
+        "target_plant_visible": [
+          "yes"
+        ],
+        "single_clear_target": [
+          "yes"
+        ],
+        "leaf_sufficient": [
+          "yes"
+        ],
+        "image_quality": [
+          "good"
+        ],
+        "natural_mobile_like": [
+          "yes"
+        ],
+        "license_status": [
+          "verified",
+          "approved"
+        ]
+      },
+      "quality_review_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/recovery/20261029_p0_final/development_validation_manual_review.csv",
+      "quality_path_column": "path",
+      "required_quality_flags": {
+        "target_plant_visible": [
+          "yes",
+          "true",
+          "1"
+        ],
+        "single_clear_target": [
+          "yes",
+          "true",
+          "1"
+        ],
+        "leaf_sufficient": [
+          "yes",
+          "true",
+          "1"
+        ]
+      }
+    }
+  },
+  "sampling": {
+    "strategy": "class_target_with_inverse_sqrt_source_weight_finite_pool",
+    "max_repeats_per_image": 2
+  },
+  "augmentation": {
+    "rotation_factor": 0.06,
+    "zoom_factor": 0.08,
+    "brightness_factor": 0.1,
+    "contrast_factor": 0.12,
+    "background_replacement": false
+  },
+  "model": {
+    "architecture": "EfficientNetB0",
+    "initialization": "imagenet_fresh_no_v2_to_v5_checkpoint",
+    "dropout_rate": 0.3,
+    "input_shape": [
+      224,
+      224,
+      3
+    ]
+  },
+  "training": {
+    "batch_size": 16,
+    "mixed_precision": true,
+    "head_epochs": 12,
+    "head_learning_rate": 0.001,
+    "fine_tune_epochs": 30,
+    "fine_tune_learning_rate": 1e-05,
+    "fine_tune_tail_layers": 40,
+    "freeze_batch_normalization": true,
+    "early_stopping_patience": 5,
+    "checkpoint_monitor": "val_macro_f1"
+  },
+  "evaluation": {
+    "batch_size": 16,
+    "metrics": [
+      "accuracy",
+      "macro_f1",
+      "macro_recall",
+      "per_class_recall",
+      "confusion_matrix"
+    ],
+    "save_row_predictions": true
+  },
+  "baseline_diagnostic": {
+    "enabled": true,
+    "model_path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/experiments/v5_natural_13_finetune_01/checkpoints/best_model.keras"
+  },
+  "known_failures": {
+    "manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/known_failures.csv",
+    "path_column": "path",
+    "label_column": "plant",
+    "source_column": "source"
+  },
+  "safety": {
+    "use_legacy_test_for_selection": false,
+    "use_locked_test_for_selection": false,
+    "deploy_automatically": false,
+    "allow_unreviewed_images": false
+  }
+}

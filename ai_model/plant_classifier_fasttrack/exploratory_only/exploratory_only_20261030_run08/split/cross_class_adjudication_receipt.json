@@ -1,0 +1,11 @@
+{
+  "adjudication_path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/exploratory_cross_class_adjudication_20261030.json",
+  "adjudication_sha256": "df9422e95f86be6b700562b641c175926afe6bd9e06e5bb8aabf92215493f1e0",
+  "source_audit_path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261029_run02_audit/split/blocked_cross_class_duplicates.json",
+  "source_audit_sha256": "270e330e09f33df3659135b307a666e1d160fb43109294c578889f393acfb527",
+  "decision_counts": {
+    "false_phash_collision": 15
+  },
+  "all_pairs_resolved_as_false_collisions": true,
+  "phash_threshold_changed": false
+}

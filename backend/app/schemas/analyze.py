@@ -28,8 +28,20 @@ class ImageAnalyzeResult(BaseModel):
     prevention: list[str]
 
 
+class ImagePlantPrediction(BaseModel):
+    index: int = Field(ge=0, le=2)
+    filename: str
+    plant: PlantPrediction
+    margin: float = Field(ge=0.0, le=1.0)
+    accepted: bool
+    reasons: list[Literal["low_confidence", "low_margin"]] = Field(
+        default_factory=list
+    )
+
+
 class AnalyzeResponse(BaseModel):
     success: Literal[True] = True
+    status: Literal["completed"] = "completed"
     image_count: int = Field(ge=1, le=3)
     plant: PlantPrediction
     disease: DiseasePrediction
@@ -37,6 +49,17 @@ class AnalyzeResponse(BaseModel):
     care: list[str]
     prevention: list[str]
     image_results: list[ImageAnalyzeResult] = Field(default_factory=list)
+
+
+class ManualConfirmationResponse(BaseModel):
+    success: Literal[False] = False
+    status: Literal["manual_confirmation_required"] = "manual_confirmation_required"
+    message: str
+    suggested_plant: PlantPrediction | None = None
+    image_predictions: list[ImagePlantPrediction]
+    reasons: list[
+        Literal["low_confidence", "low_margin", "inconsistent_plant"]
+    ]
 
 
 class ErrorResponse(BaseModel):

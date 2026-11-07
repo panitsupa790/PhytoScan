@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "corrective_test_completed",
+  "completed_at_utc": "2026-10-25T23:23:49.891783+00:00",
+  "reason": "Corrective Test re-evaluation after preprocessing parity fix",
+  "frozen_config": "app\\data\\plant_classifier_evaluation_corrective.json",
+  "frozen_config_sha256": "96ebd02a1ed29d7f78d439903c5cd439260aee9a3bae3dfefe60a2ac240446c7",
+  "thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.6936511993408203
+  },
+  "threshold_selection_performed_on_test": false,
+  "threshold_adjustment_permitted_from_test": false,
+  "artifacts": {
+    "test_report": {
+      "path": "evaluation\\plant_classifier_test_corrective_report.json",
+      "sha256": "90ae279707f07c34df557a0dbcbafee3ee6e5f866978bf0bff4906a4ab20ab90"
+    },
+    "test_predictions": {
+      "path": "evaluation\\plant_classifier_test_corrective_predictions.csv",
+      "sha256": "beb5954f184dacc1cbd7e6e4042c5008fb62b63ee15bb2f9194151e946310ce6"
+    }
+  }
+}

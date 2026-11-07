@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:32:31.314520+00:00",
+  "targets": {
+    "training": 50,
+    "development": 20,
+    "locked_test": 20
+  },
+  "target_totals": {
+    "training": 300,
+    "development": 120,
+    "locked_test": 120
+  },
+  "approved_total": 0,
+  "classes": {
+    "chrysanthemum": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "marigold": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "money_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "rose": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "snake_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    },
+    "spider_plant": {
+      "approved_natural_images": 0,
+      "target_total": 90,
+      "missing_total": 90,
+      "health_counts": {},
+      "health_missing": {
+        "healthy": 36,
+        "diseased": 36,
+        "insect_damaged": 18
+      },
+      "observer_groups": 0,
+      "session_groups": 0,
+      "plant_groups": 0
+    }
+  },
+  "ready_for_group_split": false,
+  "training_performed": false,
+  "review_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1/reviews/initial_empty_review_20261030/manual_review_manifest.csv",
+  "imported_candidates": 0,
+  "locked_test_accessed": false,
+  "next_action": "collect/import/review the reported missing natural images"
+}

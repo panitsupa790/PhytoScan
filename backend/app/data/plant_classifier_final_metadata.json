@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "final_integration_baseline",
+  "scope": {
+    "supported": "leaf images captured in a studio or against a plain, controlled background",
+    "not_supported_claims": [
+      "general natural-scene plant recognition",
+      "unsupported/OOD plant detection",
+      "species outside the six registered classes"
+    ],
+    "capture_guidance": [
+      "Use a single clearly visible leaf or plant.",
+      "Use a plain background and even lighting.",
+      "Avoid mixed plant species in one upload batch."
+    ]
+  },
+  "selected_model": {
+    "model_version": "plant-classifier-v1",
+    "architecture": "EfficientNetB0",
+    "runtime_path": "models/plant-classifier-v1.keras",
+    "sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165",
+    "input_shape": [224, 224, 3],
+    "class_order": [
+      "chrysanthemum",
+      "marigold",
+      "money_plant",
+      "rose",
+      "snake_plant",
+      "spider_plant"
+    ]
+  },
+  "preprocessing_contract": {
+    "decoder": "tf.io.decode_image(channels=3, expand_animations=False)",
+    "color_space": "RGB",
+    "dtype": "float32",
+    "resize": "tf.image.resize(224x224, bilinear, antialias=False)",
+    "pixel_range": [0, 255],
+    "external_normalization": false,
+    "normalization": "EfficientNet embedded rescaling"
+  },
+  "selection": {
+    "dataset_role": "overused_controlled_validation_diagnostic",
+    "manifest_sha256": "8d0121c11c9845fedc276caa3139f820d07da03cec5694d42379728b1f296860",
+    "samples": 2340,
+    "class_counts": {
+      "chrysanthemum": 233,
+      "marigold": 73,
+      "money_plant": 74,
+      "rose": 1775,
+      "snake_plant": 86,
+      "spider_plant": 99
+    },
+    "metrics": {
+      "accuracy": 0.997008547008547,
+      "macro_f1": 0.9924276044330415,
+      "macro_recall": 0.9993427230046948,
+      "minimum_per_class_recall": 0.9960563380281691,
+      "errors": 7,
+      "wrong_predictions_with_confidence_at_least_0_90": 0,
+      "per_class_recall": {
+        "chrysanthemum": 1.0,
+        "marigold": 1.0,
+        "money_plant": 1.0,
+        "rose": 0.9960563380281691,
+        "snake_plant": 1.0,
+        "spider_plant": 1.0
+      }
+    },
+    "decision": "V1 is retained as the final integration baseline because it has the highest minimum per-class recall in the common controlled-domain diagnostic, an already verified runtime and frozen-threshold chain, and no model-binary migration is required. V2 has the highest Macro-F1 on this overused validation set, but the small difference is insufficient to prove superiority on an independent blind set.",
+    "claim": "final integration baseline; not proven globally most accurate"
+  },
+  "runtime_thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.6936511993408203,
+    "source": "plant_classifier_evaluation_corrective.json",
+    "selection_data": "validation only",
+    "test_adjustment_performed": false
+  },
+  "runtime_behavior": {
+    "automatic_classification": true,
+    "manual_confirmation_on_low_margin_or_mixed_predictions": true,
+    "disease_routing_only_after_plant_acceptance_or_user_confirmation": true,
+    "model_checksum_verified_before_load": true,
+    "model_loaded_once_per_process": true
+  },
+  "limitations": [
+    "No new independent blind controlled-background set was available for final model selection.",
+    "The common validation set was used previously and is dominated by rose images.",
+    "The reported metrics apply only to the controlled-background evaluation domain.",
+    "The classifier does not identify unsupported/OOD plants reliably.",
+    "Natural-scene performance must not be inferred from these metrics.",
+    "A confidence score is a model score and is not a laboratory or botanical confirmation."
+  ]
+}

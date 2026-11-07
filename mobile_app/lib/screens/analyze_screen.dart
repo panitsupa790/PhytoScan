@@ -1,20 +1,34 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../models/analyze_outcome.dart';
+import '../models/analyze_result.dart';
 import '../models/plant.dart';
+import '../models/scan_history_entry.dart';
 import '../services/api_service.dart';
+import '../services/scan_history_store.dart';
 import '../theme/app_theme.dart';
-import '../widgets/image_picker_card.dart';
-import '../widgets/primary_button.dart';
+import '../theme/scan_design_tokens.dart';
+import '../widgets/scan_components.dart';
+import 'manual_plant_confirmation_screen.dart';
 import 'result_screen.dart';
 
 class AnalyzeScreen extends StatefulWidget {
-  const AnalyzeScreen({super.key, required this.plant, required this.api});
+  const AnalyzeScreen({
+    super.key,
+    required this.api,
+    this.plant,
+    this.initialImages = const [],
+    this.historyStore = const ScanHistoryStore(),
+  });
 
-  final Plant plant;
+  final Plant? plant;
   final PhytoScanApi api;
+  final List<XFile> initialImages;
+  final ScanHistoryRepository historyStore;
 
   @override
   State<AnalyzeScreen> createState() => _AnalyzeScreenState();
@@ -33,6 +47,12 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
   bool _loading = false;
   int _loadingStep = 0;
   String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _images.addAll(widget.initialImages.take(3));
+  }
 
   Future<void> _pickFromGallery() async {
     final remaining = 3 - _images.length;
@@ -107,28 +127,84 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
     });
   }
 
-  Future<void> _analyze() async {
+  Future<void> _analyze({String? confirmedPlantCode}) async {
     if (_images.isEmpty || _loading) return;
+    final plantCode = confirmedPlantCode ?? widget.plant?.code;
+    final submittedImages = List<XFile>.unmodifiable(_images);
     _startLoading();
     try {
-      final result = await widget.api.analyze(
-        plantCode: widget.plant.code,
-        images: List.unmodifiable(_images),
+      final outcome = await widget.api.analyze(
+        plantCode: plantCode,
+        images: submittedImages,
       );
       if (!mounted) return;
       _stopLoading();
-      await Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (_) =>
-              ResultScreen(result: result, images: List.unmodifiable(_images)),
-        ),
-      );
+      switch (outcome) {
+        case CompletedAnalyzeOutcome(:final result, :final scanId):
+          await _saveHistory(
+            result,
+            manuallyConfirmed: plantCode != null,
+            scanId: scanId,
+          );
+          if (!mounted) return;
+          await Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => ResultScreen(
+                result: result,
+                images: submittedImages,
+                identificationSource: plantCode == null
+                    ? PlantIdentificationSource.automatic
+                    : PlantIdentificationSource.manuallyConfirmed,
+              ),
+            ),
+          );
+        case ManualConfirmationOutcome():
+          final selectedPlantCode = await Navigator.of(context).push<String>(
+            MaterialPageRoute(
+              builder: (_) => ManualPlantConfirmationScreen(
+                outcome: outcome,
+                api: widget.api,
+              ),
+            ),
+          );
+          if (selectedPlantCode != null && mounted) {
+            await _analyze(confirmedPlantCode: selectedPlantCode);
+          }
+      }
     } on ApiException catch (error) {
-      _stopLoading(error: error.message);
+      _stopLoading(error: _errorMessage(error));
     } catch (_) {
       _stopLoading(error: 'เกิดข้อผิดพลาด กรุณาลองอีกครั้ง');
     }
   }
+
+  Future<void> _saveHistory(
+    AnalyzeResult result, {
+    required bool manuallyConfirmed,
+    String? scanId,
+  }) async {
+    try {
+      await widget.historyStore.add(
+        ScanHistoryEntry.fromResult(
+          result: result,
+          manuallyConfirmed: manuallyConfirmed,
+          id: scanId,
+        ),
+      );
+    } catch (_) {
+      // A local storage failure must not block the completed analysis result.
+    }
+  }
+
+  String _errorMessage(ApiException error) => switch (error.errorCode) {
+    'MODEL_UNAVAILABLE' =>
+      'ระบบวิเคราะห์ยังไม่พร้อมใช้งาน กรุณาลองอีกครั้งภายหลัง',
+    'INFERENCE_FAILED' =>
+      'วิเคราะห์ภาพไม่สำเร็จ กรุณาลองใช้ภาพอื่นหรือลองอีกครั้ง',
+    'NETWORK_TIMEOUT' => 'การเชื่อมต่อใช้เวลานานเกินไป กรุณาลองอีกครั้ง',
+    'NETWORK_ERROR' => 'เชื่อมต่อเซิร์ฟเวอร์ไม่ได้ กรุณาตรวจสอบอินเทอร์เน็ต',
+    _ => error.message,
+  };
 
   @override
   void dispose() {
@@ -138,314 +214,177 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('ตรวจสุขภาพต้นไม้')),
-      body: Stack(
-        children: [
-          SafeArea(
-            top: false,
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.fromLTRB(22, 10, 22, 26),
-                    children: [
-                      _PlantPill(plant: widget.plant),
-                      const SizedBox(height: 20),
-                      Text(
-                        'จัดใบไม้ให้อยู่ในกรอบ',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        'เห็นใบชัด แสงเพียงพอ ไม่เบลอ และไม่ใกล้หรือไกลเกินไป',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      const SizedBox(height: 16),
-                      _CaptureFrame(
-                        image: _images.isEmpty ? null : _images.first,
-                      ),
-                      const SizedBox(height: 14),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: OutlinedButton.icon(
-                              onPressed: _loading ? null : _takePhoto,
-                              icon: const Icon(Icons.photo_camera_outlined),
-                              label: const Text('กล้อง'),
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: OutlinedButton.icon(
-                              onPressed: _loading ? null : _pickFromGallery,
-                              icon: const Icon(Icons.photo_library_outlined),
-                              label: const Text('คลังรูป'),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 26),
-                      Row(
-                        children: [
-                          Text(
-                            'ภาพที่เลือก',
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                          const Spacer(),
-                          Text(
-                            '${_images.length}/3 ภาพ',
-                            style: Theme.of(context).textTheme.labelMedium
-                                ?.copyWith(color: AppColors.primary),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        'แต่ละภาพอาจให้ผลต่างกัน และจะแสดงผลแยกทีละภาพ',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      const SizedBox(height: 13),
-                      SizedBox(
-                        height: 96,
-                        child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          itemCount:
-                              _images.length + (_images.length < 3 ? 1 : 0),
-                          separatorBuilder: (_, _) => const SizedBox(width: 10),
-                          itemBuilder: (context, index) {
-                            if (index == _images.length) {
-                              return SizedBox(
-                                width: 96,
-                                child: ImagePickerCard.add(
-                                  onTap: _pickFromGallery,
-                                ),
-                              );
-                            }
-                            return SizedBox(
-                              width: 96,
-                              child: ImagePickerCard.preview(
-                                image: _images[index],
-                                order: index + 1,
-                                onRemove: () => setState(() {
-                                  _images.removeAt(index);
-                                  _error = null;
-                                }),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                      if (_images.isNotEmpty) ...[
-                        const SizedBox(height: 24),
-                        _ReviewSection(
-                          plant: widget.plant,
-                          imageCount: _images.length,
-                        ),
-                      ],
-                      if (_error != null) ...[
-                        const SizedBox(height: 16),
-                        _ErrorMessage(message: _error!),
-                      ],
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(22, 12, 22, 18),
-                  decoration: const BoxDecoration(
-                    color: AppColors.background,
-                    border: Border(
-                      top: BorderSide(color: AppColors.divider, width: 0.6),
-                    ),
-                  ),
-                  child: PrimaryButton(
-                    label: 'วิเคราะห์ด้วย PhytoScan',
-                    icon: Icons.auto_awesome_outlined,
-                    onPressed: _images.isEmpty ? null : _analyze,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          if (_loading)
-            Positioned.fill(
-              child: ColoredBox(
-                color: Colors.white.withValues(alpha: 0.90),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(34),
+    final hasImages = _images.isNotEmpty;
+    final canAddImages = !_loading && _images.length < 3;
+    final contextLabel = widget.plant?.nameTh ?? 'จำแนกชนิดพืชอัตโนมัติ';
+
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle.light,
+      child: Scaffold(
+        key: const ValueKey('analyze-screen'),
+        backgroundColor: ScanColors.heroTop,
+        body: Stack(
+          children: [
+            SafeArea(
+              bottom: false,
+              child: CustomScrollView(
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
+                slivers: [
+                  SliverToBoxAdapter(
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          decoration: const BoxDecoration(
-                            color: AppColors.paleGreen,
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(21),
-                            child: CircularProgressIndicator(strokeWidth: 2.5),
-                          ),
+                        ScanHero(
+                          onBack: () => Navigator.of(context).maybePop(),
+                          contextLabel: contextLabel,
                         ),
-                        const SizedBox(height: 22),
-                        AnimatedSwitcher(
-                          duration: const Duration(milliseconds: 220),
-                          child: Text(
-                            _loadingMessages[_loadingStep],
-                            key: ValueKey(_loadingStep),
-                            style: Theme.of(context).textTheme.titleLarge,
+                        Transform.translate(
+                          offset: const Offset(0, -26),
+                          child: Container(
+                            clipBehavior: Clip.antiAlias,
+                            decoration: const BoxDecoration(
+                              color: ScanColors.surface,
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(ScanRadii.sheet),
+                              ),
+                            ),
+                            padding: EdgeInsets.fromLTRB(
+                              20,
+                              30,
+                              20,
+                              _error == null ? 150 : 220,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ScanInstructionCard(
+                                  plantName: widget.plant?.nameTh,
+                                ),
+                                const SizedBox(height: 24),
+                                Text(
+                                  'เพิ่มรูปภาพ',
+                                  style: Theme.of(context).textTheme.titleLarge
+                                      ?.copyWith(
+                                        color: ScanColors.text,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  'ภาพแรกจะใช้เป็นภาพหลักในการแสดงตัวอย่าง',
+                                  style: Theme.of(context).textTheme.bodyMedium
+                                      ?.copyWith(
+                                        color: ScanColors.textSecondary,
+                                      ),
+                                ),
+                                const SizedBox(height: 13),
+                                ScanUploadFrame(
+                                  image: hasImages ? _images.first : null,
+                                ),
+                                const SizedBox(height: 14),
+                                ScanActionButtons(
+                                  onCamera: _takePhoto,
+                                  onGallery: _pickFromGallery,
+                                  enabled: canAddImages,
+                                ),
+                                const SizedBox(height: 26),
+                                ScanSelectedImages(
+                                  images: List<XFile>.unmodifiable(_images),
+                                  enabled: !_loading,
+                                  onRemove: (index) => setState(() {
+                                    _images.removeAt(index);
+                                    _error = null;
+                                  }),
+                                ),
+                                if (hasImages) ...[
+                                  const SizedBox(height: 22),
+                                  _ReviewSection(
+                                    plant: widget.plant,
+                                    imageCount: _images.length,
+                                  ),
+                                ],
+                              ],
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 7),
-                        Text(
-                          'PhytoScan กำลังตรวจภาพของคุณ',
-                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
                     ),
                   ),
-                ),
+                ],
               ),
             ),
-        ],
-      ),
-    );
-  }
-}
-
-class _PlantPill extends StatelessWidget {
-  const _PlantPill({required this.plant});
-
-  final Plant plant;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 44,
-          height: 44,
-          decoration: const BoxDecoration(
-            color: AppColors.paleGreen,
-            shape: BoxShape.circle,
-          ),
-          child: const Icon(Icons.eco_outlined, color: AppColors.primary),
-        ),
-        const SizedBox(width: 12),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(plant.nameTh, style: Theme.of(context).textTheme.titleMedium),
-            Text(plant.nameEn, style: Theme.of(context).textTheme.bodyMedium),
-          ],
-        ),
-      ],
-    );
-  }
-}
-
-class _CaptureFrame extends StatelessWidget {
-  const _CaptureFrame({required this.image});
-
-  final XFile? image;
-
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.08,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(26),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            if (image == null)
-              const ColoredBox(
-                color: AppColors.paleGreen,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.eco_outlined,
-                      size: 72,
-                      color: AppColors.primary,
-                    ),
-                    SizedBox(height: 12),
-                    Text(
-                      'เพิ่มภาพใบไม้เพื่อเริ่มตรวจ',
-                      style: TextStyle(
-                        color: AppColors.darkGreen,
-                        fontWeight: FontWeight.w500,
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: ScanBottomCta(
+                hasImages: hasImages,
+                busy: _loading,
+                errorMessage: _error,
+                onPressed: _analyze,
+              ),
+            ),
+            if (_loading)
+              Positioned.fill(
+                child: ColoredBox(
+                  color: ScanColors.primary.withValues(alpha: 0.94),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(34),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            width: 72,
+                            height: 72,
+                            decoration: BoxDecoration(
+                              color: ScanColors.white.withValues(alpha: 0.12),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(22),
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2.5,
+                                color: ScanColors.accent,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 22),
+                          AnimatedSwitcher(
+                            duration: const Duration(milliseconds: 220),
+                            child: Text(
+                              _loadingMessages[_loadingStep],
+                              key: ValueKey(_loadingStep),
+                              style: Theme.of(context).textTheme.titleLarge
+                                  ?.copyWith(color: ScanColors.white),
+                            ),
+                          ),
+                          const SizedBox(height: 7),
+                          Text(
+                            'PhytoScan กำลังตรวจภาพของคุณ',
+                            style: Theme.of(context).textTheme.bodyMedium
+                                ?.copyWith(
+                                  color: ScanColors.white.withValues(
+                                    alpha: 0.72,
+                                  ),
+                                ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              )
-            else
-              FutureBuilder(
-                future: image!.readAsBytes(),
-                builder: (context, snapshot) {
-                  if (!snapshot.hasData) {
-                    return const ColoredBox(
-                      color: AppColors.paleGreen,
-                      child: Center(child: CircularProgressIndicator()),
-                    );
-                  }
-                  return Image.memory(snapshot.data!, fit: BoxFit.cover);
-                },
               ),
-            const CustomPaint(painter: _ScanFramePainter()),
           ],
         ),
       ),
     );
   }
-}
-
-class _ScanFramePainter extends CustomPainter {
-  const _ScanFramePainter();
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.white.withValues(alpha: 0.92)
-      ..strokeWidth = 3
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round;
-    const inset = 24.0;
-    const length = 34.0;
-    final paths = [
-      Path()
-        ..moveTo(inset, inset + length)
-        ..lineTo(inset, inset)
-        ..lineTo(inset + length, inset),
-      Path()
-        ..moveTo(size.width - inset - length, inset)
-        ..lineTo(size.width - inset, inset)
-        ..lineTo(size.width - inset, inset + length),
-      Path()
-        ..moveTo(inset, size.height - inset - length)
-        ..lineTo(inset, size.height - inset)
-        ..lineTo(inset + length, size.height - inset),
-      Path()
-        ..moveTo(size.width - inset - length, size.height - inset)
-        ..lineTo(size.width - inset, size.height - inset)
-        ..lineTo(size.width - inset, size.height - inset - length),
-    ];
-    for (final path in paths) {
-      canvas.drawPath(path, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 class _ReviewSection extends StatelessWidget {
   const _ReviewSection({required this.plant, required this.imageCount});
 
-  final Plant plant;
+  final Plant? plant;
   final int imageCount;
 
   @override
@@ -486,37 +425,14 @@ class _ReviewSection extends StatelessWidget {
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'โปรดตรวจสอบว่าภาพทั้งหมดเป็น${plant.nameTh}ชนิดเดียวกัน',
+                  plant == null
+                      ? 'โปรดใช้ภาพของพืชชนิดเดียวกัน ระบบจะจำแนกชนิดพืชก่อนวิเคราะห์โรค'
+                      : 'โปรดตรวจสอบว่าภาพทั้งหมดเป็น${plant!.nameTh}ชนิดเดียวกัน',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
             ],
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class _ErrorMessage extends StatelessWidget {
-  const _ErrorMessage({required this.message});
-
-  final String message;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: AppColors.error.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Icon(Icons.error_outline_rounded, color: AppColors.error),
-          const SizedBox(width: 10),
-          Expanded(child: Text(message)),
         ],
       ),
     );

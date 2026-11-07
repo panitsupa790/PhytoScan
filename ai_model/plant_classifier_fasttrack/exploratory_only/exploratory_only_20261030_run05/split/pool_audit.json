@@ -1,0 +1,27 @@
+{
+  "pool_manifest_rows": 5474,
+  "loaded_rows": 5474,
+  "missing_files": [],
+  "missing_file_count": 0,
+  "missing_group_examples": [],
+  "missing_group_count": 0,
+  "computed_sha256_count": 97,
+  "computed_phash_count": 97,
+  "semantic_group_count": 3264,
+  "class_counts": {
+    "money_plant": 542,
+    "spider_plant": 664,
+    "rose": 1228,
+    "chrysanthemum": 1871,
+    "snake_plant": 592,
+    "marigold": 577
+  },
+  "source_counts": {
+    "v1_original_train": 3599,
+    "mendeley_chrysanthemum_leaf_disease_v2": 883,
+    "mendeley_flower_leaf_original_v4": 441,
+    "mendeley_indoor_plants_classification_v1": 454,
+    "inaturalist_dev_train": 84,
+    "v5_natural_approved": 13
+  }
+}

@@ -1,0 +1,12 @@
+Phase 1.2 automated regression and integration verification
+Command: .venv\Scripts\python.exe -m pytest -q
+Result: 63 passed in 20.66s
+Status: PASS
+
+Coverage includes threshold candidate/selection rules, metric denominators,
+corrective artifact overwrite protection, frozen-config/receipt mismatch
+fail-closed behavior, TensorFlow preprocessing parity, model routing, manual
+confirmation, invalid images, API schemas, multi-image mixed-plant protection,
+real model loading, automatic runtime routing, and confirmed-plant disease routing.
+
+No Flutter/Mobile tests or files were changed in Phase 1.2.

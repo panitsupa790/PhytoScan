@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "near_duplicate_review_complete": false,
+  "train_manifest_sha256": "b73c5f04c2dd1ec40a0c40619ff82e5c790c61a465cf2bfc665c81242dfef253",
+  "development_manifest_sha256": "017e2c181e7eef52a67a9aa151b9eed78dc48ba3a4dedf8b632b85885af096f7",
+  "notes": [
+    "Draft candidates passed automated exact/path/group/pHash screening only.",
+    "Manual plant identity, quality, natural/mobile likeness, licensing and visual near-duplicate review are pending."
+  ]
+}

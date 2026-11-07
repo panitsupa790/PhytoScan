@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:32:16.917601+00:00",
+  "workspace": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1",
+  "config": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/configs/natural_dataset_expansion.json",
+  "config_sha256": "d55340e9fa9bd6224c5da1ac53336b3080c60e95ed345050b1342f282ec11929",
+  "classes": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "targets_total": {
+    "training": 300,
+    "development": 120,
+    "locked_test": 120
+  },
+  "training_performed": false
+}

@@ -6,7 +6,6 @@ class PredictionLabel {
     required this.confidence,
   });
 
-  static const double highConfidenceMinimum = 0.80;
   static const double mediumConfidenceMinimum = 0.55;
 
   final String code;
@@ -15,12 +14,6 @@ class PredictionLabel {
   final double confidence;
 
   String get displayName => nameTh.trim().isNotEmpty ? nameTh : nameEn;
-
-  String get confidenceLabel {
-    if (confidence >= highConfidenceMinimum) return 'ความมั่นใจสูง';
-    if (confidence >= mediumConfidenceMinimum) return 'ความมั่นใจปานกลาง';
-    return 'ผลยังไม่แน่นอน';
-  }
 
   factory PredictionLabel.fromJson(Map<String, dynamic> json) {
     return PredictionLabel(

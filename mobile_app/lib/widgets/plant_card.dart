@@ -43,9 +43,7 @@ class PlantCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(plant.nameTh, style: Theme.of(context).textTheme.titleLarge),
-              const SizedBox(height: 2),
-              Text(plant.nameEn, style: Theme.of(context).textTheme.bodyMedium),
-              const SizedBox(height: 8),
+              const SizedBox(height: 6),
               Text(
                 'รองรับ ${plant.diseaseCount} อาการ',
                 style: Theme.of(
@@ -77,10 +75,6 @@ class PlantCard extends StatelessWidget {
                 Text(
                   plant.nameTh,
                   style: Theme.of(context).textTheme.titleLarge,
-                ),
-                Text(
-                  plant.nameEn,
-                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: 5),
                 Text(

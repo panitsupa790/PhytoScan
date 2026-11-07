@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:32:24.342455+00:00",
+  "review_id": "initial_empty_review_20261030",
+  "candidates": 0,
+  "class_counts": {
+    "chrysanthemum": 0,
+    "marigold": 0,
+    "money_plant": 0,
+    "rose": 0,
+    "snake_plant": 0,
+    "spider_plant": 0
+  },
+  "duplicate_pairs": 0,
+  "duplicate_classification_counts": {},
+  "manual_review_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1/reviews/initial_empty_review_20261030/manual_review_manifest.csv",
+  "duplicate_review_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1/reviews/initial_empty_review_20261030/duplicate_review_manifest.csv",
+  "contact_sheets": [],
+  "review_complete": false,
+  "training_performed": false
+}

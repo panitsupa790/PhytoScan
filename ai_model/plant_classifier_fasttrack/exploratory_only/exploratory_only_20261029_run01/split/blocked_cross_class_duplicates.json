@@ -1,0 +1,113 @@
+{
+  "semantic_groups": 3264,
+  "exact_duplicate_pairs": 0,
+  "near_duplicate_pairs_at_or_below_limit": 1552,
+  "cross_class_near_duplicate_count": 15,
+  "cross_class_near_duplicate_examples": [
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0402_Leaf41_Tree21_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Spider_Plant_Fungal_leaf_spot/Spider_Plant_Fungal_leaf_spot_078_jpg.rf.3636d8d0f2d6ab08c6bba534c7f65f2a.jpg",
+      "left_plant": "spider_plant",
+      "right": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Snake_Plant_Leaf_Withering/Snake_Plant_Leaf_Withering_048_jpg.rf.081473c4529ab0d763543189caa0978c.jpg",
+      "right_plant": "snake_plant",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_1949.jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Healthy/Image0821_Leaf83_Tree42_Healthy.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0842_Leaf85_Tree43_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (138).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/IMG (80).jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Septoria/Image0220_Leaf22_Tree11_Septoria.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/IMG (80).jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Septoria/Image0221_Leaf23_Tree12_Septoria.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Insect_Damage/resized_Insects_1806.jpg",
+      "left_plant": "rose",
+      "right": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Healthy/Image0305_Leaf31_Tree16_Healthy.jpg",
+      "right_plant": "chrysanthemum",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Bacterial/Image0227_Leaf23_Tree12_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0302_Leaf31_Tree16_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (178).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0403_Leaf41_Tree21_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0547_Leaf55_Tree28_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0599_Leaf60_Tree30_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0600_Leaf60_Tree30_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (4).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/AI in Plant Pathology A Chrysanthemum Leaf Disease (1)/AI in Plant Pathology A Chrysanthemum Leaf Disease/Chrysanthemum Leaf_Dataset/Chrysanthemum Leaf_Dataset/Bacterial/Image0802_Leaf81_Tree41_Bacterial.jpg",
+      "left_plant": "chrysanthemum",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (268).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    },
+    {
+      "left": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Marigold/Marigold (148).jpg",
+      "left_plant": "marigold",
+      "right": "/mnt/c/Users/HP/Downloads/Original Data/Original Data/Rose/Rose (28).jpg",
+      "right_plant": "rose",
+      "distance": 4
+    }
+  ]
+}

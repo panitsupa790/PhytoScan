@@ -1,0 +1,1 @@
+pair_id,left_candidate_id,left_path,left_plant,left_sha256,left_phash,left_semantic_group,right_id,right_path,right_sha256,right_phash,right_semantic_group,right_scope,right_role,phash_distance,classification,decision,reviewer,review_evidence

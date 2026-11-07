@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "experiment_name": "phytoscan_fresh_b0_natural_data_only_pending",
+  "seed": 42,
+  "classes": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "output_root": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/artifacts",
+  "data": {
+    "status": "blocked_until_natural_dataset_split_passes",
+    "planned_train_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1/splits/<split-id>/combined_training.csv",
+    "planned_development_manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/natural_dataset/expansion_v1/splits/<split-id>/development.csv",
+    "locked_test_manifest_intentionally_omitted": true
+  },
+  "sampling": {
+    "strategy": "class_target_with_inverse_sqrt_source_weight_finite_pool",
+    "max_repeats_per_image": 2
+  },
+  "augmentation": {
+    "rotation_factor": 0.06,
+    "zoom_factor": 0.08,
+    "brightness_factor": 0.1,
+    "contrast_factor": 0.12,
+    "background_replacement": false
+  },
+  "model": {
+    "architecture": "EfficientNetB0",
+    "initialization": "imagenet_fresh_no_v2_to_v5_checkpoint",
+    "dropout_rate": 0.3,
+    "input_shape": [
+      224,
+      224,
+      3
+    ]
+  },
+  "training": {
+    "batch_size": 16,
+    "mixed_precision": true,
+    "head_epochs": 12,
+    "head_learning_rate": 0.001,
+    "fine_tune_epochs": 30,
+    "fine_tune_learning_rate": 1e-05,
+    "fine_tune_tail_layers": 40,
+    "freeze_batch_normalization": true,
+    "early_stopping_patience": 5,
+    "checkpoint_monitor": "val_macro_f1"
+  },
+  "evaluation": {
+    "batch_size": 16,
+    "metrics": [
+      "accuracy",
+      "macro_f1",
+      "macro_recall",
+      "per_class_recall",
+      "confusion_matrix"
+    ],
+    "save_row_predictions": true
+  },
+  "baseline_diagnostic": {
+    "enabled": true,
+    "model_path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/experiments/v5_natural_13_finetune_01/checkpoints/best_model.keras"
+  },
+  "known_failures": {
+    "manifest": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/manifests/known_failures.csv",
+    "path_column": "path",
+    "label_column": "plant",
+    "source_column": "source"
+  },
+  "safety": {
+    "use_legacy_test_for_selection": false,
+    "use_locked_test_for_selection": false,
+    "deploy_automatically": false,
+    "allow_unreviewed_images": false
+  },
+  "change_control": {
+    "allowed_change": "data_only",
+    "architecture_sha256": "8dcad06fc2121c56e31451be4583ca84e35970bafa7ff990f35cb00bfddae77a",
+    "augmentation_sha256": "e4ad60f8f00238f97e6a0d6a309edec5f09467374630ea353108987ff8e0393a",
+    "training_performed_by_dataset_pipeline": false
+  }
+}

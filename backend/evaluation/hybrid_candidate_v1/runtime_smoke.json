@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-31T21:32:25.351973+00:00",
+  "candidate_only": true,
+  "test_set_used": false,
+  "automatic_routes": {
+    "chrysanthemum": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/Chrysanthemum Leaf_Dataset/Septoria/Image0136_Leaf14_Tree07_Septoria.jpg",
+      "plant_result": "chrysanthemum",
+      "disease_result": "Septoria",
+      "disease_model_architecture": "MobileNetV2",
+      "disease_model_sha256": "ee2ac31fe0cd31b2cb744de7ce6857fafabcfee4d03350fa05ed66eb8c2aebd9"
+    },
+    "marigold": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/Rose And MArigold Leaf Disease001/Perfect Data Set/marigold/Alternaria Leaf Blight/IMG_20241112_163404.jpg",
+      "plant_result": "marigold",
+      "disease_result": "Alternaria Leaf Blight",
+      "disease_model_architecture": "EfficientNetB0",
+      "disease_model_sha256": "68b4ea44f8a6abdfc74f5e46b6aa6432857d4aac89e5c55f0afa61b2aee68635"
+    },
+    "money_plant": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Money_Plant_Manganese_Toxicity/Money_Plant_Manganese_Toxicity_016_jpg.rf.ad6a7817fe174f3fce891651c994db4d.jpg",
+      "plant_result": "money_plant",
+      "disease_result": "Money_Plant_Bacterial_wilt_disease",
+      "disease_model_architecture": "MobileNetV2",
+      "disease_model_sha256": "b4eb4ea4ceb5c9234f753531454af61bc499f81da896bbaa100879afe5cbcdc5"
+    },
+    "rose": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/archive_2/Final Dataset/Rose/Rose_Yellow_Mosaic_Virus/IMG (100).jpg",
+      "plant_result": "rose",
+      "disease_result": "Rose_Yellow_Mosaic_Virus",
+      "disease_model_architecture": "MobileNetV2",
+      "disease_model_sha256": "8269c31fa441d73a22a663b9fc09f344e19b70537976ddcdeada77ecba3217fe"
+    },
+    "snake_plant": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Snake_Plant_Healthy/Snake_Plant_Healthy_037_jpg.rf.176158782d264ff80292d1aa81f01d78.jpg",
+      "plant_result": "snake_plant",
+      "disease_result": "Snake_Plant_Healthy",
+      "disease_model_architecture": "MobileNetV2",
+      "disease_model_sha256": "1774220b74719c7ddf39c2a61b5b0157308a6e499be35430008105cce9004729"
+    },
+    "spider_plant": {
+      "status": "PASS",
+      "source_image": "/mnt/c/Users/HP/Downloads/archive (2)/indoor/train/Spider_Plant_Healthy/Spider_Plant_Healthy_045_jpg.rf.0f52a9e542532535b0c6f9a7b87972e6.jpg",
+      "plant_result": "spider_plant",
+      "disease_result": "Spider_Plant_Healthy",
+      "disease_model_architecture": "MobileNetV2",
+      "disease_model_sha256": "e32f7439ca2107218fae46a54ef4646b23585b36ea027803c846babc041a2622"
+    }
+  },
+  "three_image_same_plant": "PASS",
+  "mixed_plant_fail_closed": "PASS",
+  "manual_confirmation": "PASS",
+  "api_schema_changed": false,
+  "active_manifest_changed": false
+}

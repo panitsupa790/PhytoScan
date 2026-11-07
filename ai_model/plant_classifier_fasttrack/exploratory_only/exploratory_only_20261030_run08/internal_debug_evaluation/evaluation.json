@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:09:00.077731+00:00",
+  "dataset_role": "exploratory_internal_debug_not_mobile_evidence",
+  "notes": [
+    "Internal Debug Validation was split from the audited training pool.",
+    "This result is not evidence of mobile/natural-image generalization and cannot promote a model."
+  ],
+  "metrics": {
+    "samples": 680,
+    "correct": 647,
+    "accuracy": 0.9514705882352941,
+    "macro_f1": 0.9457178710630996,
+    "macro_recall": 0.9478448802468157,
+    "per_class_recall": {
+      "chrysanthemum": 0.920863309352518,
+      "marigold": 0.8160919540229885,
+      "money_plant": 0.9876543209876543,
+      "rose": 0.9836956521739131,
+      "snake_plant": 0.9887640449438202,
+      "spider_plant": 0.99
+    },
+    "classification_report": {
+      "chrysanthemum": {
+        "precision": 0.9922480620155039,
+        "recall": 0.920863309352518,
+        "f1-score": 0.9552238805970149,
+        "support": 139.0
+      },
+      "marigold": {
+        "precision": 1.0,
+        "recall": 0.8160919540229885,
+        "f1-score": 0.8987341772151899,
+        "support": 87.0
+      },
+      "money_plant": {
+        "precision": 0.8695652173913043,
+        "recall": 0.9876543209876543,
+        "f1-score": 0.9248554913294798,
+        "support": 81.0
+      },
+      "rose": {
+        "precision": 0.9627659574468085,
+        "recall": 0.9836956521739131,
+        "f1-score": 0.9731182795698925,
+        "support": 184.0
+      },
+      "snake_plant": {
+        "precision": 0.9263157894736842,
+        "recall": 0.9887640449438202,
+        "f1-score": 0.9565217391304348,
+        "support": 89.0
+      },
+      "spider_plant": {
+        "precision": 0.9428571428571428,
+        "recall": 0.99,
+        "f1-score": 0.9658536585365853,
+        "support": 100.0
+      },
+      "accuracy": 0.9514705882352941,
+      "macro avg": {
+        "precision": 0.948958694864074,
+        "recall": 0.9478448802468157,
+        "f1-score": 0.9457178710630996,
+        "support": 680.0
+      },
+      "weighted avg": {
+        "precision": 0.9547559102175526,
+        "recall": 0.9514705882352941,
+        "f1-score": 0.9509541936698851,
+        "support": 680.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        128,
+        0,
+        4,
+        4,
+        2,
+        1
+      ],
+      [
+        1,
+        71,
+        5,
+        2,
+        4,
+        4
+      ],
+      [
+        0,
+        0,
+        80,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        181,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        88,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        99
+      ]
+    ]
+  },
+  "class_counts": {
+    "chrysanthemum": 139,
+    "marigold": 87,
+    "money_plant": 81,
+    "rose": 184,
+    "snake_plant": 89,
+    "spider_plant": 100
+  },
+  "class_order": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "preprocessing_contract": {
+    "decode": "tf.io.decode_image(channels=3, expand_animations=False)",
+    "dtype": "float32",
+    "resize": "tf.image.resize(224x224, bilinear, antialias=False)",
+    "pixel_range": "0-255",
+    "normalization": "EfficientNet embedded rescaling"
+  },
+  "model": {
+    "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/training/fine_tune_best.exploratory_only.keras",
+    "sha256": "27948ebd4355c13c6e98354efdc748aefd695c73494fe5c795b51eacff687c82"
+  },
+  "manifest": {
+    "path": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/exploratory_only/exploratory_only_20261030_run08/split/internal_debug_validation.csv",
+    "sha256": "4db23772243bb645e5c397f478883db9b495998c7415551ccc9c2119b5b245fd"
+  },
+  "runtime": {
+    "duration_seconds": 10.568846066002152,
+    "images_per_second": 64.34004202099442,
+    "tensorflow": "2.22.0-rc0",
+    "keras": "3.16.0.dev2026100104",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  }
+}

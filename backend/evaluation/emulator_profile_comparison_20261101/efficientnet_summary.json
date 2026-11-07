@@ -1,0 +1,30 @@
+{
+  "profile": "efficientnet",
+  "generated_at_utc": "2026-10-31T22:41:17.954262+00:00",
+  "source": "Android emulator /sdcard/Download",
+  "image_directory": "C:\\phytoscan\\backend\\evaluation\\emulator_profile_comparison_20261101\\images",
+  "image_count": 25,
+  "model_manifest": "app/data/model_manifest.json",
+  "plant_classifier": {
+    "architecture": "EfficientNetB0",
+    "model_version": "plant-classifier-v1",
+    "sha256": "5585bb91835006003e6f052c58465d84fc0d9ac6e37227d842a28d18f3991165"
+  },
+  "thresholds": {
+    "min_confidence": 0.0,
+    "min_margin": 0.6936511993408203
+  },
+  "decision_counts": {
+    "manual_confirmation_required": 2,
+    "completed": 23
+  },
+  "predicted_plant_counts": {
+    "chrysanthemum": 2,
+    "rose": 18,
+    "money_plant": 2,
+    "marigold": 1,
+    "spider_plant": 2
+  },
+  "ground_truth_status": "NOT VERIFIED",
+  "unsupported_ood_status": "NOT VERIFIED"
+}

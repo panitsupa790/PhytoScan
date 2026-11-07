@@ -1,0 +1,1042 @@
+{
+  "schema_version": 1,
+  "status": "content_completed_pending_expert_review",
+  "instructions": {
+    "required_fields": [
+      "plant_code",
+      "name_th",
+      "name_en",
+      "taxonomy.scientific_name",
+      "overview.summary_th",
+      "identification.distinguishing_features",
+      "care.light.details",
+      "care.watering.details",
+      "care.soil.details",
+      "safety.toxicity_humans",
+      "safety.toxicity_pets"
+    ],
+    "rules": [
+      "ห้ามแก้ plant_code เพราะต้องตรงกับ Model Registry",
+      "ไม่ต้องเปลี่ยน supported_disease_codes เพราะต้องตรงกับ Output ของโมเดล",
+      "หากยังไม่ทราบข้อมูลให้คงข้อความว่างหรือ List ว่าง ห้ามคาดเดา",
+      "ใช้หน่วยอุณหภูมิเป็นองศาเซลเซียสและความสูงเป็นเซนติเมตร",
+      "รูปภาพต้องมีสิทธิ์ใช้งานและควรระบุแหล่งที่มาใน media",
+      "ค่า pH สำหรับไม้กระถางบางชนิดเป็นช่วงทั่วไปของวัสดุปลูก ไม่ใช่ข้อกำหนดเฉพาะชนิด",
+      "media.gallery ว่างหมายถึงยังไม่มีภาพเพิ่มเติมที่คัดเลือก ไม่ใช่ข้อมูลพืชขาดหาย"
+    ],
+    "completion_notes": [
+      "ข้อมูลพืช 6 รายการเติมจากแหล่งอ้างอิงที่ระบุใน sources ของแต่ละพืช",
+      "ชื่อวิทยาศาสตร์บางรายการอ้างอิงระดับสกุลหรือชนิดตัวอย่าง ไม่ใช่การยืนยันชนิดจากภาพ Dataset",
+      "ช่วงอุณหภูมิที่แหล่งข้อมูลไม่ได้ให้ชัดเจนคง null",
+      "media URL และ license คงว่างจนกว่าจะได้ภาพที่ตรวจสอบสิทธิ์",
+      "คำแนะนำ scan_guidance เป็นแนวทางออกแบบการถ่ายภาพสำหรับแอป ไม่ใช่การวินิจฉัยโรค"
+    ]
+  },
+  "plants": [
+    {
+      "plant_code": "chrysanthemum",
+      "name_th": "เบญจมาศ",
+      "name_en": "Chrysanthemum",
+      "other_names_th": [
+        "เบญจมาศสวน"
+      ],
+      "other_names_en": [
+        "Florist’s chrysanthemum",
+        "Garden mum"
+      ],
+      "taxonomy": {
+        "scientific_name": "Chrysanthemum × morifolium",
+        "family": "Asteraceae",
+        "genus": "Chrysanthemum",
+        "species_or_cultivar_notes": "อ้างอิงเบญจมาศปลูกประดับกลุ่ม garden/florist mum; ไม่ได้ยืนยันพันธุ์ในภาพ Dataset"
+      },
+      "overview": {
+        "summary_th": "ไม้ดอกอายุหลายปีในวงศ์ทานตะวัน มีกอแตกกิ่งและช่อดอกหลายรูปแบบ สีและขนาดขึ้นกับพันธุ์ นิยมปลูกประดับและตัดดอก",
+        "summary_en": "Ornamental herbaceous perennial with mounded growth and many cultivars differing in flower color and form.",
+        "origin": "เอเชีย; กลุ่มลูกผสมของชนิดที่มีถิ่นกำเนิดในเอเชีย",
+        "growth_habit": "ไม้ล้มลุกอายุหลายปี ลำต้นตั้งตรง แตกกอ",
+        "typical_height_cm": {
+          "min": 30,
+          "max": 91
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "รูปไข่ถึงรูปใบหอก ขอบหยักหรือเว้าเป็นแฉก"
+        ],
+        "leaf_color": [
+          "เขียว"
+        ],
+        "stem_features": [
+          "ลำต้นหลายกิ่ง ตั้งตรง"
+        ],
+        "flower_features": [
+          "ช่อดอกแบบกระจุกแน่น สีขาว เหลือง ชมพู แดง หรือม่วงตามพันธุ์"
+        ],
+        "distinguishing_features": [
+          "ใบเดี่ยวเรียงสลับ ขอบหยักเป็นแฉก",
+          "ทรงพุ่มเป็นกอและดอกหลากสี"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "แดดจัด",
+          "details": "เหมาะกับแดดโดยตรงประมาณ 6 ชั่วโมงขึ้นไปต่อวัน"
+        },
+        "watering": {
+          "frequency": "ตรวจดินเป็นประจำ",
+          "details": "รดให้ดินชุ่มพอเหมาะ รอให้ผิวดินเริ่มแห้งก่อนรดซ้ำ หลีกเลี่ยงน้ำขัง",
+          "warning_signs": [
+            "ใบเหี่ยว",
+            "ดินแฉะต่อเนื่อง"
+          ]
+        },
+        "soil": {
+          "type": "ดินปลูกอินทรียวัตถุสูง ระบายน้ำดี",
+          "ph_range": {
+            "min": 6.0,
+            "max": 8.0
+          },
+          "details": "รักษาความชื้นพอเหมาะแต่ไม่ให้น้ำขัง"
+        },
+        "temperature_c": {
+          "min": 15,
+          "max": 28,
+          "details": "ช่วง 15–28°C เป็นกรอบอุณหภูมิกลางคืนและกลางวันที่แนะนำสำหรับการปลูก ไม่ใช่อุณหภูมิคงที่ตลอดวัน โดยแหล่งข้อมูล TNAU แนะนำกลางวัน 20–28°C และกลางคืน 15–20°C; การออกดอกขึ้นกับพันธุ์และช่วงแสงด้วย"
+        },
+        "humidity": {
+          "level": "อากาศถ่ายเท",
+          "details": "เว้นระยะต้นเพื่อให้อากาศถ่ายเท ลดใบเปียกค้าง"
+        },
+        "fertilizer": {
+          "frequency": "ตามคำแนะนำปุ๋ยไม้ดอก",
+          "details": "ใส่ในระยะเจริญเติบโตตามคำแนะนำฉลากและสภาพต้น ไม่ใส่มากเกินไป"
+        },
+        "pruning": "เด็ดดอกโรยและตัดแต่งกิ่งที่เสียหาย; ฆ่าเชื้อเครื่องมือก่อนใช้",
+        "repotting": "ย้ายกระถางเมื่อรากแน่นและเลือกดินระบายน้ำดี"
+      },
+      "safety": {
+        "toxicity_humans": "อาจทำให้ระคายเคืองผิวในผู้ไวต่อพืช และอาจเกิดอาการทางเดินอาหารหากกิน ไม่ควรรับประทานพันธุ์ปลูกประดับโดยไม่ตรวจความปลอดภัย",
+        "toxicity_pets": "มีความเป็นพิษต่อสุนัขและแมวหากกิน ควรวางพ้นสัตว์เลี้ยง",
+        "handling_notes": [
+          "สวมถุงมือเมื่อมีผิวแพ้ง่าย",
+          "อย่าให้เด็กและสัตว์เลี้ยงกินใบหรือดอก"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Bacterial",
+        "Healthy",
+        "Septoria"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/ChrysanthemumMorifolium.jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างเบญจมาศ จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysanthemum_morifolium_Flower.jpg",
+            "alt_text_th": "ดอกเบญจมาศที่บาน",
+            "source": "https://commons.wikimedia.org/wiki/File:Chrysanthemum_morifolium_Flower.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Dolon Prova"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysanthemum_%C3%97_morifolium_leaf.jpg",
+            "alt_text_th": "รายละเอียดใบเบญจมาศ",
+            "source": "https://commons.wikimedia.org/wiki/File:Chrysanthemum_%C3%97_morifolium_leaf.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Willow Coville"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:ChrysanthemumMorifolium.jpg",
+        "license": "CC BY-SA 3.0; ผู้สร้าง: Fanghong; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:ChrysanthemumMorifolium.jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Chrysanthemum × morifolium",
+          "url": "https://plants.ces.ncsu.edu/plants/chrysanthemum-x-morifolium/",
+          "type": "university_extension"
+        },
+        {
+          "title": "Tamil Nadu Agricultural University — Commercial Chrysanthemum",
+          "url": "https://agritech.tnau.ac.in/horticulture/horti_flower%20crops_commercial%20chrysanthemum.html",
+          "type": "university_extension"
+        },
+        {
+          "title": "Wikimedia Commons — ChrysanthemumMorifolium.jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:ChrysanthemumMorifolium.jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    },
+    {
+      "plant_code": "marigold",
+      "name_th": "ดาวเรือง",
+      "name_en": "Marigold",
+      "other_names_th": [
+        "ดาวเรืองดอกใหญ่"
+      ],
+      "other_names_en": [
+        "African marigold",
+        "Aztec marigold"
+      ],
+      "taxonomy": {
+        "scientific_name": "Tagetes erecta",
+        "family": "Asteraceae",
+        "genus": "Tagetes",
+        "species_or_cultivar_notes": "ชื่อดาวเรืองอาจหมายถึง Tagetes หลายชนิด; ใช้ T. erecta เป็นตัวอย่างดาวเรืองดอกใหญ่ และ Dataset ยังไม่ได้ยืนยันชนิดพืชในระดับ species"
+      },
+      "overview": {
+        "summary_th": "ไม้ดอกปลูกประดับในสกุล Tagetes มีดอกสีเหลืองถึงส้มและใบหยักแยกเป็นแฉก กลิ่นใบค่อนข้างเด่น ชอบแดดและดินระบายน้ำดี",
+        "summary_en": "Flowering marigold with yellow to orange flower heads and finely divided aromatic foliage; grows well in sun and drained soil.",
+        "origin": "เม็กซิโกและกัวเตมาลา (สำหรับ T. erecta)",
+        "growth_habit": "ไม้ล้มลุกตั้งตรง มักปลูกเป็นไม้ฤดูเดียว",
+        "typical_height_cm": {
+          "min": 30,
+          "max": 122
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "ใบเว้าแฉกเป็นส่วนย่อยหลายแฉก ขอบหยัก"
+        ],
+        "leaf_color": [
+          "เขียว"
+        ],
+        "stem_features": [
+          "ลำต้นตั้งตรง แตกกิ่ง มีกลิ่นเมื่อขยี้"
+        ],
+        "flower_features": [
+          "ช่อดอกสีเหลือง ส้ม หรือทอง ขนาดต่างกันตามพันธุ์"
+        ],
+        "distinguishing_features": [
+          "ใบมีส่วนย่อยเรียวและมีกลิ่น",
+          "ดอกเป็นช่อกระจุกแน่นเด่นชัด"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "แดดจัด",
+          "details": "ได้รับแสงแดดโดยตรงราว 6 ชั่วโมงหรือมากกว่า; อากาศร้อนจัดอาจให้ร่มช่วงบ่าย"
+        },
+        "watering": {
+          "frequency": "เมื่อผิวดินเริ่มแห้ง",
+          "details": "รดบริเวณโคนต้นให้ชุ่มพอดีและระบายออกได้ หลีกเลี่ยงน้ำแฉะ",
+          "warning_signs": [
+            "ดินแฉะ",
+            "ต้นเหี่ยวแม้ดินเปียก"
+          ]
+        },
+        "soil": {
+          "type": "ดินร่วนระบายน้ำดี",
+          "ph_range": {
+            "min": 6.0,
+            "max": 7.5
+          },
+          "details": "ปลูกในดินที่ระบายน้ำดี ไม่จำเป็นต้องกำหนด pH เฉพาะทุกพันธุ์ ช่วง pH 6.0–7.5 เป็นคำแนะนำสำหรับดาวเรืองแอฟริกัน (Tagetes erecta) ในดินปลูก; ค่าเหมาะสมอาจแตกต่างตามพันธุ์และวัสดุปลูก"
+        },
+        "temperature_c": {
+          "min": 20,
+          "max": 32,
+          "details": "ช่วง 20–32°C เป็นอุณหภูมิที่เหมาะต่อการเจริญเติบโตตามคู่มือผู้ผลิตเมล็ดพันธุ์สำหรับดาวเรือง Tagetes erecta สายพันธุ์ COCO; พันธุ์อื่นอาจมีความต้องการต่างกัน ไม่ใช่ช่วงทนร้อน/หนาวสูงสุด"
+        },
+        "humidity": {
+          "level": "ปานกลาง",
+          "details": "เว้นระยะปลูก ลดความชื้นสะสมในทรงพุ่ม"
+        },
+        "fertilizer": {
+          "frequency": "พอเหมาะ",
+          "details": "หลีกเลี่ยงปุ๋ยไนโตรเจนมากจนใบดกแต่ดอกน้อย"
+        },
+        "pruning": "เด็ดดอกโรยและส่วนเสียหายเพื่อส่งเสริมดอกใหม่",
+        "repotting": "ย้ายปลูกเมื่อต้นกล้าแข็งแรงโดยระวังราก และใช้กระถางมีรูระบายน้ำ"
+      },
+      "safety": {
+        "toxicity_humans": "น้ำยางอาจระคายเคืองผิวและร่วมกับแดดอาจทำให้เกิดผื่นในผู้ไวต่อพืช",
+        "toxicity_pets": "ไม่ยืนยันระดับความเป็นพิษต่อสุนัขและแมวสำหรับชนิดที่อยู่ใน Dataset; ควรหลีกเลี่ยงการให้สัตว์เลี้ยงกิน",
+        "handling_notes": [
+          "สวมถุงมือเมื่อตัดแต่ง",
+          "ล้างผิวหากสัมผัสยางและมีอาการระคายเคือง"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Alternaria Leaf Blight",
+        "Helathy Leaves",
+        "Pest Damaged"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_erecta_01.jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างดาวเรือง จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_Erecta_Flower.jpg",
+            "alt_text_th": "ดอกดาวเรืองสีเหลือง",
+            "source": "https://commons.wikimedia.org/wiki/File:Tagetes_Erecta_Flower.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Dolon Prova"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_erecta_flower.jpg",
+            "alt_text_th": "ดอกดาวเรืองอีกมุมมอง",
+            "source": "https://commons.wikimedia.org/wiki/File:Tagetes_erecta_flower.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Davidjose365"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:Tagetes_erecta_01.jpg",
+        "license": "CC BY-SA 4.0; ผู้สร้าง: Indrajit Das; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:Tagetes_erecta_01.jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Tagetes erecta",
+          "url": "https://plants.ces.ncsu.edu/plants/tagetes-erecta/",
+          "type": "university_extension"
+        },
+        {
+          "title": "NC State Extension — Tagetes (genus)",
+          "url": "https://plants.ces.ncsu.edu/plants/tagetes/",
+          "type": "university_extension"
+        },
+        {
+          "title": "Sakata — COCO Marigold (Tagetes erecta) Culture Information",
+          "url": "https://www.infloracutflowers.com/resources/TechSheets/Sakata/MarigoldCOCOCulture.pdf",
+          "type": "horticultural_producer_technical_guide"
+        },
+        {
+          "title": "ICAR-CCARI African Marigold soil",
+          "url": "https://ccari.res.in/dss/marigold.html",
+          "type": "government_agriculture"
+        },
+        {
+          "title": "Wikimedia Commons — Tagetes erecta 01.jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:Tagetes_erecta_01.jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    },
+    {
+      "plant_code": "money_plant",
+      "name_th": "พลูด่าง",
+      "name_en": "Money Plant",
+      "other_names_th": [
+        "พลูด่างทอง",
+        "พลูด่างใบหัวใจ"
+      ],
+      "other_names_en": [
+        "Golden pothos",
+        "Devil’s ivy",
+        "Pothos"
+      ],
+      "taxonomy": {
+        "scientific_name": "Epipremnum aureum",
+        "family": "Araceae",
+        "genus": "Epipremnum",
+        "species_or_cultivar_notes": "Money Plant ในที่นี้หมายถึงพลูด่าง (golden pothos) ไม่ใช่พืชชื่อ money plant ชนิดอื่น"
+      },
+      "overview": {
+        "summary_th": "ไม้ประดับใบเขียวตลอดปีแบบเลื้อยหรือห้อย มีใบรูปหัวใจสีเขียวหรือด่างเหลืองครีม นิยมปลูกภายในอาคารในที่แสงรำไร ช่วง 30–240 ซม. เป็นช่วงแสดงผลโดยประมาณสำหรับเถาเลื้อยในบ้าน ไม่ใช่ขีดจำกัดของชนิดพืช; พืชนี้มีเถายาวได้มากกว่า 12 เมตรเมื่อมีที่เกาะ",
+        "summary_en": "Evergreen climbing or trailing aroid with glossy heart-shaped green or variegated leaves, often grown indoors.",
+        "origin": "หมู่เกาะโซไซตีในมหาสมุทรแปซิฟิก",
+        "growth_habit": "ไม้เลื้อยอายุหลายปี แตกข้อและรากอากาศ ความสูงที่แสดงเป็นช่วงสำหรับต้นปลูกทั่วไปและขึ้นอยู่กับพันธุ์/การพยุงเถา",
+        "typical_height_cm": {
+          "min": 30,
+          "max": 240
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "ใบรูปหัวใจเมื่อยังอ่อน"
+        ],
+        "leaf_color": [
+          "เขียว",
+          "เขียวด่างเหลือง",
+          "เขียวด่างครีม"
+        ],
+        "stem_features": [
+          "ลำต้นเป็นเถา มีข้อและรากอากาศ"
+        ],
+        "flower_features": [
+          "แทบไม่ออกดอกในสภาพปลูกในบ้าน"
+        ],
+        "distinguishing_features": [
+          "ใบมันรูปหัวใจ",
+          "เถาเลื้อยหรือห้อยลง",
+          "ลายด่างตามพันธุ์"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "แสงสว่างรำไร",
+          "details": "ชอบแสงสว่างทางอ้อม และทนแสงน้อยได้ แต่ลายด่างอาจลดลง"
+        },
+        "watering": {
+          "frequency": "เมื่อวัสดุปลูกเริ่มแห้ง",
+          "details": "ปล่อยให้วัสดุปลูกแห้งบางส่วนระหว่างรดน้ำและเทน้ำส่วนเกินออก",
+          "warning_signs": [
+            "ใบเหลืองพร้อมดินแฉะ",
+            "โคนอ่อนหรือรากเน่า"
+          ]
+        },
+        "soil": {
+          "type": "วัสดุปลูกโปร่ง ระบายน้ำดี",
+          "ph_range": {
+            "min": 5.5,
+            "max": 6.5
+          },
+          "details": "ใช้ดินปลูกที่ระบายอากาศและน้ำได้ดี ค่า pH เป็นช่วงแนะนำทั่วไปของวัสดุปลูกไม้กระถางจาก Oklahoma State University ไม่ใช่ค่าเหมาะสมที่ทดลองเฉพาะพลูด่าง"
+        },
+        "temperature_c": {
+          "min": 18,
+          "max": 30,
+          "details": "ช่วง 18–30°C สำหรับการดูแลพลูด่างในบ้านตาม RHS; ควรหลีกเลี่ยงลมเย็นจัดและความร้อนจากแหล่งกำเนิดโดยตรง"
+        },
+        "humidity": {
+          "level": "ชอบความชื้นปานกลางถึงสูง",
+          "details": "หลีกเลี่ยงสภาพอับชื้นและน้ำขัง"
+        },
+        "fertilizer": {
+          "frequency": "เป็นครั้งคราวช่วงเติบโต",
+          "details": "ใส่ปุ๋ยไม้ใบแบบเจือจางตามฉลากและไม่มากเกินไป"
+        },
+        "pruning": "ตัดเถาที่ยาวเพื่อกระตุ้นการแตกยอดและเช็ดฝุ่นบนใบ",
+        "repotting": "เปลี่ยนกระถางเมื่อรากแน่น หรือวัสดุปลูกเสื่อม; ปักชำข้อได้"
+      },
+      "safety": {
+        "toxicity_humans": "มีผลึกแคลเซียมออกซาเลต ระคายเคืองช่องปากและผิวหนังหากกินหรือสัมผัสน้ำยาง",
+        "toxicity_pets": "เป็นพิษต่อสุนัขและแมวหากเคี้ยวหรือกิน อาจระคายเคืองปาก น้ำลายไหล และอาเจียน",
+        "handling_notes": [
+          "วางพ้นเด็กและสัตว์เลี้ยง",
+          "สวมถุงมือเมื่อตัดแต่งหากมีผิวแพ้ง่าย"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Money_Plant_Bacterial_wilt_disease",
+        "Money_Plant_Healthy",
+        "Money_Plant_Manganese_Toxicity"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epipremnum_aureum.jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างพลูด่าง จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epipremnum_aureum_leaf.JPG",
+            "alt_text_th": "ใบพลูด่าง",
+            "source": "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum_leaf.JPG",
+            "license": "CC BY 3.0",
+            "attribution": "Pogrebnoj-Alexandroff"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epipremnum_aureum_vine.jpg",
+            "alt_text_th": "เถาและข้อของพลูด่าง",
+            "source": "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum_vine.jpg",
+            "license": "CC BY-SA 3.0",
+            "attribution": "ZooFari"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum.jpg",
+        "license": "Public domain; ผู้สร้าง: Sergei; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:Epipremnum_aureum.jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Epipremnum aureum",
+          "url": "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/",
+          "type": "university_extension"
+        },
+        {
+          "title": "Royal Horticultural Society — How to Grow Epipremnum",
+          "url": "https://www.rhs.org.uk/plants/epipremnum/growing-guide",
+          "type": "university_extension"
+        },
+        {
+          "title": "OSU General soilless growing medium pH",
+          "url": "https://extension.okstate.edu/fact-sheets/greenhouse-growth-media-sampling-testing-and-interpretations",
+          "type": "university_extension"
+        },
+        {
+          "title": "NC State Extension — Epipremnum aureum growth habit",
+          "url": "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/",
+          "type": "university_extension"
+        },
+        {
+          "title": "Wikimedia Commons — Epipremnum aureum.jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum.jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    },
+    {
+      "plant_code": "rose",
+      "name_th": "กุหลาบ",
+      "name_en": "Rose",
+      "other_names_th": [
+        "กุหลาบสวน",
+        "กุหลาบตัดดอก"
+      ],
+      "other_names_en": [
+        "Rose",
+        "Garden rose"
+      ],
+      "taxonomy": {
+        "scientific_name": "Rosa spp.",
+        "family": "Rosaceae",
+        "genus": "Rosa",
+        "species_or_cultivar_notes": "กุหลาบมีหลายชนิดและลูกผสม Dataset ไม่ระบุชนิด/พันธุ์แน่ชัด"
+      },
+      "overview": {
+        "summary_th": "ไม้พุ่มหรือไม้เลื้อยเนื้อไม้ มีดอกหลายสีและรูปทรงตามพันธุ์ ลำต้นมักมีหนามแบบ prickles ต้องการแสงแดดจัดและดินระบายน้ำดี",
+        "summary_en": "Woody flowering shrubs or climbers with varied flower forms and colors, usually bearing prickles on stems.",
+        "origin": "เขตอบอุ่นและกึ่งร้อนซีกโลกเหนือ; แตกต่างตามชนิด",
+        "growth_habit": "ไม้พุ่มหรือไม้เลื้อยอายุหลายปี",
+        "typical_height_cm": {
+          "min": 30,
+          "max": 244
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "ใบประกอบแบบขนนก ใบย่อยขอบหยัก"
+        ],
+        "leaf_color": [
+          "เขียว"
+        ],
+        "stem_features": [
+          "ลำต้นเนื้อไม้ มักมีหนามที่ผิวกิ่ง"
+        ],
+        "flower_features": [
+          "ดอกมีสีและกลีบหลากหลายตามชนิดและพันธุ์"
+        ],
+        "distinguishing_features": [
+          "ใบย่อยขอบหยัก",
+          "กิ่งมีหนาม",
+          "ดอกเด่นหลายสี"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "แดดจัด",
+          "details": "ควรได้แดดโดยตรงอย่างน้อยประมาณ 6 ชั่วโมงต่อวัน"
+        },
+        "watering": {
+          "frequency": "รดลึกเมื่อจำเป็น",
+          "details": "รดโคนต้นให้ชุ่มลึก แล้วตรวจความชื้นดินก่อนรดซ้ำ ลดการเปียกใบ",
+          "warning_signs": [
+            "ใบเหี่ยว",
+            "ดินแฉะ",
+            "ใบเหลืองจากน้ำมากหรือน้อย"
+          ]
+        },
+        "soil": {
+          "type": "ดินร่วนอินทรียวัตถุสูง ระบายน้ำดี",
+          "ph_range": {
+            "min": 6.0,
+            "max": 6.5
+          },
+          "details": "เหมาะกับดินค่อนข้างเป็นกรดถึงเป็นกลาง มีอินทรียวัตถุและระบายน้ำดี กุหลาบส่วนใหญ่เจริญได้ดีในดินเป็นกรดอ่อน pH 6.0–6.5; อาจแตกต่างกันตามพันธุ์และดิน"
+        },
+        "temperature_c": {
+          "min": 15,
+          "max": 28,
+          "details": "ช่วง 15–28°C เป็นกรอบสภาพอากาศที่แนะนำสำหรับการปลูกกุหลาบตัดดอกในคู่มือ TNAU ไม่ใช่ช่วงเหมาะสมเฉพาะของกุหลาบทุกพันธุ์; งานวิจัยกุหลาบโรงเรือนให้แนวทางกลางวัน 24–27°C กลางคืนประมาณ 18°C"
+        },
+        "humidity": {
+          "level": "ถ่ายเทอากาศดี",
+          "details": "หลีกเลี่ยงความชื้นค้างบนใบและปลูกไม่แน่น"
+        },
+        "fertilizer": {
+          "frequency": "ตามช่วงการเติบโต",
+          "details": "ใช้ปุ๋ยสำหรับกุหลาบตามคำแนะนำฉลาก หลีกเลี่ยงใส่หนักเมื่อพืชเครียด"
+        },
+        "pruning": "ตัดแต่งกิ่งตายหรือเป็นโรค และเด็ดดอกโรย ใช้กรรไกรสะอาด",
+        "repotting": "ย้ายปลูกเมื่อรากแน่นและจัดกระถางที่ระบายดี"
+      },
+      "safety": {
+        "toxicity_humans": "ไม่จัดเป็นพืชมีพิษทั่วไป แต่หนามอาจบาดผิว และสารเคมีที่ใช้ปลูกอาจมีความเสี่ยง",
+        "toxicity_pets": "ASPCA จัดกุหลาบ Rosa spp. ว่าไม่เป็นพิษต่อแมวและสุนัข แต่หนามยังทำให้เกิดบาดแผลได้",
+        "handling_notes": [
+          "สวมถุงมือเมื่อตัดแต่งกิ่ง",
+          "หลีกเลี่ยงบาดแผลจากหนาม"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Rose_Yellow_Mosaic_Virus",
+        "Rose_Rust",
+        "Rose_Powdery_Mildew",
+        "Rose_Mosaic_Virus",
+        "Rose_Insect_Damage",
+        "Rose_Healthy",
+        "Rose_Downy_Mildew",
+        "Rose_Black_Spot"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rubiginosa.jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างกุหลาบ จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_leaf_and_Buds.JPG",
+            "alt_text_th": "ใบและดอกตูมกุหลาบ",
+            "source": "https://commons.wikimedia.org/wiki/File:Rose_leaf_and_Buds.JPG",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Bijay chaurasia"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_leaf_3.jpg",
+            "alt_text_th": "ลักษณะใบกุหลาบ",
+            "source": "https://commons.wikimedia.org/wiki/File:Rose_leaf_3.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Sneha jayaraman"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:Rosa_rubiginosa.jpg",
+        "license": "CC BY-SA 4.0; ผู้สร้าง: G.HarishGovindaraj; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:Rosa_rubiginosa.jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Rosa (genus)",
+          "url": "https://plants.ces.ncsu.edu/plants/rosa/",
+          "type": "university_extension"
+        },
+        {
+          "title": "ASPCA — Rose",
+          "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/rose",
+          "type": "animal_poison_control"
+        },
+        {
+          "title": "Tamil Nadu Agricultural University — Cut Rose: Soil and Climate",
+          "url": "https://agritech.tnau.ac.in/horticulture/horti_flower%20crops_cut%20rose.html",
+          "type": "university_extension"
+        },
+        {
+          "title": "University of Maryland Extension Rose care",
+          "url": "https://www.extension.umd.edu/resource/rose-identify-and-manage-problems",
+          "type": "university_extension"
+        },
+        {
+          "title": "Wikimedia Commons — Rosa rubiginosa.jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:Rosa_rubiginosa.jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    },
+    {
+      "plant_code": "snake_plant",
+      "name_th": "ลิ้นมังกร",
+      "name_en": "Snake Plant",
+      "other_names_th": [
+        "หอกพระอินทร์"
+      ],
+      "other_names_en": [
+        "Snake plant",
+        "Mother-in-law’s tongue",
+        "Sansevieria"
+      ],
+      "taxonomy": {
+        "scientific_name": "Dracaena trifasciata",
+        "family": "Asparagaceae",
+        "genus": "Dracaena",
+        "species_or_cultivar_notes": "ชื่อเดิม Sansevieria trifasciata; ลิ้นมังกรมีหลายพันธุ์ลายใบ"
+      },
+      "overview": {
+        "summary_th": "ไม้ประดับใบหนาอวบน้ำตั้งตรง มีแถบลายเขียวพาดขวาง บางพันธุ์ขอบเหลือง ทนแสงน้อยและทนแล้งได้แต่ไม่ทนน้ำขัง ช่วงความสูง 15–122 ซม. เป็นประมาณการครอบคลุมพันธุ์เตี้ยและชนิดปลูกทั่วไป โดยค่าสูงสุดสอดคล้องกับใบยาวได้ถึงราว 4 ฟุต ไม่ใช่ค่าตายตัวของทุกสายพันธุ์",
+        "summary_en": "Succulent-like perennial with upright sword-shaped leaves, transverse green banding, and drought tolerance.",
+        "origin": "แอฟริกาตะวันตกและแอฟริกากลางตะวันตก",
+        "growth_habit": "ไม้ล้มลุกอายุหลายปี แตกกอจากเหง้า ใบตั้งตรง ขนาดขึ้นกับพันธุ์และสภาพปลูก",
+        "typical_height_cm": {
+          "min": 15,
+          "max": 122
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "ใบเรียวยาวคล้ายดาบ แข็งและหนา"
+        ],
+        "leaf_color": [
+          "เขียวเข้ม",
+          "เขียวเทาลายขวาง",
+          "เขียวขอบเหลืองบางพันธุ์"
+        ],
+        "stem_features": [
+          "ลำต้นไม่เด่นชัด ใบเกิดจากโคนและเหง้า"
+        ],
+        "flower_features": [
+          "ดอกเล็กสีเขียวขาว ออกไม่บ่อยเมื่อปลูกในบ้าน"
+        ],
+        "distinguishing_features": [
+          "ใบตั้งตรงหนาแข็ง",
+          "ลายขวางเป็นแถบ",
+          "เรียงตัวเป็นกอ"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "รำไรถึงแดดบางช่วง",
+          "details": "เหมาะกับแสงทางอ้อมหรือแดดบางส่วน และทนแสงน้อยได้"
+        },
+        "watering": {
+          "frequency": "เมื่อดินแห้งมากแล้ว",
+          "details": "ปล่อยให้วัสดุปลูกแห้งระหว่างรดน้ำ อย่าให้น้ำขัง โดยเฉพาะในที่แสงน้อย",
+          "warning_signs": [
+            "โคนใบอ่อนหรือเน่า",
+            "ใบเหลืองร่วมกับดินแฉะ"
+          ]
+        },
+        "soil": {
+          "type": "ดินโปร่งระบายน้ำเร็ว",
+          "ph_range": {
+            "min": 5.5,
+            "max": 6.5
+          },
+          "details": "ใช้วัสดุปลูกสำหรับไม้อวบน้ำหรือดินที่น้ำไม่ขัง ค่า pH เป็นช่วงแนะนำทั่วไปของวัสดุปลูกกระถาง ไม่ใช่ค่าที่พิสูจน์ว่าเหมาะที่สุดเฉพาะลิ้นมังกร; RHS ระบุว่าทนสภาพดินเป็นกลางถึงด่างได้"
+        },
+        "temperature_c": {
+          "min": 21,
+          "max": 27,
+          "details": "ช่วงประมาณ 21–27°C เป็นช่วงสำหรับการดูแลไม้ประดับสกุล Dracaena ภายในอาคารตามคู่มือ UF/IFAS (70–80°F) ซึ่งใช้เป็นแนวทางประมาณสำหรับลิ้นมังกร Dracaena trifasciata ไม่ใช่ค่าทดลองเฉพาะสายพันธุ์; ลิ้นมังกรทนสภาพเย็นหรือร้อนได้กว้างกว่าช่วงนี้ แต่ต้องระวังดินแฉะและลมเย็น"
+        },
+        "humidity": {
+          "level": "ต่ำถึงปานกลาง",
+          "details": "ทนความชื้นอากาศต่ำได้ ไม่จำเป็นต้องพ่นน้ำบนใบ"
+        },
+        "fertilizer": {
+          "frequency": "น้อย",
+          "details": "ให้ปุ๋ยเจือจางในช่วงเติบโต หลีกเลี่ยงการใส่มาก"
+        },
+        "pruning": "ตัดใบที่เสียหายจากโคนด้วยเครื่องมือสะอาด",
+        "repotting": "ย้ายเมื่อกอแน่นหรือกระถางคับ แยกกอจากเหง้าได้"
+      },
+      "safety": {
+        "toxicity_humans": "มีสารกลุ่มซาโปนิน ไม่ควรกิน อาจทำให้คลื่นไส้หรือระคายเคือง",
+        "toxicity_pets": "เป็นพิษต่อแมวและสุนัขหากกิน อาจทำให้อาเจียนและท้องเสีย",
+        "handling_notes": [
+          "เก็บให้ห่างเด็กและสัตว์เลี้ยง",
+          "ระวังน้ำยางหากผิวไวต่อการระคายเคือง"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Snake_Plant_Anthracnose",
+        "Snake_Plant_Healthy",
+        "Snake_Plant_Leaf_Withering"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dracaena_Trifasciata_(Snake_Plant).jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างลิ้นมังกร จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sansevieria_Trifasciata_.jpg",
+            "alt_text_th": "ลิ้นมังกรในกระถาง",
+            "source": "https://commons.wikimedia.org/wiki/File:Sansevieria_Trifasciata_.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Enzo Rippa"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Snake_Plant_(Dracaena_trifasciata).jpg",
+            "alt_text_th": "รูปทรงใบลิ้นมังกร",
+            "source": "https://commons.wikimedia.org/wiki/File:Snake_Plant_(Dracaena_trifasciata).jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Prathvi Acharya"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:Dracaena_Trifasciata_(Snake_Plant).jpg",
+        "license": "CC BY-SA 4.0; ผู้สร้าง: See Wikimedia Commons file page; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:Dracaena_Trifasciata_(Snake_Plant).jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Dracaena trifasciata",
+          "url": "https://plants.ces.ncsu.edu/plants/dracaena-trifasciata/",
+          "type": "university_extension"
+        },
+        {
+          "title": "University of Florida IFAS — Cultural Guidelines for Interiorscape Dracaena",
+          "url": "https://ask.ifas.ufl.edu/publication/EP149",
+          "type": "university_extension"
+        },
+        {
+          "title": "OSU general media pH; RHS snake plant conditions",
+          "url": "https://extension.okstate.edu/fact-sheets/greenhouse-growth-media-sampling-testing-and-interpretations",
+          "type": "university_extension"
+        },
+        {
+          "title": "NC State Extension — Dracaena trifasciata",
+          "url": "https://plants.ces.ncsu.edu/plants/dracaena-trifasciata/",
+          "type": "university_extension"
+        },
+        {
+          "title": "RHS — Dracaena trifasciata",
+          "url": "https://www.rhs.org.uk/plants/530138/dracaena-trifasciata/details",
+          "type": "botanical_society"
+        },
+        {
+          "title": "Wikimedia Commons — Dracaena Trifasciata (Snake Plant).jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:Dracaena_Trifasciata_(Snake_Plant).jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    },
+    {
+      "plant_code": "spider_plant",
+      "name_th": "เศรษฐีเรือนใน",
+      "name_en": "Spider Plant",
+      "other_names_th": [
+        "เศรษฐีเรือนในใบด่าง"
+      ],
+      "other_names_en": [
+        "Spider plant",
+        "Ribbon plant"
+      ],
+      "taxonomy": {
+        "scientific_name": "Chlorophytum comosum",
+        "family": "Asparagaceae",
+        "genus": "Chlorophytum",
+        "species_or_cultivar_notes": "ใบของพันธุ์ปลูกอาจเขียวล้วนหรือมีแถบสีขาว/ครีม"
+      },
+      "overview": {
+        "summary_th": "ไม้ประดับใบเป็นกอ ใบเรียวยาวโค้งลง สีเขียวหรือด่างขาว มีไหลยาวและต้นอ่อนห้อยออกจากต้นแม่ นิยมปลูกในกระถางแขวน",
+        "summary_en": "Clumping perennial houseplant with arching strap-like leaves and runners that carry small plantlets.",
+        "origin": "ทวีปแอฟริกา โดยเฉพาะเขตร้อนและตอนใต้",
+        "growth_habit": "ไม้ล้มลุกอายุหลายปี แตกกอ ใบโค้งห้อย",
+        "typical_height_cm": {
+          "min": 30,
+          "max": 46
+        }
+      },
+      "identification": {
+        "leaf_shape": [
+          "ใบแคบยาวเป็นเส้น โค้งลง"
+        ],
+        "leaf_color": [
+          "เขียว",
+          "เขียวสลับขาว",
+          "เขียวสลับครีม"
+        ],
+        "stem_features": [
+          "กอจากโคน มีไหลยาวแตกต้นอ่อน"
+        ],
+        "flower_features": [
+          "ดอกเล็กสีขาวบนก้านไหล"
+        ],
+        "distinguishing_features": [
+          "ใบแถบเรียวยาวโค้งลง",
+          "มีต้นอ่อนบนไหลห้อย"
+        ]
+      },
+      "care": {
+        "light": {
+          "level": "แสงสว่างทางอ้อม",
+          "details": "ชอบแสงปานกลางถึงสว่างรำไร หลีกเลี่ยงแดดแรงตรง ๆ ที่ทำให้ใบไหม้"
+        },
+        "watering": {
+          "frequency": "เมื่อหน้าดินเริ่มแห้ง",
+          "details": "รักษาดินชื้นพอเหมาะแต่ไม่แฉะ ลดน้ำเมื่อโตช้าหรืออากาศเย็น",
+          "warning_signs": [
+            "ปลายใบแห้งสีน้ำตาล",
+            "ใบเหลืองและดินเปียกมาก"
+          ]
+        },
+        "soil": {
+          "type": "ดินร่วนระบายน้ำดี",
+          "ph_range": {
+            "min": 6.0,
+            "max": 8.0
+          },
+          "details": "ชอบดินชื้นพอเหมาะและมีการระบายน้ำดี"
+        },
+        "temperature_c": {
+          "min": 18,
+          "max": 24,
+          "details": "ช่วงประมาณ 18–24°C คืออุณหภูมิกลางวันที่เหมาะสม (65–75°F) ตาม Clemson Extension; กลางคืนเหมาะที่ประมาณ 10–13°C (50–55°F) ตามแหล่งเดียวกัน จึงไม่ควรตีความค่า min เป็นขีดจำกัดต่ำสุดที่พืชทนได้"
+        },
+        "humidity": {
+          "level": "ปานกลาง",
+          "details": "ความชื้นอากาศระดับปานกลางเหมาะสม; อากาศแห้งอาจทำให้ปลายใบแห้ง"
+        },
+        "fertilizer": {
+          "frequency": "ไม่มาก",
+          "details": "ใส่ปุ๋ยในช่วงเติบโตอย่างพอเหมาะ เพราะใส่มากอาจลดการเกิดต้นอ่อน"
+        },
+        "pruning": "ตัดปลายใบแห้งหรือใบเสียหาย และตัดไหลได้ตามความเหมาะสม",
+        "repotting": "เมื่อรากแน่นให้ย้ายกระถางหรือแบ่งกอ; ต้นอ่อนบนไหลนำไปขยายพันธุ์ได้"
+      },
+      "safety": {
+        "toxicity_humans": "ไม่ได้จัดเป็นพืชมีพิษรุนแรงทั่วไป แต่ไม่ควรนำไม้ประดับไปรับประทาน",
+        "toxicity_pets": "ASPCA ระบุว่า Chlorophytum comosum ไม่เป็นพิษต่อแมวและสุนัข แต่การกินพืชปริมาณมากอาจทำให้ท้องไส้ไม่สบายได้",
+        "handling_notes": [
+          "หลีกเลี่ยงให้สัตว์เลี้ยงเคี้ยวใบเป็นประจำ",
+          "ถ้าปลายใบไหม้ควรตรวจคุณภาพน้ำและการใส่ปุ๋ย"
+        ]
+      },
+      "scan_guidance": {
+        "recommended_parts": [
+          "ใบที่มีอาการหรือใบที่ต้องการตรวจ",
+          "ใบที่สมบูรณ์อีกใบเพื่อเปรียบเทียบ หากมี"
+        ],
+        "capture_tips": [
+          "ถ่ายภาพใบให้ชัดและมีแสงธรรมชาติสม่ำเสมอ",
+          "ถ่ายภาพด้านหน้าใบ และด้านหลังใบหากมีอาการ",
+          "ให้ใบอยู่กลางภาพและเห็นอาการเต็มบริเวณ ไม่บังด้วยมือ"
+        ],
+        "avoid": [
+          "ภาพเบลอหรือย้อนแสง",
+          "ภาพที่มีหลายใบซ้อนกันจนแยกอาการไม่ชัด",
+          "ใช้ฟิลเตอร์ปรับสีแรงหรือภาพที่ถูกแต่งจนสีใบผิดธรรมชาติ"
+        ]
+      },
+      "supported_disease_codes": [
+        "Spider_Plant_Fungal_leaf_spot",
+        "Spider_Plant_Healthy",
+        "Spider_Plant_Leaf_Tip_Necrosis"
+      ],
+      "media": {
+        "cover_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spider_plants_(Chlorophytum_comosum).jpg",
+        "cover_alt_text_th": "ภาพตัวอย่างเศรษฐีเรือนใน จาก Wikimedia Commons",
+        "gallery": [
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Decorative_Spider_plant.jpg",
+            "alt_text_th": "เศรษฐีเรือนในปลูกประดับ",
+            "source": "https://commons.wikimedia.org/wiki/File:Decorative_Spider_plant.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "DEEPAN RAJA .M"
+          },
+          {
+            "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chlorophytum_comosum%2C_flores.jpg",
+            "alt_text_th": "ดอกและใบเศรษฐีเรือนใน",
+            "source": "https://commons.wikimedia.org/wiki/File:Chlorophytum_comosum%2C_flores.jpg",
+            "license": "CC BY-SA 4.0",
+            "attribution": "Juan Carlos Fonseca Mata"
+          }
+        ],
+        "source": "https://commons.wikimedia.org/wiki/File:Spider_plants_(Chlorophytum_comosum).jpg",
+        "license": "CC0 1.0; ผู้สร้าง: Philipola; ตรวจรายละเอียดและข้อกำหนดการให้เครดิตที่ https://commons.wikimedia.org/wiki/File:Spider_plants_(Chlorophytum_comosum).jpg"
+      },
+      "sources": [
+        {
+          "title": "NC State Extension — Chlorophytum comosum",
+          "url": "https://plants.ces.ncsu.edu/plants/chlorophytum-comosum/",
+          "type": "university_extension"
+        },
+        {
+          "title": "ASPCA — Spider Plant",
+          "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/spider-plant",
+          "type": "animal_poison_control"
+        },
+        {
+          "title": "Clemson Cooperative Extension — Spider Plant",
+          "url": "https://hgic.clemson.edu/factsheet/spider-plant/",
+          "type": "university_extension"
+        },
+        {
+          "title": "Wikimedia Commons — Spider plants (Chlorophytum comosum).jpg (photo licensing)",
+          "url": "https://commons.wikimedia.org/wiki/File:Spider_plants_(Chlorophytum_comosum).jpg",
+          "type": "licensed_image"
+        }
+      ],
+      "review": {
+        "status": "needs_expert_review",
+        "reviewed_by": "",
+        "reviewed_at": null
+      }
+    }
+  ]
+}

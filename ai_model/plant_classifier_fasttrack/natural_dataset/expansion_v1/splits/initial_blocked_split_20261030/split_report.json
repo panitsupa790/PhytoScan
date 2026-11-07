@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T18:32:40.441255+00:00",
+  "passed": false,
+  "decision": "split_blocked_fail_closed",
+  "blocking_reasons": [
+    "insufficient_approved_images_for_50_20_20_per_class"
+  ],
+  "approved_images": 0,
+  "unresolved_phash_pairs": 0,
+  "locked_test_manifest_created": false,
+  "training_config_created": false,
+  "training_performed": false
+}

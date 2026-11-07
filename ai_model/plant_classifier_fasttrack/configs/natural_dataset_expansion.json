@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "dataset_name": "phytoscan_natural_expansion_v1",
+  "seed": 42,
+  "classes": [
+    "chrysanthemum",
+    "marigold",
+    "money_plant",
+    "rose",
+    "snake_plant",
+    "spider_plant"
+  ],
+  "targets_per_class": {
+    "training": 50,
+    "development": 20,
+    "locked_test": 20
+  },
+  "health_targets_per_class": {
+    "healthy": 36,
+    "diseased": 36,
+    "insect_damaged": 18
+  },
+  "allowed_health_states": ["healthy", "diseased", "insect_damaged", "mixed"],
+  "allowed_licenses": ["own_photo", "cc0", "cc-by-4.0", "cc-by-sa-4.0"],
+  "minimum_image_side": 224,
+  "near_duplicate_phash_distance": 4,
+  "base_training_manifest": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/plant_classifier_v5_train.csv",
+  "reference_hash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_hash_registry.csv",
+  "reference_phash_registry": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v2/evaluation/dataset_phash_registry.csv",
+  "reference_manifests": [
+    {
+      "role": "existing_training",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v5/manifests/plant_classifier_v5_train.csv"
+    },
+    {
+      "role": "legacy_validation_exclusion_only",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/valid_split.csv"
+    },
+    {
+      "role": "legacy_test_exclusion_only",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v1/test_split.csv"
+    },
+    {
+      "role": "overused_external_development_exclusion_only",
+      "path": "/home/mind_hp/phytoscan/phytoscan/models/plant_classifier_v3/manifests/external_development_split_v3.csv"
+    }
+  ],
+  "base_training_config": "/mnt/c/phytoscan/ai_model/plant_classifier_fasttrack/configs/fresh_b0_fasttrack.json",
+  "contact_sheet": {
+    "columns": 4,
+    "rows": 4,
+    "thumbnail_width": 260,
+    "thumbnail_height": 190
+  }
+}

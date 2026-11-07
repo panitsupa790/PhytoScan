@@ -15,6 +15,12 @@ class ErrorCode(str, Enum):
     multiple_plant_types = "MULTIPLE_PLANT_TYPES"
     model_unavailable = "MODEL_UNAVAILABLE"
     inference_failed = "INFERENCE_FAILED"
+    invalid_device_id = "INVALID_DEVICE_ID"
+    authentication_required = "AUTHENTICATION_REQUIRED"
+    invalid_credentials = "INVALID_CREDENTIALS"
+    email_already_registered = "EMAIL_ALREADY_REGISTERED"
+    history_not_found = "HISTORY_NOT_FOUND"
+    plant_library_not_found = "PLANT_LIBRARY_NOT_FOUND"
 
 
 class APIError(Exception):
